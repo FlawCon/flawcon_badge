@@ -1,3 +1,4 @@
-[submodule "firmware/src/micropython"]
-	path = firmware/src/micropython
+[submodule "micropython"]
+	path = micropython
 	url = git@github.com:micropython/micropython.git
+
