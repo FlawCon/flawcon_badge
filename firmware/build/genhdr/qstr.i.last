@@ -2934,19 +2934,9 @@ typedef struct _machine_ep_spi_obj_t {
     mp_obj_base_t base;
 } machine_ep_spi_obj_t;
 
-static mp_obj_t mp_machine_ep_spi_write(mp_obj_t self, mp_obj_t wr_buf, mp_obj_t dc) {
-    mp_buffer_info_t src;
-    mp_get_buffer_raise(wr_buf, &src, (1));
-
+static mp_obj_t mp_machine_ep_spi_write(mp_obj_t self, mp_obj_t data, mp_obj_t dc) {
     spi_transaction(1, 0, 0, 0, 0, 1, mp_obj_int_get_checked(dc), 0, 0);
-
-    const uint8_t *buf = (const uint8_t *)src.buf;
-    size_t i = 0;
-    while (i < src.len) {
-        spi_tx8fast(1, buf[i]);
-        ++i;
-    }
-
+    spi_tx8fast(1, mp_obj_int_get_checked(data));
     return (((mp_obj_t)&mp_const_none_obj));
 }
 const mp_obj_fun_builtin_fixed_t mp_machine_ep_spi_write_obj = {{&mp_type_fun_builtin_3}, .fun._3 = mp_machine_ep_spi_write};

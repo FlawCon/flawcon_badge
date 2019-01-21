@@ -1,14 +1,14 @@
 from micropython import const
 import time
 
-WHITE = 0
-BLACK = 1
-RED = 2
+WHITE = const(0)
+BLACK = const(1)
+RED = const(2)
 
 _SPI_COMMAND = False
 _SPI_DATA = True
 
-RESOLUTION = const(((296, 128), (128, 296, -90)))
+RESOLUTION = ((296, 128), (128, 296, -90))
 
 
 class EPD:

@@ -47,7 +47,7 @@ typedef struct _machine_ep_spi_obj_t {
 
 STATIC mp_obj_t mp_machine_ep_spi_write(mp_obj_t self, mp_obj_t data, mp_obj_t dc) {
     spi_transaction(HSPI, 0, 0, 0, 0, 1, mp_obj_int_get_checked(dc), 0, 0);
-    spi_tx8fast(HSPI, mp_obj_int_get_checked();
+    spi_tx8fast(HSPI, mp_obj_int_get_checked(data));
     return mp_const_none;
 }
 MP_DEFINE_CONST_FUN_OBJ_3(mp_machine_ep_spi_write_obj, mp_machine_ep_spi_write);
