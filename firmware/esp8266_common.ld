@@ -160,6 +160,8 @@ SECTIONS
         *machine_spi.o(.literal*, .text*)
         *machine_hspi.o(.literal*, .text*)
         *machine_ep_spi.o(.literal*, .text*)
+        *qrcode.o(.literal*, .text*)
+        *modqr.o(.literal*, .text*)
         *hspi.o(.literal*, .text*)
         *modesp.o(.literal* .text*)
         *modnetwork.o(.literal* .text*)

@@ -97,6 +97,7 @@ enum {
     MP_QSTR__busy_wait,
     MP_QSTR__update,
     MP_QSTR_set_pixel,
+    MP_QSTR_dirty,
     MP_QSTR__rotate_buf,
     MP_QSTR_show,
     MP_QSTR__spi_write,
@@ -113,6 +114,7 @@ enum {
     MP_QSTR__busy_pin,
     MP_QSTR__cs_pin,
     MP_QSTR__spi,
+    MP_QSTR__dirty,
     MP_QSTR__luts,
     MP_QSTR_spi,
     MP_QSTR_cs_pin,
@@ -124,7 +126,6 @@ enum {
     MP_QSTR_x,
     MP_QSTR_y,
     MP_QSTR_v,
-    MP_QSTR_matrix,
     MP_QSTR_degree,
     MP_QSTR_dc,
     MP_QSTR_command,
@@ -230,7 +231,7 @@ const qstr_pool_t mp_qstr_frozen_const_pool = {
     (qstr_pool_t*)&mp_qstr_const_pool, // previous pool
     MP_QSTRnumber_of, // previous pool size
     10, // allocated entries
-    192, // used entries
+    193, // used entries
     {
         (const byte*)"\xe7\xe7\x0c" "flashbdev.py",
         (const byte*)"\xc0\xf8\x09" "FlashBdev",
@@ -298,6 +299,7 @@ const qstr_pool_t mp_qstr_frozen_const_pool = {
         (const byte*)"\xb3\xc5\x0a" "_busy_wait",
         (const byte*)"\x4b\xa0\x07" "_update",
         (const byte*)"\xb0\xda\x09" "set_pixel",
+        (const byte*)"\x77\xc8\x05" "dirty",
         (const byte*)"\x8d\x10\x0b" "_rotate_buf",
         (const byte*)"\x86\xaa\x04" "show",
         (const byte*)"\xd2\x60\x0a" "_spi_write",
@@ -314,6 +316,7 @@ const qstr_pool_t mp_qstr_frozen_const_pool = {
         (const byte*)"\xaf\x81\x09" "_busy_pin",
         (const byte*)"\xe2\x3d\x07" "_cs_pin",
         (const byte*)"\x50\xe1\x04" "_spi",
+        (const byte*)"\xa8\xea\x06" "_dirty",
         (const byte*)"\xe4\xc3\x05" "_luts",
         (const byte*)"\xcf\x8d\x03" "spi",
         (const byte*)"\x5d\xd1\x06" "cs_pin",
@@ -325,7 +328,6 @@ const qstr_pool_t mp_qstr_frozen_const_pool = {
         (const byte*)"\xdd\xb5\x01" "x",
         (const byte*)"\xdc\xb5\x01" "y",
         (const byte*)"\xd3\xb5\x01" "v",
-        (const byte*)"\x5e\x4e\x06" "matrix",
         (const byte*)"\x51\x57\x06" "degree",
         (const byte*)"\x82\x6d\x02" "dc",
         (const byte*)"\x02\x77\x07" "command",
@@ -1327,11 +1329,11 @@ const mp_raw_code_t raw_code_websocket_helper__lt_module_gt_ = {
 };
 
 // frozen bytecode for file _boot.py, scope _boot_<module>
-STATIC const byte bytecode_data__boot__lt_module_gt_[209] = {
-    0x06, 0x01, 0x00, 0x00, 0x00, 0x00, 0x15,
+STATIC const byte bytecode_data__boot__lt_module_gt_[199] = {
+    0x06, 0x01, 0x00, 0x00, 0x00, 0x00, 0x14,
     MP_QSTR__lt_module_gt_ & 0xff, MP_QSTR__lt_module_gt_ >> 8,
     MP_QSTR__boot_dot_py & 0xff, MP_QSTR__boot_dot_py >> 8,
-    0x29, 0x3c, 0x28, 0x50, 0x23, 0x26, 0x5c, 0x28, 0x4e, 0x49, 0x28, 0x4f, 0x28, 0x2b, 0x00, 0x00, 0xff,
+    0x29, 0x3c, 0x28, 0x50, 0x23, 0x26, 0x5c, 0x28, 0x4e, 0x49, 0x28, 0x4f, 0x28, 0x00, 0x00, 0xff,
     0x80, 
     0x11, 
     0x68, MP_QSTR_gc & 0xff, MP_QSTR_gc >> 8, 
@@ -1409,10 +1411,6 @@ STATIC const byte bytecode_data__boot__lt_module_gt_[209] = {
     0x1e, MP_QSTR_FCB & 0xff, MP_QSTR_FCB >> 8, 
     0x66, 0x00, 
     0x24, MP_QSTR_fc & 0xff, MP_QSTR_fc >> 8, 
-    0x1b, MP_QSTR_fc & 0xff, MP_QSTR_fc >> 8, 
-    0x1e, MP_QSTR_start & 0xff, MP_QSTR_start >> 8, 
-    0x66, 0x00, 
-    0x32, 
     0x11, 
     0x5b, 
 };
@@ -1424,7 +1422,7 @@ const mp_raw_code_t raw_code__boot__lt_module_gt_ = {
         .bytecode = bytecode_data__boot__lt_module_gt_,
         .const_table = NULL,
         #if MICROPY_PERSISTENT_CODE_SAVE
-        .bc_len = 209,
+        .bc_len = 199,
         .n_obj = 0,
         .n_raw_code = 0,
         #endif
@@ -2000,11 +1998,11 @@ STATIC const mp_raw_code_t raw_code_fcb__epd__lt_module_gt__EPD___init____lt_lis
 };
 
 // frozen bytecode for file fcb/_epd.py, scope fcb__epd__lt_module_gt__EPD___init__
-STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD___init__[232] = {
-    0x4c, 0x00, 0x00, 0x05, 0x00, 0x00, 0x13,
+STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD___init__[239] = {
+    0x4c, 0x00, 0x00, 0x05, 0x00, 0x00, 0x14,
     MP_QSTR___init__ & 0xff, MP_QSTR___init__ >> 8,
     MP_QSTR_fcb_slash__epd_dot_py & 0xff, MP_QSTR_fcb_slash__epd_dot_py >> 8,
-    0x82, 0x10, 0x2a, 0x31, 0x56, 0x35, 0x46, 0x26, 0x26, 0x26, 0x46, 0x22, 0x00, 0x00, 0x00, 0xff,
+    0x82, 0x10, 0x2a, 0x31, 0x56, 0x35, 0x46, 0x26, 0x26, 0x26, 0x46, 0x46, 0x22, 0x00, 0x00, 0x00, 0xff,
     0x1c, MP_QSTR_RESOLUTION & 0xff, MP_QSTR_RESOLUTION >> 8, 
     0x80, 
     0x21, 
@@ -2052,6 +2050,9 @@ STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD___init__[232] = {
     0xb1, 
     0x1a, 0x00, 
     0x26, MP_QSTR__spi & 0xff, MP_QSTR__spi >> 8, 
+    0x10, 
+    0x1a, 0x00, 
+    0x26, MP_QSTR__dirty & 0xff, MP_QSTR__dirty >> 8, 
     0x53, 0x01, 
     0x14, 0x80, 0x48, 
     0x14, 0x81, 0x20, 
@@ -2147,7 +2148,7 @@ STATIC const mp_raw_code_t raw_code_fcb__epd__lt_module_gt__EPD___init__ = {
         .bytecode = bytecode_data_fcb__epd__lt_module_gt__EPD___init__,
         .const_table = (mp_uint_t*)const_table_data_fcb__epd__lt_module_gt__EPD___init__,
         #if MICROPY_PERSISTENT_CODE_SAVE
-        .bc_len = 232,
+        .bc_len = 239,
         .n_obj = 0,
         .n_raw_code = 1,
         #endif
@@ -2159,7 +2160,7 @@ STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD_setup[80] = {
     0x04, 0x00, 0x00, 0x01, 0x00, 0x00, 0x0e,
     MP_QSTR_setup & 0xff, MP_QSTR_setup >> 8,
     MP_QSTR_fcb_slash__epd_dot_py & 0xff, MP_QSTR_fcb_slash__epd_dot_py >> 8,
-    0x81, 0x33, 0x2a, 0x2b, 0x2a, 0x4b, 0x28, 0x00, 0x00, 0xff,
+    0x81, 0x35, 0x2a, 0x2b, 0x2a, 0x4b, 0x28, 0x00, 0x00, 0xff,
     0xb0, 
     0x1d, MP_QSTR__reset_pin & 0xff, MP_QSTR__reset_pin >> 8, 
     0x1e, MP_QSTR_off & 0xff, MP_QSTR_off >> 8, 
@@ -2235,7 +2236,7 @@ STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD__busy_wait[45] = {
     0x04, 0x00, 0x00, 0x01, 0x00, 0x00, 0x0a,
     MP_QSTR__busy_wait & 0xff, MP_QSTR__busy_wait >> 8,
     MP_QSTR_fcb_slash__epd_dot_py & 0xff, MP_QSTR_fcb_slash__epd_dot_py >> 8,
-    0x81, 0x3c, 0x23, 0x00, 0x00, 0xff,
+    0x81, 0x3e, 0x23, 0x00, 0x00, 0xff,
     0x35, 0x0b, 0x80, 
     0x1c, MP_QSTR_time & 0xff, MP_QSTR_time >> 8, 
     0x1e, MP_QSTR_sleep & 0xff, MP_QSTR_sleep >> 8, 
@@ -2279,11 +2280,11 @@ STATIC const mp_raw_code_t raw_code_fcb__epd__lt_module_gt__EPD__busy_wait = {
 };
 
 // frozen bytecode for file fcb/_epd.py, scope fcb__epd__lt_module_gt__EPD__update
-STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD__update[347] = {
-    0x10, 0x00, 0x00, 0x03, 0x00, 0x00, 0x22,
+STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD__update[353] = {
+    0x10, 0x00, 0x00, 0x03, 0x00, 0x00, 0x23,
     MP_QSTR__update & 0xff, MP_QSTR__update >> 8,
     MP_QSTR_fcb_slash__epd_dot_py & 0xff, MP_QSTR_fcb_slash__epd_dot_py >> 8,
-    0x81, 0x40, 0x47, 0x55, 0x2d, 0x4c, 0x4d, 0x4c, 0x2a, 0x2a, 0x49, 0x28, 0x4a, 0x2a, 0x4c, 0x51, 0x35, 0x70, 0x2f, 0x25, 0x2b, 0x2e, 0x4c, 0x2b, 0x28, 0x2b, 0x27, 0x00, 0x00, 0xff,
+    0x81, 0x42, 0x47, 0x55, 0x2d, 0x4c, 0x4d, 0x4c, 0x2a, 0x2a, 0x49, 0x28, 0x4a, 0x2a, 0x4c, 0x51, 0x35, 0x70, 0x2f, 0x25, 0x2b, 0x2e, 0x4c, 0x2b, 0x28, 0x2b, 0x27, 0x29, 0x00, 0x00, 0xff,
     0xb0, 
     0x1e, MP_QSTR_setup & 0xff, MP_QSTR_setup >> 8, 
     0x66, 0x00, 
@@ -2460,6 +2461,9 @@ STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD__update[347] = {
     0x81, 
     0x66, 0x02, 
     0x32, 
+    0x10, 
+    0xb0, 
+    0x26, MP_QSTR__dirty & 0xff, MP_QSTR__dirty >> 8, 
     0x11, 
     0x5b, 
 };
@@ -2486,7 +2490,7 @@ STATIC const mp_raw_code_t raw_code_fcb__epd__lt_module_gt__EPD__update = {
         .bytecode = bytecode_data_fcb__epd__lt_module_gt__EPD__update,
         .const_table = (mp_uint_t*)const_table_data_fcb__epd__lt_module_gt__EPD__update,
         #if MICROPY_PERSISTENT_CODE_SAVE
-        .bc_len = 347,
+        .bc_len = 353,
         .n_obj = 1,
         .n_raw_code = 0,
         #endif
@@ -2494,18 +2498,18 @@ STATIC const mp_raw_code_t raw_code_fcb__epd__lt_module_gt__EPD__update = {
 };
 
 // frozen bytecode for file fcb/_epd.py, scope fcb__epd__lt_module_gt__EPD_set_pixel
-STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD_set_pixel[38] = {
-    0x08, 0x00, 0x00, 0x04, 0x00, 0x00, 0x0a,
+STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD_set_pixel[44] = {
+    0x08, 0x00, 0x00, 0x04, 0x00, 0x00, 0x0b,
     MP_QSTR_set_pixel & 0xff, MP_QSTR_set_pixel >> 8,
     MP_QSTR_fcb_slash__epd_dot_py & 0xff, MP_QSTR_fcb_slash__epd_dot_py >> 8,
-    0x81, 0x68, 0x2a, 0x00, 0x00, 0xff,
+    0x81, 0x6b, 0x2a, 0x29, 0x00, 0x00, 0xff,
     0xb3, 
     0x80, 
     0x81, 
     0x82, 
     0x50, 0x03, 
     0xdd, 
-    0x37, 0x09, 0x80, 
+    0x37, 0x0e, 0x80, 
     0xb3, 
     0xb0, 
     0x1d, MP_QSTR_buf & 0xff, MP_QSTR_buf >> 8, 
@@ -2513,6 +2517,9 @@ STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD_set_pixel[38] = {
     0x21, 
     0xb1, 
     0x27, 
+    0x12, 
+    0xb0, 
+    0x26, MP_QSTR__dirty & 0xff, MP_QSTR__dirty >> 8, 
     0x11, 
     0x5b, 
 };
@@ -2530,7 +2537,35 @@ STATIC const mp_raw_code_t raw_code_fcb__epd__lt_module_gt__EPD_set_pixel = {
         .bytecode = bytecode_data_fcb__epd__lt_module_gt__EPD_set_pixel,
         .const_table = (mp_uint_t*)const_table_data_fcb__epd__lt_module_gt__EPD_set_pixel,
         #if MICROPY_PERSISTENT_CODE_SAVE
-        .bc_len = 38,
+        .bc_len = 44,
+        .n_obj = 0,
+        .n_raw_code = 0,
+        #endif
+    },
+};
+
+// frozen bytecode for file fcb/_epd.py, scope fcb__epd__lt_module_gt__EPD_dirty
+STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD_dirty[21] = {
+    0x02, 0x00, 0x00, 0x01, 0x00, 0x00, 0x09,
+    MP_QSTR_dirty & 0xff, MP_QSTR_dirty >> 8,
+    MP_QSTR_fcb_slash__epd_dot_py & 0xff, MP_QSTR_fcb_slash__epd_dot_py >> 8,
+    0x81, 0x71, 0x00, 0x00, 0xff,
+    0xb0, 
+    0x1d, MP_QSTR__dirty & 0xff, MP_QSTR__dirty >> 8, 
+    0x5b, 
+};
+STATIC const mp_rom_obj_t const_table_data_fcb__epd__lt_module_gt__EPD_dirty[1] = {
+    MP_ROM_QSTR(MP_QSTR_self),
+};
+STATIC const mp_raw_code_t raw_code_fcb__epd__lt_module_gt__EPD_dirty = {
+    .kind = MP_CODE_BYTECODE,
+    .scope_flags = 0x00,
+    .n_pos_args = 1,
+    .data.u_byte = {
+        .bytecode = bytecode_data_fcb__epd__lt_module_gt__EPD_dirty,
+        .const_table = (mp_uint_t*)const_table_data_fcb__epd__lt_module_gt__EPD_dirty,
+        #if MICROPY_PERSISTENT_CODE_SAVE
+        .bc_len = 21,
         .n_obj = 0,
         .n_raw_code = 0,
         #endif
@@ -2542,7 +2577,7 @@ STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD__rotate_buf[75] = {
     0x0a, 0x00, 0x00, 0x03, 0x00, 0x01, 0x0b,
     MP_QSTR__rotate_buf & 0xff, MP_QSTR__rotate_buf >> 8,
     MP_QSTR_fcb_slash__epd_dot_py & 0xff, MP_QSTR_fcb_slash__epd_dot_py >> 8,
-    0x81, 0x6c, 0x35, 0x25, 0x00, 0x00, 0xff,
+    0x81, 0x74, 0x35, 0x25, 0x00, 0x00, 0xff,
     0xb2, 
     0x80, 
     0x14, 0x80, 0x5a, 
@@ -2601,7 +2636,7 @@ STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD_show[138] = {
     0x11, 0x00, 0x00, 0x01, 0x00, 0x00, 0x16,
     MP_QSTR_show & 0xff, MP_QSTR_show >> 8,
     MP_QSTR_fcb_slash__epd_dot_py & 0xff, MP_QSTR_fcb_slash__epd_dot_py >> 8,
-    0x81, 0x71, 0x45, 0x27, 0x4c, 0x23, 0x43, 0x26, 0x26, 0x26, 0x4b, 0x28, 0x26, 0x4b, 0x4e, 0x00, 0x00, 0xff,
+    0x81, 0x79, 0x45, 0x27, 0x4c, 0x23, 0x43, 0x26, 0x26, 0x26, 0x4b, 0x28, 0x26, 0x4b, 0x4e, 0x00, 0x00, 0xff,
     0xb0, 
     0x1d, MP_QSTR_buf & 0xff, MP_QSTR_buf >> 8, 
     0xc1, 
@@ -2691,7 +2726,7 @@ STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD__spi_write[32] = {
     0x07, 0x00, 0x00, 0x03, 0x00, 0x00, 0x09,
     MP_QSTR__spi_write & 0xff, MP_QSTR__spi_write >> 8,
     MP_QSTR_fcb_slash__epd_dot_py & 0xff, MP_QSTR_fcb_slash__epd_dot_py >> 8,
-    0x81, 0x87, 0x00, 0x00, 0xff,
+    0x81, 0x8f, 0x00, 0x00, 0xff,
     0xb0, 
     0x1d, MP_QSTR__spi & 0xff, MP_QSTR__spi >> 8, 
     0x1e, MP_QSTR_write & 0xff, MP_QSTR_write >> 8, 
@@ -2727,7 +2762,7 @@ STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD__send_command[48] = 
     0x07, 0x00, 0x00, 0x03, 0x00, 0x01, 0x0b,
     MP_QSTR__send_command & 0xff, MP_QSTR__send_command >> 8,
     MP_QSTR_fcb_slash__epd_dot_py & 0xff, MP_QSTR_fcb_slash__epd_dot_py >> 8,
-    0x81, 0x8a, 0x2d, 0x27, 0x00, 0x00, 0xff,
+    0x81, 0x92, 0x2d, 0x27, 0x00, 0x00, 0xff,
     0xb0, 
     0x1e, MP_QSTR__spi_write & 0xff, MP_QSTR__spi_write >> 8, 
     0x1c, MP_QSTR__SPI_COMMAND & 0xff, MP_QSTR__SPI_COMMAND >> 8, 
@@ -2773,7 +2808,7 @@ STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD__send_data[47] = {
     0x06, 0x00, 0x00, 0x02, 0x00, 0x00, 0x0b,
     MP_QSTR__send_data & 0xff, MP_QSTR__send_data >> 8,
     MP_QSTR_fcb_slash__epd_dot_py & 0xff, MP_QSTR_fcb_slash__epd_dot_py >> 8,
-    0x81, 0x8f, 0x2c, 0x24, 0x00, 0x00, 0xff,
+    0x81, 0x97, 0x2c, 0x24, 0x00, 0x00, 0xff,
     0x1c, MP_QSTR_isinstance & 0xff, MP_QSTR_isinstance >> 8, 
     0xb1, 
     0x1c, MP_QSTR_int & 0xff, MP_QSTR_int >> 8, 
@@ -2811,11 +2846,11 @@ STATIC const mp_raw_code_t raw_code_fcb__epd__lt_module_gt__EPD__send_data = {
 };
 
 // frozen bytecode for file fcb/_epd.py, scope fcb__epd__lt_module_gt__EPD
-STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD[105] = {
-    0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1a,
+STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD[117] = {
+    0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1c,
     MP_QSTR_EPD & 0xff, MP_QSTR_EPD >> 8,
     MP_QSTR_fcb_slash__epd_dot_py & 0xff, MP_QSTR_fcb_slash__epd_dot_py >> 8,
-    0x8d, 0x0e, 0x85, 0x24, 0x85, 0x09, 0x65, 0x20, 0x85, 0x28, 0x65, 0x20, 0x69, 0x40, 0x85, 0x16, 0x65, 0x69, 0x40, 0x00, 0x00, 0xff,
+    0x8d, 0x0e, 0x85, 0x26, 0x85, 0x09, 0x65, 0x20, 0x85, 0x29, 0x65, 0x40, 0x6a, 0x20, 0x69, 0x40, 0x85, 0x16, 0x65, 0x69, 0x40, 0x00, 0x00, 0xff,
     0x1b, MP_QSTR___name__ & 0xff, MP_QSTR___name__ >> 8, 
     0x24, MP_QSTR___module__ & 0xff, MP_QSTR___module__ >> 8, 
     0x16, MP_QSTR_EPD & 0xff, MP_QSTR_EPD >> 8, 
@@ -2830,31 +2865,36 @@ STATIC const byte bytecode_data_fcb__epd__lt_module_gt__EPD[105] = {
     0x24, MP_QSTR__update & 0xff, MP_QSTR__update >> 8, 
     0x60, 0x04, 
     0x24, MP_QSTR_set_pixel & 0xff, MP_QSTR_set_pixel >> 8, 
+    0x1b, MP_QSTR_property & 0xff, MP_QSTR_property >> 8, 
+    0x60, 0x05, 
+    0x64, 0x01, 
+    0x24, MP_QSTR_dirty & 0xff, MP_QSTR_dirty >> 8, 
     0x80, 
     0x50, 0x01, 
     0x18, 
-    0x61, 0x05, 
+    0x61, 0x06, 
     0x24, MP_QSTR__rotate_buf & 0xff, MP_QSTR__rotate_buf >> 8, 
-    0x60, 0x06, 
-    0x24, MP_QSTR_show & 0xff, MP_QSTR_show >> 8, 
     0x60, 0x07, 
+    0x24, MP_QSTR_show & 0xff, MP_QSTR_show >> 8, 
+    0x60, 0x08, 
     0x24, MP_QSTR__spi_write & 0xff, MP_QSTR__spi_write >> 8, 
     0x11, 
     0x50, 0x01, 
     0x18, 
-    0x61, 0x08, 
+    0x61, 0x09, 
     0x24, MP_QSTR__send_command & 0xff, MP_QSTR__send_command >> 8, 
-    0x60, 0x09, 
+    0x60, 0x0a, 
     0x24, MP_QSTR__send_data & 0xff, MP_QSTR__send_data >> 8, 
     0x11, 
     0x5b, 
 };
-STATIC const mp_rom_obj_t const_table_data_fcb__epd__lt_module_gt__EPD[10] = {
+STATIC const mp_rom_obj_t const_table_data_fcb__epd__lt_module_gt__EPD[11] = {
     MP_ROM_PTR(&raw_code_fcb__epd__lt_module_gt__EPD___init__),
     MP_ROM_PTR(&raw_code_fcb__epd__lt_module_gt__EPD_setup),
     MP_ROM_PTR(&raw_code_fcb__epd__lt_module_gt__EPD__busy_wait),
     MP_ROM_PTR(&raw_code_fcb__epd__lt_module_gt__EPD__update),
     MP_ROM_PTR(&raw_code_fcb__epd__lt_module_gt__EPD_set_pixel),
+    MP_ROM_PTR(&raw_code_fcb__epd__lt_module_gt__EPD_dirty),
     MP_ROM_PTR(&raw_code_fcb__epd__lt_module_gt__EPD__rotate_buf),
     MP_ROM_PTR(&raw_code_fcb__epd__lt_module_gt__EPD_show),
     MP_ROM_PTR(&raw_code_fcb__epd__lt_module_gt__EPD__spi_write),
@@ -2869,9 +2909,9 @@ STATIC const mp_raw_code_t raw_code_fcb__epd__lt_module_gt__EPD = {
         .bytecode = bytecode_data_fcb__epd__lt_module_gt__EPD,
         .const_table = (mp_uint_t*)const_table_data_fcb__epd__lt_module_gt__EPD,
         #if MICROPY_PERSISTENT_CODE_SAVE
-        .bc_len = 105,
+        .bc_len = 117,
         .n_obj = 0,
-        .n_raw_code = 10,
+        .n_raw_code = 11,
         #endif
     },
 };
@@ -4415,11 +4455,11 @@ STATIC const mp_raw_code_t raw_code_fcb_fcb__lt_module_gt__FCB___init__ = {
 };
 
 // frozen bytecode for file fcb/fcb.py, scope fcb_fcb__lt_module_gt__FCB_start
-STATIC const byte bytecode_data_fcb_fcb__lt_module_gt__FCB_start[199] = {
-    0x06, 0x00, 0x00, 0x01, 0x00, 0x00, 0x18,
+STATIC const byte bytecode_data_fcb_fcb__lt_module_gt__FCB_start[208] = {
+    0x06, 0x00, 0x00, 0x01, 0x00, 0x00, 0x19,
     MP_QSTR_start & 0xff, MP_QSTR_start >> 8,
     MP_QSTR_fcb_slash_fcb_dot_py & 0xff, MP_QSTR_fcb_slash_fcb_dot_py >> 8,
-    0x81, 0x2b, 0x27, 0x4a, 0x29, 0x28, 0x4a, 0x20, 0x37, 0x2a, 0x23, 0x2e, 0x27, 0x29, 0x23, 0x3c, 0x2c, 0x00, 0x00, 0xff,
+    0x81, 0x2b, 0x27, 0x4a, 0x29, 0x28, 0x4a, 0x20, 0x37, 0x2a, 0x23, 0x2e, 0x27, 0x29, 0x23, 0x3c, 0x2a, 0x2a, 0x00, 0x00, 0xff,
     0xb0, 
     0x1e, MP_QSTR_clear_disp & 0xff, MP_QSTR_clear_disp >> 8, 
     0x66, 0x00, 
@@ -4459,7 +4499,7 @@ STATIC const byte bytecode_data_fcb_fcb__lt_module_gt__FCB_start[199] = {
     0x8a, 
     0x66, 0x01, 
     0x32, 
-    0x35, 0x53, 0x80, 
+    0x35, 0x5b, 0x80, 
     0xb0, 
     0x1d, MP_QSTR__uart & 0xff, MP_QSTR__uart >> 8, 
     0x1e, MP_QSTR_any & 0xff, MP_QSTR_any >> 8, 
@@ -4493,13 +4533,17 @@ STATIC const byte bytecode_data_fcb_fcb__lt_module_gt__FCB_start[199] = {
     0x1d, MP_QSTR__app & 0xff, MP_QSTR__app >> 8, 
     0x1e, MP_QSTR_redraw & 0xff, MP_QSTR_redraw >> 8, 
     0x66, 0x00, 
+    0x32, 
+    0xb0, 
+    0x1d, MP_QSTR__epd & 0xff, MP_QSTR__epd >> 8, 
+    0x1d, MP_QSTR_dirty & 0xff, MP_QSTR_dirty >> 8, 
     0x37, 0x0a, 0x80, 
     0xb0, 
     0x1d, MP_QSTR__epd & 0xff, MP_QSTR__epd >> 8, 
     0x1e, MP_QSTR_show & 0xff, MP_QSTR_show >> 8, 
     0x66, 0x00, 
     0x32, 
-    0x35, 0x86, 0x7f, 
+    0x35, 0x7e, 0x7f, 
     0x11, 
     0x5b, 
 };
@@ -4516,7 +4560,7 @@ STATIC const mp_raw_code_t raw_code_fcb_fcb__lt_module_gt__FCB_start = {
         .bytecode = bytecode_data_fcb_fcb__lt_module_gt__FCB_start,
         .const_table = (mp_uint_t*)const_table_data_fcb_fcb__lt_module_gt__FCB_start,
         #if MICROPY_PERSISTENT_CODE_SAVE
-        .bc_len = 199,
+        .bc_len = 208,
         .n_obj = 1,
         .n_raw_code = 0,
         #endif
@@ -4528,7 +4572,7 @@ STATIC const byte bytecode_data_fcb_fcb__lt_module_gt__FCB_clear_disp[45] = {
     0x08, 0x00, 0x00, 0x01, 0x00, 0x00, 0x09,
     MP_QSTR_clear_disp & 0xff, MP_QSTR_clear_disp >> 8,
     MP_QSTR_fcb_slash_fcb_dot_py & 0xff, MP_QSTR_fcb_slash_fcb_dot_py >> 8,
-    0x81, 0x3f, 0x00, 0x00, 0xff,
+    0x81, 0x40, 0x00, 0x00, 0xff,
     0xb0, 
     0x1d, MP_QSTR__gfx & 0xff, MP_QSTR__gfx >> 8, 
     0x1e, MP_QSTR_fill_rect & 0xff, MP_QSTR_fill_rect >> 8, 
@@ -4573,7 +4617,7 @@ STATIC const byte bytecode_data_fcb_fcb__lt_module_gt__FCB__event_waiting[31] = 
     0x04, 0x00, 0x00, 0x01, 0x00, 0x00, 0x09,
     MP_QSTR__event_waiting & 0xff, MP_QSTR__event_waiting >> 8,
     MP_QSTR_fcb_slash_fcb_dot_py & 0xff, MP_QSTR_fcb_slash_fcb_dot_py >> 8,
-    0x81, 0x42, 0x00, 0x00, 0xff,
+    0x81, 0x43, 0x00, 0x00, 0xff,
     0x1c, MP_QSTR_bool & 0xff, MP_QSTR_bool >> 8, 
     0x1c, MP_QSTR_len & 0xff, MP_QSTR_len >> 8, 
     0xb0, 
@@ -4605,7 +4649,7 @@ STATIC const byte bytecode_data_fcb_fcb__lt_module_gt__FCB__handle_touch_intr[52
     0x0d, 0x00, 0x00, 0x02, 0x00, 0x00, 0x0a,
     MP_QSTR__handle_touch_intr & 0xff, MP_QSTR__handle_touch_intr >> 8,
     MP_QSTR_fcb_slash_fcb_dot_py & 0xff, MP_QSTR_fcb_slash_fcb_dot_py >> 8,
-    0x81, 0x45, 0x26, 0x00, 0x00, 0xff,
+    0x81, 0x46, 0x26, 0x00, 0x00, 0xff,
     0xb1, 
     0x47, 
     0x43, 0x1c, 0x00, 
@@ -4649,7 +4693,7 @@ STATIC const byte bytecode_data_fcb_fcb__lt_module_gt__FCB__handle_uart[65] = {
     0x08, 0x00, 0x00, 0x01, 0x00, 0x00, 0x0a,
     MP_QSTR__handle_uart & 0xff, MP_QSTR__handle_uart >> 8,
     MP_QSTR_fcb_slash_fcb_dot_py & 0xff, MP_QSTR_fcb_slash_fcb_dot_py >> 8,
-    0x81, 0x49, 0x23, 0x00, 0x00, 0xff,
+    0x81, 0x4a, 0x23, 0x00, 0x00, 0xff,
     0x35, 0x1d, 0x80, 
     0xb0, 
     0x1d, MP_QSTR__event_queue & 0xff, MP_QSTR__event_queue >> 8, 
@@ -4697,7 +4741,7 @@ STATIC const byte bytecode_data_fcb_fcb__lt_module_gt__FCB[68] = {
     0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x11,
     MP_QSTR_FCB & 0xff, MP_QSTR_FCB >> 8,
     MP_QSTR_fcb_slash_fcb_dot_py & 0xff, MP_QSTR_fcb_slash_fcb_dot_py >> 8,
-    0x8d, 0x1e, 0x85, 0x0c, 0x85, 0x14, 0x65, 0x65, 0x65, 0x20, 0x00, 0x00, 0xff,
+    0x8d, 0x1e, 0x85, 0x0c, 0x85, 0x15, 0x65, 0x65, 0x65, 0x20, 0x00, 0x00, 0xff,
     0x1b, MP_QSTR___name__ & 0xff, MP_QSTR___name__ >> 8, 
     0x24, MP_QSTR___module__ & 0xff, MP_QSTR___module__ >> 8, 
     0x16, MP_QSTR_FCB & 0xff, MP_QSTR_FCB >> 8, 
@@ -6531,14 +6575,14 @@ STATIC const mp_raw_code_t raw_code_fcb_default_apps_circle_test__lt_module_gt__
 };
 
 // frozen bytecode for file fcb/default_apps/circle_test.py, scope fcb_default_apps_circle_test__lt_module_gt__App_redraw
-STATIC const byte bytecode_data_fcb_default_apps_circle_test__lt_module_gt__App_redraw[80] = {
-    0x09, 0x00, 0x00, 0x02, 0x00, 0x00, 0x0e,
+STATIC const byte bytecode_data_fcb_default_apps_circle_test__lt_module_gt__App_redraw[76] = {
+    0x09, 0x00, 0x00, 0x02, 0x00, 0x00, 0x0c,
     MP_QSTR_redraw & 0xff, MP_QSTR_redraw >> 8,
     MP_QSTR_fcb_slash_default_apps_slash_circle_test_dot_py & 0xff, MP_QSTR_fcb_slash_default_apps_slash_circle_test_dot_py >> 8,
-    0x81, 0x2f, 0x27, 0x37, 0x34, 0x25, 0x22, 0x00, 0x00, 0xff,
+    0x81, 0x2f, 0x27, 0x37, 0x34, 0x00, 0x00, 0xff,
     0xb0, 
     0x1d, MP_QSTR_changed & 0xff, MP_QSTR_changed >> 8, 
-    0x37, 0x32, 0x80, 
+    0x37, 0x30, 0x80, 
     0xb1, 
     0x1e, MP_QSTR_fill_rect & 0xff, MP_QSTR_fill_rect >> 8, 
     0x80, 
@@ -6569,9 +6613,7 @@ STATIC const byte bytecode_data_fcb_default_apps_circle_test__lt_module_gt__App_
     0x10, 
     0xb0, 
     0x26, MP_QSTR_changed & 0xff, MP_QSTR_changed >> 8, 
-    0x12, 
-    0x5b, 
-    0x10, 
+    0x11, 
     0x5b, 
 };
 STATIC const mp_rom_obj_t const_table_data_fcb_default_apps_circle_test__lt_module_gt__App_redraw[2] = {
@@ -6586,7 +6628,7 @@ STATIC const mp_raw_code_t raw_code_fcb_default_apps_circle_test__lt_module_gt__
         .bytecode = bytecode_data_fcb_default_apps_circle_test__lt_module_gt__App_redraw,
         .const_table = (mp_uint_t*)const_table_data_fcb_default_apps_circle_test__lt_module_gt__App_redraw,
         #if MICROPY_PERSISTENT_CODE_SAVE
-        .bc_len = 80,
+        .bc_len = 76,
         .n_obj = 0,
         .n_raw_code = 0,
         #endif

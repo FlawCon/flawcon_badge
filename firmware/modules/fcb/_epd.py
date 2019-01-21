@@ -26,6 +26,8 @@ class EPD:
         self._cs_pin = cs_pin
         self._spi = spi
 
+        self._dirty = False
+
         self._luts = {
             'default': [
                 # Phase 0     Phase 1     Phase 2     Phase 3     Phase 4     Phase 5     Phase 6
@@ -100,10 +102,16 @@ class EPD:
         time.sleep(0.05)
         self._busy_wait()
         self._send_command(0x10, 0x01)  # Enter Deep Sleep
+        self._dirty = False
 
     def set_pixel(self, x, y, v):
         if v in (WHITE, BLACK, RED):
             self.buf[y][x] = v
+            self._dirty = True
+
+    @property
+    def dirty(self):
+        return self._dirty
 
     def _rotate_buf(self, matrix, degree=0):
         if degree not in [0, 90, 180, 270, 360]:

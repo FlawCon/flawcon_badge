@@ -83,6 +83,8 @@ SRC_C = \
 	machine_wdt.c \
 	machine_hspi.c \
 	machine_ep_spi.c \
+	qrcode.c \
+	modqr.c \
 	modesp.c \
 	modnetwork.c \
 	modutime.c \

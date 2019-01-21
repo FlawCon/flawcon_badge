@@ -57,7 +57,8 @@ class FCB:
             if self._event_waiting():
                 while self._event_waiting():
                     self._app.handle_event(self._event_queue.popleft())
-            if self._app.redraw():
+            self._app.redraw()
+            if self._epd.dirty:
                 self._epd.show()
 
     def clear_disp(self):

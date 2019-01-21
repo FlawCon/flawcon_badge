@@ -94,6 +94,14 @@ Q(EBADF)
 
 Q(EBADF)
 
+Q(ECC_HIGH)
+
+Q(ECC_LOW)
+
+Q(ECC_MEDIUM)
+
+Q(ECC_QUARTILE)
+
 Q(ECONNABORTED)
 
 Q(ECONNABORTED)
@@ -353,6 +361,10 @@ Q(Pin)
 Q(Pin)
 
 Q(PinBase)
+
+Q(QR)
+
+Q(QR)
 
 Q(RGB565)
 
@@ -657,6 +669,8 @@ Q(__mod__)
 Q(__module__)
 
 Q(__mul__)
+
+Q(__name__)
 
 Q(__name__)
 
@@ -1662,6 +1676,8 @@ Q(math)
 
 Q(math)
 
+Q(matrix)
+
 Q(max)
 
 Q(maximum_space_recursion_space_depth_space_exceeded)
@@ -1905,6 +1921,10 @@ Q(pull)
 Q(push)
 
 Q(put)
+
+Q(qr)
+
+Q(qr)
 
 Q(qstr_info)
 
@@ -2527,6 +2547,8 @@ Q(websocket)
 Q(websocket)
 
 Q(wrap_socket)
+
+Q(write)
 
 Q(write)
 

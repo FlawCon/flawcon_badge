@@ -339,7 +339,8 @@ extern const struct _mp_obj_module_t utime_module;
 extern const struct _mp_obj_module_t uos_module;
 extern const struct _mp_obj_module_t mp_module_lwip;
 extern const struct _mp_obj_module_t mp_module_machine;
-# 204 "./mpconfigport.h"
+extern const struct _mp_obj_module_t qr_module;
+# 206 "./mpconfigport.h"
 # 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/alloca.h" 1 3
 # 10 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/alloca.h" 3
 # 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 1 3
@@ -559,7 +560,7 @@ extern struct _reent *const _global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
 # 12 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/alloca.h" 2 3
-# 205 "./mpconfigport.h" 2
+# 207 "./mpconfigport.h" 2
 # 63 "../micropython/py/mpconfig.h" 2
 # 614 "../micropython/py/mpconfig.h"
 typedef float mp_float_t;
@@ -694,6 +695,14 @@ Q(EALREADY)
 Q(EBADF)
 
 Q(EBADF)
+
+Q(ECC_HIGH)
+
+Q(ECC_LOW)
+
+Q(ECC_MEDIUM)
+
+Q(ECC_QUARTILE)
 
 Q(ECONNABORTED)
 
@@ -954,6 +963,10 @@ Q(Pin)
 Q(Pin)
 
 Q(PinBase)
+
+Q(QR)
+
+Q(QR)
 
 Q(RGB565)
 
@@ -1258,6 +1271,8 @@ Q(__mod__)
 Q(__module__)
 
 Q(__mul__)
+
+Q(__name__)
 
 Q(__name__)
 
@@ -2263,6 +2278,8 @@ Q(math)
 
 Q(math)
 
+Q(matrix)
+
 Q(max)
 
 Q(maximum_space_recursion_space_depth_space_exceeded)
@@ -2506,6 +2523,10 @@ Q(pull)
 Q(push)
 
 Q(put)
+
+Q(qr)
+
+Q(qr)
 
 Q(qstr_info)
 
@@ -3128,6 +3149,8 @@ Q(websocket)
 Q(websocket)
 
 Q(wrap_socket)
+
+Q(write)
 
 Q(write)
 

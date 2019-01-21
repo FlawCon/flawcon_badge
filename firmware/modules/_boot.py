@@ -17,4 +17,4 @@ esp.sleep_type(esp.SLEEP_MODEM)
 
 import fcb
 fc = fcb.FCB()
-fc.start()
+# fc.start()

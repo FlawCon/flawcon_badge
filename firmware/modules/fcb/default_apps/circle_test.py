@@ -49,5 +49,3 @@ class App:
             gfx.fill_rect(0, 0, RESOLUTION[0][0], RESOLUTION[0][1])
             gfx.circle(self.circle_x, self.circle_y, self.circle_radius, 1)
             self.changed = False
-            return True
-        return False
