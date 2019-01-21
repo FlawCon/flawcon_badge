@@ -10,250 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d7cb189-dfa7-4409-80ed-d743a6a0daeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/machine_ep_spi.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/epd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../badge/_saved_badge.sch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../badge/badge.bak" beforeDir="false" afterPath="$PROJECT_DIR$/../badge/badge.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../badge/badge.sch" beforeDir="false" afterPath="$PROJECT_DIR$/../badge/badge.sch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/build/frozen_mpy.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/build/frozen_mpy.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/esp_init_data.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp_init_data.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/esp_mphal.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/esp_mphal.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/espapa102.P" beforeDir="false" afterPath="$PROJECT_DIR$/build/espapa102.P" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/espapa102.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/espapa102.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/espneopixel.P" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/espneopixel.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/machine_i2c.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/machine_i2c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/machine_mem.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/machine_mem.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/machine_pinbase.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/machine_pinbase.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/machine_signal.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/machine_signal.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/machine_spi.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/machine_spi.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/modbtree.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/modbtree.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/modframebuf.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/modframebuf.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/modlwip.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/modlwip.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/modonewire.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/modonewire.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/modubinascii.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/modubinascii.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/moducryptolib.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/moducryptolib.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/moductypes.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/moductypes.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/moduhashlib.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/moduhashlib.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/moduheapq.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/moduheapq.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/modujson.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/modujson.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/modurandom.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/modurandom.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/modure.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/modure.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/moduselect.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/moduselect.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/modussl_axtls.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/modussl_axtls.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/modutimeq.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/modutimeq.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/moduzlib.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/moduzlib.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/modwebrepl.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/modwebrepl.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/modwebsocket.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/modwebsocket.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/vfs.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/vfs.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/vfs_fat.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/vfs_fat.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/vfs_fat_diskio.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/vfs_fat_diskio.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extmod/vfs_fat_file.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/extmod/vfs_fat_file.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/firmware-combined.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/firmware-combined.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/firmware.elf" beforeDir="false" afterPath="$PROJECT_DIR$/build/firmware.elf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/firmware.elf-0x00000.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/firmware.elf-0x00000.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/firmware.elf-0x09000.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/firmware.elf-0x09000.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/firmware.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/firmware.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/frozen_mpy.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/frozen_mpy.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/frozen_mpy/dht.mpy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/frozen_mpy/ds18x20.mpy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/frozen_mpy/inisetup.mpy" beforeDir="false" afterPath="$PROJECT_DIR$/build/frozen_mpy/inisetup.mpy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/frozen_mpy/neopixel.mpy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/frozen_mpy/onewire.mpy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/frozen_mpy/upip.mpy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/frozen_mpy/upip_utarfile.mpy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/frozen_mpy/webrepl.mpy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/frozen_mpy/webrepl_setup.mpy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/mpversion.h" beforeDir="false" afterPath="$PROJECT_DIR$/build/genhdr/mpversion.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr.i.last" beforeDir="false" afterPath="$PROJECT_DIR$/build/genhdr/qstr.i.last" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__machine_i2c.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__machine_mem.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__machine_pinbase.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__machine_signal.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__machine_spi.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__modbtree.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__modframebuf.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__modlwip.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__modonewire.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__modubinascii.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__moducryptolib.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__moductypes.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__moduhashlib.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__moduheapq.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__modujson.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__modurandom.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__modure.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__moduselect.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__modussl_axtls.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__modutimeq.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__moduzlib.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__modwebrepl.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__modwebsocket.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__vfs.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__vfs_fat.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__extmod__vfs_fat_file.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__lib__utils__pyexec.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__lib__utils__sys_stdio_mphal.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__builtinevex.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__builtinhelp.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__builtinimport.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__compile.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__emitbc.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__emitinlinextensa.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__emitnative.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__gc.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__modarray.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__modbuiltins.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__modcollections.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__modgc.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__modio.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__modmath.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__modmicropython.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__modstruct.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__modsys.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__moduerrno.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objarray.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objattrtuple.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objbool.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objboundmeth.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objclosure.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objdeque.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objdict.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objenumerate.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objexcept.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objfilter.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objfloat.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objfun.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objgenerator.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objgetitemiter.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objint.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objlist.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objmap.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objmodule.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objnone.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objobject.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objpolyiter.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objproperty.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objrange.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objreversed.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objset.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objsingleton.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objslice.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objstr.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objstringio.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objstrunicode.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objtuple.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objtype.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__objzip.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__parse.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__runtime.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__scope.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/@@__@@__py__vm.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/modesp.c.qstr" beforeDir="false" afterPath="$PROJECT_DIR$/build/genhdr/qstr/modesp.c.qstr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/modmachine.c.qstr" beforeDir="false" afterPath="$PROJECT_DIR$/build/genhdr/qstr/modmachine.c.qstr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/mp_main.c.qstr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstr/out" beforeDir="false" afterPath="$PROJECT_DIR$/build/genhdr/qstr/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstrdefs.collected.h" beforeDir="false" afterPath="$PROJECT_DIR$/build/genhdr/qstrdefs.collected.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstrdefs.collected.h.hash" beforeDir="false" afterPath="$PROJECT_DIR$/build/genhdr/qstrdefs.collected.h.hash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstrdefs.generated.h" beforeDir="false" afterPath="$PROJECT_DIR$/build/genhdr/qstrdefs.generated.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/genhdr/qstrdefs.preprocessed.h" beforeDir="false" afterPath="$PROJECT_DIR$/build/genhdr/qstrdefs.preprocessed.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/oofatfs/ff.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/oofatfs/ff.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/oofatfs/option/unicode.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/oofatfs/option/unicode.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/timeutils/timeutils.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/timeutils/timeutils.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/utils/pyexec.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/utils/pyexec.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/utils/sys_stdio_mphal.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/utils/sys_stdio_mphal.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/machine_adc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/machine_adc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/machine_hspi.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/machine_hspi.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/machine_pin.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/machine_pin.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/machine_pwm.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/machine_pwm.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/machine_rtc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/machine_rtc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/machine_uart.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/machine_uart.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/machine_wdt.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/machine_wdt.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/main.P" beforeDir="false" afterPath="$PROJECT_DIR$/build/main.P" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/main.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/modesp.P" beforeDir="false" afterPath="$PROJECT_DIR$/build/modesp.P" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/modesp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/modesp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/modmachine.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/modmachine.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/modnetwork.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/modnetwork.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/moduos.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/moduos.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/modutime.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/modutime.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/mp_main.P" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/mp_main.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/builtinhelp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/builtinhelp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/compile.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/compile.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/emitinlinextensa.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/emitinlinextensa.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/emitnxtensa.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/emitnxtensa.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/modarray.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/modarray.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/modbuiltins.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/modbuiltins.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/modcollections.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/modcollections.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/modgc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/modgc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/modio.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/modio.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/modmath.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/modmath.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/modmicropython.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/modmicropython.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/modstruct.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/modstruct.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/modsys.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/modsys.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/moduerrno.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/moduerrno.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objarray.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objarray.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objattrtuple.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objattrtuple.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objbool.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objbool.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objboundmeth.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objboundmeth.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objclosure.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objclosure.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objdeque.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objdeque.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objdict.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objdict.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objenumerate.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objenumerate.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objexcept.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objexcept.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objfilter.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objfilter.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objfloat.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objfloat.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objfun.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objfun.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objgenerator.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objgenerator.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objgetitemiter.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objgetitemiter.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objint.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objint.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objlist.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objlist.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objmap.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objmap.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objmodule.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objmodule.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objnone.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objnone.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objobject.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objobject.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objpolyiter.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objpolyiter.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objproperty.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objproperty.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objrange.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objrange.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objreversed.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objreversed.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objset.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objset.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objsingleton.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objsingleton.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objslice.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objslice.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objstr.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objstr.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objstringio.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objstringio.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objstrunicode.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objstrunicode.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objtuple.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objtuple.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objtype.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objtype.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/objzip.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/objzip.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/parse.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/parse.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/qstr.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/qstr.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/repl.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/repl.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/runtime.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/runtime.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/py/vm.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/py/vm.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/esp8266_common.ld" beforeDir="false" afterPath="$PROJECT_DIR$/esp8266_common.ld" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/espneopixel.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/espneopixel.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/machine_hspi.c" beforeDir="false" afterPath="$PROJECT_DIR$/machine_hspi.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modesp.c" beforeDir="false" afterPath="$PROJECT_DIR$/modesp.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modmachine.c" beforeDir="false" afterPath="$PROJECT_DIR$/modmachine.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modmachine.h" beforeDir="false" afterPath="$PROJECT_DIR$/modmachine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/apa102.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dht.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/ds18x20.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/inisetup.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/inisetup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/neopixel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/onewire.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/upip.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/upip_utarfile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/webrepl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/webrepl_setup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mp_main.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpconfigport.h" beforeDir="false" afterPath="$PROJECT_DIR$/mpconfigport.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../micropython" beforeDir="false" afterPath="$PROJECT_DIR$/../micropython" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/epd.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/epd.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -262,12 +20,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/epd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1211">
-              <caret line="130" column="23" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
+            <state relative-caret-position="562">
+              <caret line="147" column="63" selection-start-line="147" selection-start-column="63" selection-end-line="147" selection-end-column="63" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -278,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modmachine.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="310" column="33" lean-forward="true" selection-start-line="310" selection-start-column="33" selection-end-line="310" selection-end-column="33" />
+            <state relative-caret-position="5270">
+              <caret line="310" column="33" selection-start-line="310" selection-start-column="33" selection-end-line="310" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -287,7 +45,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modesp.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
+            <state relative-caret-position="374">
               <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
               <folding>
                 <element signature="e#5345#5642#0" expanded="true" />
@@ -300,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mpconfigport.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1369">
+            <state relative-caret-position="1496">
               <caret line="88" column="30" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
             </state>
           </provider>
@@ -309,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/machine_hspi.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
+            <state relative-caret-position="850">
               <caret line="50" column="83" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="85" />
             </state>
           </provider>
@@ -318,7 +76,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/machine_ep_spi.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
+            <state relative-caret-position="833">
               <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
             </state>
           </provider>
@@ -327,7 +85,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="661">
+            <state relative-caret-position="1428">
               <caret line="84" column="15" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="15" />
             </state>
           </provider>
@@ -336,7 +94,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/esp8266_common.ld">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
+            <state relative-caret-position="2737">
               <caret line="161" column="20" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="20" />
             </state>
           </provider>
@@ -345,7 +103,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hspi.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
+            <state relative-caret-position="3162">
               <caret line="186" column="22" selection-start-line="186" selection-start-column="9" selection-end-line="186" selection-end-column="23" />
             </state>
           </provider>
@@ -353,9 +111,7 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hspi.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-540" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -506,18 +262,19 @@
       <updated>1547890522245</updated>
       <workItem from="1547890524154" duration="18209000" />
       <workItem from="1547979799383" duration="13717000" />
+      <workItem from="1548076399370" duration="862000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31926000" />
+    <option name="totallyTimeSpent" value="32788000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1181" extended-state="6" />
+    <frame x="0" y="0" width="1600" height="881" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.118716575" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.12" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -541,13 +298,7 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../esp-open-sdk/sdk/include/user_interface.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="115" column="17" selection-start-line="115" selection-start-column="17" selection-end-line="115" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../esp-open-sdk/sdk/include/user_interface.h" />
     <entry file="file://$PROJECT_DIR$/ets_sys.h" />
     <entry file="file://$PROJECT_DIR$/user_config.h">
       <provider selected="true" editor-type-id="text-editor" />
@@ -662,15 +413,7 @@
         <state relative-caret-position="-1260" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/webrepl_setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-569">
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/webrepl_setup.py" />
     <entry file="file://$PROJECT_DIR$/moduos.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -684,16 +427,7 @@
     <entry file="file://$PROJECT_DIR$/modules/_boot.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/webrepl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="e#71#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/webrepl.py" />
     <entry file="file://$PROJECT_DIR$/modules/websocket_helper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-609" />
@@ -708,9 +442,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/neopixel.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/neopixel.py" />
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
@@ -722,16 +454,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/apa102.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#104#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/apa102.py" />
     <entry file="file://$PROJECT_DIR$/modules/flashbdev.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -765,56 +488,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hspi.h">
+    <entry file="file://$PROJECT_DIR$/modules/epd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/esp8266_common.ld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="161" column="20" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="20" />
+        <state relative-caret-position="562">
+          <caret line="147" column="63" selection-start-line="147" selection-start-column="63" selection-end-line="147" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
+    <entry file="file://$PROJECT_DIR$/modmachine.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="84" column="15" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hspi.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="186" column="22" selection-start-line="186" selection-start-column="9" selection-end-line="186" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/machine_ep_spi.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mpconfigport.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1369">
-          <caret line="88" column="30" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/machine_hspi.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="50" column="83" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="85" />
+        <state relative-caret-position="5270">
+          <caret line="310" column="33" selection-start-line="310" selection-start-column="33" selection-end-line="310" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modesp.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
+        <state relative-caret-position="374">
           <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
           <folding>
             <element signature="e#5345#5642#0" expanded="true" />
@@ -823,22 +516,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modmachine.c">
+    <entry file="file://$PROJECT_DIR$/mpconfigport.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="310" column="33" lean-forward="true" selection-start-line="310" selection-start-column="33" selection-end-line="310" selection-end-column="33" />
+        <state relative-caret-position="1496">
+          <caret line="88" column="30" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/epd.py">
+    <entry file="file://$PROJECT_DIR$/machine_hspi.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1211">
-          <caret line="130" column="23" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="850">
+          <caret line="50" column="83" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="85" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machine_ep_spi.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="84" column="15" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/esp8266_common.ld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2737">
+          <caret line="161" column="20" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hspi.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3162">
+          <caret line="186" column="22" selection-start-line="186" selection-start-column="9" selection-end-line="186" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hspi.h">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

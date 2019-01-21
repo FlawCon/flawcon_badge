@@ -10,14 +10,14 @@ _SPI_COMMAND = False
 _SPI_DATA = True
 
 
-class Inky:
+class _EPD:
     def __init__(self, spi, cs_pin, reset_pin, busy_pin):
 
         self.resolution = const((296, 128))
         self.width, self.height = self.resolution
         self.cols, self.rows, self.rotation = const((128, 296, -90))
 
-        self.buf = bytearray(self.height * self.width)
+        self.buf = [[0 for _ in range(self.height)] for _ in range(self.width)]
         self.border_colour = 0
 
         self._reset_pin = reset_pin
@@ -26,26 +26,7 @@ class Inky:
         self._spi = spi
 
         self._luts = {
-            'black': [
-                # Phase 0     Phase 1     Phase 2     Phase 3     Phase 4     Phase 5     Phase 6
-                # A B C D     A B C D     A B C D     A B C D     A B C D     A B C D     A B C D
-                0b01001000, 0b10100000, 0b00010000, 0b00010000, 0b00010011, 0b00000000, 0b00000000,  # LUT0 - Black
-                0b01001000, 0b10100000, 0b10000000, 0b00000000, 0b00000011, 0b00000000, 0b00000000,  # LUTT1 - White
-                0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,  # IGNORE
-                0b01001000, 0b10100101, 0b00000000, 0b10111011, 0b00000000, 0b00000000, 0b00000000,  # LUT3 - Red
-                0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,  # LUT4 - VCOM
-
-                # Duration            |  Repeat
-                # A   B     C     D   |
-                16,   4,    4,    4,     4,   # 0 Flash
-                16,   4,    4,    4,     4,   # 1 clear
-                4,    8,    8,    16,    16,  # 2 bring in the black
-                0,    0,    0,    0,     0,   # 3 time for red
-                0,    0,    0,    0,     0,   # 4 final black sharpen phase
-                0,    0,    0,    0,     0,   # 5
-                0,    0,    0,    0,     0,   # 6
-            ],
-            'red': [
+            'default': [
                 # Phase 0     Phase 1     Phase 2     Phase 3     Phase 4     Phase 5     Phase 6
                 # A B C D     A B C D     A B C D     A B C D     A B C D     A B C D     A B C D
                 0b01001000, 0b10100000, 0b00010000, 0b00010000, 0b00010011, 0b00000000, 0b00000000,  # LUT0 - Black
@@ -99,21 +80,14 @@ class Inky:
         self._send_command(0x2c, 0x3c)  # VCOM Register, 0x3c = -1.5v?
 
         self._send_command(0x3c, 0x00)
-        if self.border_colour == self.BLACK:
-            self._send_command(0x3c, 0x00)
-        elif self.border_colour == self.RED:
-            self._send_command(0x3c, 0x33)
-        elif self.border_colour == self.YELLOW:
-            self._send_command(0x3c, 0x33)
-        elif self.border_colour == self.WHITE:
-            self._send_command(0x3c, 0xFF)
+        self._send_command(0x3c, 0xFF)
 
-        self._send_command(0x32, self._luts['black'])  # Set LUTs
+        self._send_command(0x32, self._luts['default'])  # Set LUTs
 
         self._send_command(0x44, [0x00, (self.cols // 8) - 1])  # Set RAM X Start/End
         self._send_command(0x45, [0x00, 0x00] + packed_height)  # Set RAM Y Start/End
 
-        # 0x24 == RAM B/W, 0x26 == RAM Red/Yellow/etc
+        # 0x24 == RAM B/W, 0x26 == RAM Red
         for data in ((0x24, buf_a), (0x26, buf_b)):
             cmd, buf = data
             self._send_command(0x4e, 0x00)  # Set RAM X Pointer Start
@@ -130,34 +104,32 @@ class Inky:
         if v in (WHITE, BLACK, RED):
             self.buf[y][x] = v
 
+    def _rotate_buf(self, matrix, degree=0):
+        if degree not in [0, 90, 180, 270, 360]:
+            raise ValueError
+        return matrix if not degree else self._rotate_buf(zip(*matrix[::-1]), degree-90)
+
     def show(self):
         region = self.buf
 
-        if self.v_flip:
-            region = numpy.fliplr(region)
-
-        if self.h_flip:
-            region = numpy.flipud(region)
-
         if self.rotation:
-            region = numpy.rot90(region, self.rotation // 90)
+            region = self._rotate_buf(region, self.rotation)
 
-        buf_a = numpy.packbits(numpy.where(region == BLACK, 0, 1)).tolist()
-        buf_b = numpy.packbits(numpy.where(region == RED, 1, 0)).tolist()
+        buf_a = []
+        buf_b = []
+
+        for row in region:
+            for cell in region:
+                if cell == BLACK:
+                    buf_a.append(1)
+                else:
+                    buf_a.append(0)
+                if cell == RED:
+                    buf_b.append(1)
+                else:
+                    buf_b.append(0)
 
         self._update(buf_a, buf_b)
-
-    def set_border(self, colour):
-        """Set the border colour."""
-        if colour in (WHITE, BLACK, RED):
-            self.border_colour = colour
-
-    def set_image(self, image):
-        """Copy an image to the display."""
-        if self.rotation % 180 == 0:
-            self.buf = numpy.array(image, dtype=numpy.uint8).reshape((self.width, self.height))
-        else:
-            self.buf = numpy.array(image, dtype=numpy.uint8).reshape((self.height, self.width))
 
     def _spi_write(self, dc, values):
         self._spi.write(data, dc)
@@ -173,4 +145,4 @@ class Inky:
             self._spi_write(_SPI_DATA, data)
 
 
-epd = EPD(EPSPI(), Pin(9, Pin.OUT), Pin(10, Pin.IN))
+epd = _EPD(spi=EPSPI(), cs_pin=Pin(15, Pin.OUT), reset_pin=Pin(0, Pin.OUT), busy_pin=Pin(16, Pin.IN))
