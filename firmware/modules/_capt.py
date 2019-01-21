@@ -1,5 +1,4 @@
 from micropython import const
-from machine import Pin, I2C
 
 CAP1296_I2C_ADDRESS = const(0x28)
 
@@ -25,17 +24,22 @@ def _byte_to_keys(keys_as_byte, num_keys=6):
     ]
 
 
-class _CAP1296:
-    def __init__(self, i2c, alert_pin):
+class CAP1296:
+    def __init__(self, i2c, alert_pin, intr):
         self.i2c = i2c
+        self.alert = alert_pin
+        self.intr = intr
         self._addr = CAP1296_I2C_ADDRESS
 
         self.write = lambda r, b: self.i2c.writeto_mem(self._addr, r, b)
         self.read = lambda r, n: self.i2c.readfrom_mem(self._addr, r, n)
-        self.enable_interrupt([])
+        self.alert.irq(handler=self.handle_interrupt, trigger=Pin.IRQ_LOW_LEVEL)
+
+    def handle_interrupt(self):
+        self.intr(self.read_keys(True))
 
     def enable_interrupt(self, keys):
-        self.write(INTERRUPT_ENABLE, _keys_to_byte(keys))
+        self.write(INTERRUPT_ENABLE, _keys_to_byte(keys, default=b'\x3f'))
 
     def enable_multitouch(self, enable, simultaneous_touches=1):
         b_mult_t = (simultaneous_touches - 1) << 2
@@ -51,5 +55,3 @@ class _CAP1296:
 
         return _byte_to_keys(status, num_keys=5) if as_list else status
 
-
-capt = _CAP1296(i2c=I2C(cl=Pin(5), sda=Pin(4), freq=100000), alert_pin=Pin(10))

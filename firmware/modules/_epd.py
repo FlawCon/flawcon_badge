@@ -1,5 +1,4 @@
 from micropython import const
-from machine import Pin, EPSPI
 import time
 
 WHITE = 0
@@ -9,13 +8,15 @@ RED = 2
 _SPI_COMMAND = False
 _SPI_DATA = True
 
+RESOLUTION = const(((296, 128), (128, 296, -90)))
 
-class _EPD:
+
+class EPD:
     def __init__(self, spi, cs_pin, reset_pin, busy_pin):
 
-        self.resolution = const((296, 128))
-        self.width, self.height = self.resolution
-        self.cols, self.rows, self.rotation = const((128, 296, -90))
+        self.resolution = RESOLUTION[0]
+        self.width, self.height = RESOLUTION[0]
+        self.cols, self.rows, self.rotation = RESOLUTION[1]
 
         self.buf = [[0 for _ in range(self.height)] for _ in range(self.width)]
         self.border_colour = 0
@@ -144,5 +145,3 @@ class _EPD:
             data = [data]
             self._spi_write(_SPI_DATA, data)
 
-
-epd = _EPD(spi=EPSPI(), cs_pin=Pin(15, Pin.OUT), reset_pin=Pin(0, Pin.OUT), busy_pin=Pin(16, Pin.IN))

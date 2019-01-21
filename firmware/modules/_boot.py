@@ -11,3 +11,8 @@ except OSError:
     inisetup.setup()
 
 gc.collect()
+
+import fcb
+
+fc = fcb.FCB()
+fc.start()

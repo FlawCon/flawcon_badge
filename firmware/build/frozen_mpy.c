@@ -148,7 +148,7 @@ const qstr_pool_t mp_qstr_frozen_const_pool = {
         (const byte*)"\x92\xb5\x01" "7",
         (const byte*)"\x97\x2a\x04" "8 RX",
         (const byte*)"\x1f\x3f\x0a" "lwIP PCBs:",
-        (const byte*)"\x73\x27\x06" "epd.py",
+        (const byte*)"\x73\x27\x06" "_epd.py",
         (const byte*)"\xf4\xa7\x03" "EPD",
         (const byte*)"\x50\xe1\x04" "_spi",
         (const byte*)"\xcf\x8d\x03" "spi",
@@ -1630,7 +1630,7 @@ const mp_raw_code_t raw_code_port_diag__lt_module_gt_ = {
     },
 };
 
-// frozen bytecode for file epd.py, scope epd__lt_module_gt__EPD___init__
+// frozen bytecode for file _epd.py, scope epd__lt_module_gt__EPD___init__
 STATIC const byte bytecode_data_epd__lt_module_gt__EPD___init__[23] = {
     0x04, 0x00, 0x00, 0x02, 0x00, 0x00, 0x09,
     MP_QSTR___init__ & 0xff, MP_QSTR___init__ >> 8,
@@ -1661,7 +1661,7 @@ STATIC const mp_raw_code_t raw_code_epd__lt_module_gt__EPD___init__ = {
     },
 };
 
-// frozen bytecode for file epd.py, scope epd__lt_module_gt__EPD
+// frozen bytecode for file _epd.py, scope epd__lt_module_gt__EPD
 STATIC const byte bytecode_data_epd__lt_module_gt__EPD[34] = {
     0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08,
     MP_QSTR_EPD & 0xff, MP_QSTR_EPD >> 8,
@@ -1694,7 +1694,7 @@ STATIC const mp_raw_code_t raw_code_epd__lt_module_gt__EPD = {
     },
 };
 
-// frozen bytecode for file epd.py, scope epd_<module>
+// frozen bytecode for file _epd.py, scope epd_<module>
 STATIC const byte bytecode_data_epd__lt_module_gt_[44] = {
     0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08,
     MP_QSTR__lt_module_gt_ & 0xff, MP_QSTR__lt_module_gt_ >> 8,
@@ -1740,7 +1740,7 @@ const char mp_frozen_mpy_names[] = {
 "_boot.py\0"
 "ntptime.py\0"
 "port_diag.py\0"
-"epd.py\0"
+"_epd.py\0"
 "\0"};
 const mp_raw_code_t *const mp_frozen_mpy_content[] = {
     &raw_code_flashbdev__lt_module_gt_,

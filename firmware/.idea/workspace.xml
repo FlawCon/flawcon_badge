@@ -10,8 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d7cb189-dfa7-4409-80ed-d743a6a0daeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/modules/capt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/_capt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/_gfx.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/fcb.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/frozen_mpy.c" beforeDir="false" afterPath="$PROJECT_DIR$/build/frozen_mpy.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/_boot.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/_boot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/capt.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/_adt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/epd.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/_epd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/inisetup.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/inisetup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,65 +30,61 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/epd.py">
+        <entry file="file://$PROJECT_DIR$/modules/_epd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2465">
-              <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
+            <state relative-caret-position="306">
+              <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/fcb.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules/capt.py">
+        <entry file="file://$PROJECT_DIR$/modules/_adt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modesp.c">
+        <entry file="file://$PROJECT_DIR$/modules/_gfx.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-              <folding>
-                <element signature="e#5345#5642#0" expanded="true" />
-                <element signature="e#8768#12370#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-663">
+              <caret column="10" selection-start-column="10" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mpconfigport.h">
+        <entry file="file://$PROJECT_DIR$/modules/_capt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="88" column="30" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
+            <state relative-caret-position="-390">
+              <caret column="29" selection-start-column="29" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/machine_hspi.c">
+        <entry file="file://$PROJECT_DIR$/modules/_boot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="50" column="83" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="85" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/machine_ep_spi.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
+            <state relative-caret-position="289">
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -178,7 +182,6 @@
         <option value="$PROJECT_DIR$/task/task.h" />
         <option value="$PROJECT_DIR$/osapi.h" />
         <option value="$PROJECT_DIR$/uart_register.h" />
-        <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/espmissing.h" />
         <option value="$PROJECT_DIR$/uart.c" />
         <option value="$PROJECT_DIR$/uart.h" />
@@ -186,7 +189,6 @@
         <option value="$PROJECT_DIR$/hal.h" />
         <option value="$PROJECT_DIR$/hal.c" />
         <option value="$PROJECT_DIR$/ets_alt_task.c" />
-        <option value="$PROJECT_DIR$/modules/inisetup.py" />
         <option value="$PROJECT_DIR$/modesp.c" />
         <option value="$PROJECT_DIR$/mpconfigport.h" />
         <option value="$PROJECT_DIR$/modmachine.c" />
@@ -195,8 +197,16 @@
         <option value="$PROJECT_DIR$/esp8266_common.ld" />
         <option value="$PROJECT_DIR$/machine_hspi.c" />
         <option value="$PROJECT_DIR$/machine_ep_spi.c" />
+        <option value="$PROJECT_DIR$/modules/fcb/__init__.py" />
+        <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/modules/inisetup.py" />
+        <option value="$PROJECT_DIR$/modules/_boot.py" />
         <option value="$PROJECT_DIR$/modules/epd.py" />
         <option value="$PROJECT_DIR$/modules/capt.py" />
+        <option value="$PROJECT_DIR$/modules/_gfx.py" />
+        <option value="$PROJECT_DIR$/modules/_epd.py" />
+        <option value="$PROJECT_DIR$/modules/fcb.py" />
+        <option value="$PROJECT_DIR$/modules/_adt.py" />
       </list>
     </option>
   </component>
@@ -238,7 +248,12 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/modules" />
+      <recent name="$PROJECT_DIR$/modules/fcb" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/modules" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -266,12 +281,12 @@
       <updated>1547890522245</updated>
       <workItem from="1547890524154" duration="18209000" />
       <workItem from="1547979799383" duration="13717000" />
-      <workItem from="1548076399370" duration="1567000" />
+      <workItem from="1548076399370" duration="4633000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33493000" />
+    <option name="totallyTimeSpent" value="36559000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1600" height="881" extended-state="6" />
@@ -284,7 +299,7 @@
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" weight="0.3292683" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.328084" />
       <window_info anchor="bottom" id="Run" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="6" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
@@ -302,12 +317,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ets_sys.h" />
-    <entry file="file://$PROJECT_DIR$/user_config.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task/task.h" />
-    <entry file="file://$PROJECT_DIR$/osapi.h" />
     <entry file="file://$PROJECT_DIR$/task/task.c" />
     <entry file="file://$PROJECT_DIR$/uart_register.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -427,9 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/_boot.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/webrepl.py" />
     <entry file="file://$PROJECT_DIR$/modules/websocket_helper.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -446,30 +452,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/neopixel.py" />
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
-          <folding>
-            <element signature="e#2815#2971#0" expanded="true" />
-            <element signature="e#3645#3670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/apa102.py" />
     <entry file="file://$PROJECT_DIR$/modules/flashbdev.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/inisetup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="43" column="74" selection-start-line="43" selection-start-column="74" selection-end-line="43" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/ntptime.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -488,16 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/epd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2465">
-          <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -564,13 +539,77 @@
     <entry file="file://$PROJECT_DIR$/hspi.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/capt.py">
+    <entry file="file://$PROJECT_DIR$/modules/fcb/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+        <state relative-caret-position="674">
+          <caret line="88" column="4" lean-forward="true" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
+          <folding>
+            <element signature="e#2237#2304#0" expanded="true" />
+            <element signature="e#2815#2971#0" expanded="true" />
+            <element signature="e#3192#3217#0" expanded="true" />
+            <element signature="e#3645#3670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/inisetup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="74" selection-start-line="47" selection-start-column="74" selection-end-line="47" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/_boot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/_capt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-390">
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/_epd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/_gfx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-663">
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/fcb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/_adt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
         </state>
       </provider>
     </entry>
