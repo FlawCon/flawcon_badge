@@ -1,1 +1,1 @@
-from fcb import FCB, Event, RESOLUTION
+from fcb.fcb import FCB, Event, RESOLUTION

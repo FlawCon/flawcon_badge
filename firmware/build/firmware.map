@@ -6823,7 +6823,7 @@ Linker script and memory map
  *(.dport.data)
                 0x000000003ff00000                _dport0_data_end = ABSOLUTE (.)
 
-.irom0.text     0x0000000040209000    0x86c52
+.irom0.text     0x0000000040209000    0x86cb2
                 0x0000000040209000                _irom0_text_start = ABSOLUTE (.)
  *(.irom0.literal .irom.literal .irom.text.literal .irom0.text .irom.text)
  .irom0.text    0x0000000040209000      0x2ab build/uart.o
@@ -20385,1052 +20385,1052 @@ Linker script and memory map
  .rodata.const_table_data_fcb_fcb__lt_module_gt__FCB_start
                 0x0000000040289c08        0x8 build/build/frozen_mpy.o
  .rodata.str1.1
-                0x0000000040289c10      0xcf1 build/build/frozen_mpy.o
-                                        0xcf8 (size before relaxing)
- *fill*         0x000000004028a901        0x3 
+                0x0000000040289c10      0xd2d build/build/frozen_mpy.o
+                                        0xd34 (size before relaxing)
+ *fill*         0x000000004028a93d        0x3 
  .rodata.const_obj_fcb_fcb__lt_module_gt__FCB_start_0
-                0x000000004028a904       0x10 build/build/frozen_mpy.o
+                0x000000004028a940       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb_fcb__lt_module_gt__FCB_start
-                0x000000004028a914       0xd0 build/build/frozen_mpy.o
+                0x000000004028a950       0xd0 build/build/frozen_mpy.o
  .rodata.raw_code_fcb_fcb__lt_module_gt__FCB___init__
-                0x000000004028a9e4       0x10 build/build/frozen_mpy.o
+                0x000000004028aa20       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb_fcb__lt_module_gt__FCB___init__
-                0x000000004028a9f4        0x4 build/build/frozen_mpy.o
+                0x000000004028aa30        0x4 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb_fcb__lt_module_gt__FCB___init__
-                0x000000004028a9f8      0x10d build/build/frozen_mpy.o
- *fill*         0x000000004028ab05        0x3 
+                0x000000004028aa34      0x10d build/build/frozen_mpy.o
+ *fill*         0x000000004028ab41        0x3 
  .rodata.raw_code_fcb_fcb__lt_module_gt__Event
-                0x000000004028ab08       0x10 build/build/frozen_mpy.o
+                0x000000004028ab44       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb_fcb__lt_module_gt__Event
-                0x000000004028ab18        0x4 build/build/frozen_mpy.o
+                0x000000004028ab54        0x4 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb_fcb__lt_module_gt__Event
-                0x000000004028ab1c       0x46 build/build/frozen_mpy.o
- *fill*         0x000000004028ab62        0x2 
+                0x000000004028ab58       0x46 build/build/frozen_mpy.o
+ *fill*         0x000000004028ab9e        0x2 
  .rodata.raw_code_fcb_fcb__lt_module_gt__Event___init__
-                0x000000004028ab64       0x10 build/build/frozen_mpy.o
+                0x000000004028aba0       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb_fcb__lt_module_gt__Event___init__
-                0x000000004028ab74       0x10 build/build/frozen_mpy.o
+                0x000000004028abb0       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_fcb_fcb__lt_module_gt__Event___init___0
-                0x000000004028ab84       0x10 build/build/frozen_mpy.o
+                0x000000004028abc0       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb_fcb__lt_module_gt__Event___init__
-                0x000000004028ab94       0x41 build/build/frozen_mpy.o
- *fill*         0x000000004028abd5        0x3 
+                0x000000004028abd0       0x41 build/build/frozen_mpy.o
+ *fill*         0x000000004028ac11        0x3 
  .rodata.raw_code_fcb___init____lt_module_gt_
-                0x000000004028abd8       0x10 build/build/frozen_mpy.o
-                0x000000004028abd8                raw_code_fcb___init____lt_module_gt_
+                0x000000004028ac14       0x10 build/build/frozen_mpy.o
+                0x000000004028ac14                raw_code_fcb___init____lt_module_gt_
  .rodata.bytecode_data_fcb___init____lt_module_gt_
-                0x000000004028abe8       0x32 build/build/frozen_mpy.o
- *fill*         0x000000004028ac1a        0x2 
+                0x000000004028ac24       0x32 build/build/frozen_mpy.o
+ *fill*         0x000000004028ac56        0x2 
  .rodata.raw_code_fcb__font__lt_module_gt_
-                0x000000004028ac1c       0x10 build/build/frozen_mpy.o
-                0x000000004028ac1c                raw_code_fcb__font__lt_module_gt_
+                0x000000004028ac58       0x10 build/build/frozen_mpy.o
+                0x000000004028ac58                raw_code_fcb__font__lt_module_gt_
  .rodata.const_table_data_fcb__font__lt_module_gt_
-                0x000000004028ac2c        0x4 build/build/frozen_mpy.o
+                0x000000004028ac68        0x4 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__font__lt_module_gt_
-                0x000000004028ac30       0x24 build/build/frozen_mpy.o
+                0x000000004028ac6c       0x24 build/build/frozen_mpy.o
  .rodata.raw_code_fcb__font__lt_module_gt__Font
-                0x000000004028ac54       0x10 build/build/frozen_mpy.o
+                0x000000004028ac90       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__font__lt_module_gt__Font
-                0x000000004028ac64       0x14 build/build/frozen_mpy.o
+                0x000000004028aca0       0x14 build/build/frozen_mpy.o
  .rodata.const_obj_fcb__font__lt_module_gt__Font_0
-                0x000000004028ac78       0x10 build/build/frozen_mpy.o
+                0x000000004028acb4       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__font__lt_module_gt__Font
-                0x000000004028ac88       0x3d build/build/frozen_mpy.o
- *fill*         0x000000004028acc5        0x3 
+                0x000000004028acc4       0x3d build/build/frozen_mpy.o
+ *fill*         0x000000004028ad01        0x3 
  .rodata.raw_code_fcb__font__lt_module_gt__Font_width
-                0x000000004028acc8       0x10 build/build/frozen_mpy.o
+                0x000000004028ad04       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__font__lt_module_gt__Font_width
-                0x000000004028acd8        0x8 build/build/frozen_mpy.o
+                0x000000004028ad14        0x8 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__font__lt_module_gt__Font_width
-                0x000000004028ace0       0x1e build/build/frozen_mpy.o
- *fill*         0x000000004028acfe        0x2 
+                0x000000004028ad1c       0x1e build/build/frozen_mpy.o
+ *fill*         0x000000004028ad3a        0x2 
  .rodata.raw_code_fcb__font__lt_module_gt__Font_text
-                0x000000004028ad00       0x10 build/build/frozen_mpy.o
+                0x000000004028ad3c       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__font__lt_module_gt__Font_text
-                0x000000004028ad10       0x10 build/build/frozen_mpy.o
+                0x000000004028ad4c       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__font__lt_module_gt__Font_text
-                0x000000004028ad20       0x40 build/build/frozen_mpy.o
+                0x000000004028ad5c       0x40 build/build/frozen_mpy.o
  .rodata.raw_code_fcb__font__lt_module_gt__Font_draw_char
-                0x000000004028ad60       0x10 build/build/frozen_mpy.o
+                0x000000004028ad9c       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__font__lt_module_gt__Font_draw_char
-                0x000000004028ad70       0x10 build/build/frozen_mpy.o
+                0x000000004028adac       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__font__lt_module_gt__Font_draw_char
-                0x000000004028ad80       0xb2 build/build/frozen_mpy.o
- *fill*         0x000000004028ae32        0x2 
+                0x000000004028adbc       0xb2 build/build/frozen_mpy.o
+ *fill*         0x000000004028ae6e        0x2 
  .rodata.raw_code_fcb__font__lt_module_gt__Font___init__
-                0x000000004028ae34       0x10 build/build/frozen_mpy.o
+                0x000000004028ae70       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__font__lt_module_gt__Font___init__
-                0x000000004028ae44       0x14 build/build/frozen_mpy.o
+                0x000000004028ae80       0x14 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__font__lt_module_gt__Font___init__
-                0x000000004028ae58       0x5a build/build/frozen_mpy.o
- *fill*         0x000000004028aeb2        0x2 
+                0x000000004028ae94       0x5a build/build/frozen_mpy.o
+ *fill*         0x000000004028aeee        0x2 
  .rodata.raw_code_fcb__capt__lt_module_gt_
-                0x000000004028aeb4       0x10 build/build/frozen_mpy.o
-                0x000000004028aeb4                raw_code_fcb__capt__lt_module_gt_
+                0x000000004028aef0       0x10 build/build/frozen_mpy.o
+                0x000000004028aef0                raw_code_fcb__capt__lt_module_gt_
  .rodata.const_table_data_fcb__capt__lt_module_gt_
-                0x000000004028aec4       0x10 build/build/frozen_mpy.o
- .rodata        0x000000004028aed4        0x2 build/build/frozen_mpy.o
- *fill*         0x000000004028aed6        0x2 
+                0x000000004028af00       0x10 build/build/frozen_mpy.o
+ .rodata        0x000000004028af10        0xf build/build/frozen_mpy.o
+ *fill*         0x000000004028af1f        0x1 
  .rodata.const_obj_fcb__capt__lt_module_gt__0
-                0x000000004028aed8       0x10 build/build/frozen_mpy.o
+                0x000000004028af20       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__capt__lt_module_gt_
-                0x000000004028aee8       0x45 build/build/frozen_mpy.o
- *fill*         0x000000004028af2d        0x3 
+                0x000000004028af30       0x45 build/build/frozen_mpy.o
+ *fill*         0x000000004028af75        0x3 
  .rodata.raw_code_fcb__capt__lt_module_gt__CAP1296
-                0x000000004028af30       0x10 build/build/frozen_mpy.o
+                0x000000004028af78       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__capt__lt_module_gt__CAP1296
-                0x000000004028af40       0x18 build/build/frozen_mpy.o
+                0x000000004028af88       0x18 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__capt__lt_module_gt__CAP1296
-                0x000000004028af58       0x4b build/build/frozen_mpy.o
- *fill*         0x000000004028afa3        0x1 
+                0x000000004028afa0       0x4b build/build/frozen_mpy.o
+ *fill*         0x000000004028afeb        0x1 
  .rodata.raw_code_fcb__capt__lt_module_gt__CAP1296_read_keys
-                0x000000004028afa4       0x10 build/build/frozen_mpy.o
+                0x000000004028afec       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__capt__lt_module_gt__CAP1296_read_keys
-                0x000000004028afb4        0xc build/build/frozen_mpy.o
+                0x000000004028affc        0xc build/build/frozen_mpy.o
  .rodata.const_obj_fcb__capt__lt_module_gt__CAP1296_read_keys_0
-                0x000000004028afc0       0x10 build/build/frozen_mpy.o
- .rodata.bytecode_data_fcb__capt__lt_module_gt__CAP1296_read_keys
-                0x000000004028afd0       0x37 build/build/frozen_mpy.o
- *fill*         0x000000004028b007        0x1 
- .rodata.raw_code_fcb__capt__lt_module_gt__CAP1296_enable_keys
                 0x000000004028b008       0x10 build/build/frozen_mpy.o
+ .rodata.bytecode_data_fcb__capt__lt_module_gt__CAP1296_read_keys
+                0x000000004028b018       0x37 build/build/frozen_mpy.o
+ *fill*         0x000000004028b04f        0x1 
+ .rodata.raw_code_fcb__capt__lt_module_gt__CAP1296_enable_keys
+                0x000000004028b050       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__capt__lt_module_gt__CAP1296_enable_keys
-                0x000000004028b018        0xc build/build/frozen_mpy.o
+                0x000000004028b060        0xc build/build/frozen_mpy.o
  .rodata.const_obj_fcb__capt__lt_module_gt__CAP1296_enable_keys_0
-                0x000000004028b024       0x10 build/build/frozen_mpy.o
+                0x000000004028b06c       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__capt__lt_module_gt__CAP1296_enable_keys
-                0x000000004028b034       0x26 build/build/frozen_mpy.o
- *fill*         0x000000004028b05a        0x2 
+                0x000000004028b07c       0x26 build/build/frozen_mpy.o
+ *fill*         0x000000004028b0a2        0x2 
  .rodata.raw_code_fcb__capt__lt_module_gt__CAP1296_enable_multitouch
-                0x000000004028b05c       0x10 build/build/frozen_mpy.o
+                0x000000004028b0a4       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__capt__lt_module_gt__CAP1296_enable_multitouch
-                0x000000004028b06c        0xc build/build/frozen_mpy.o
+                0x000000004028b0b4        0xc build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__capt__lt_module_gt__CAP1296_enable_multitouch
-                0x000000004028b078       0x38 build/build/frozen_mpy.o
+                0x000000004028b0c0       0x38 build/build/frozen_mpy.o
  .rodata.raw_code_fcb__capt__lt_module_gt__CAP1296_enable_interrupt
-                0x000000004028b0b0       0x10 build/build/frozen_mpy.o
+                0x000000004028b0f8       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__capt__lt_module_gt__CAP1296_enable_interrupt
-                0x000000004028b0c0        0xc build/build/frozen_mpy.o
+                0x000000004028b108        0xc build/build/frozen_mpy.o
  .rodata.const_obj_fcb__capt__lt_module_gt__CAP1296_enable_interrupt_0
-                0x000000004028b0cc       0x10 build/build/frozen_mpy.o
+                0x000000004028b114       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__capt__lt_module_gt__CAP1296_enable_interrupt
-                0x000000004028b0dc       0x26 build/build/frozen_mpy.o
- *fill*         0x000000004028b102        0x2 
+                0x000000004028b124       0x26 build/build/frozen_mpy.o
+ *fill*         0x000000004028b14a        0x2 
  .rodata.raw_code_fcb__capt__lt_module_gt__CAP1296_handle_interrupt
-                0x000000004028b104       0x10 build/build/frozen_mpy.o
+                0x000000004028b14c       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__capt__lt_module_gt__CAP1296_handle_interrupt
-                0x000000004028b114        0x4 build/build/frozen_mpy.o
+                0x000000004028b15c        0x4 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__capt__lt_module_gt__CAP1296_handle_interrupt
-                0x000000004028b118       0x20 build/build/frozen_mpy.o
+                0x000000004028b160       0x20 build/build/frozen_mpy.o
  .rodata.raw_code_fcb__capt__lt_module_gt__CAP1296___init__
-                0x000000004028b138       0x10 build/build/frozen_mpy.o
+                0x000000004028b180       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__capt__lt_module_gt__CAP1296___init__
-                0x000000004028b148       0x18 build/build/frozen_mpy.o
+                0x000000004028b190       0x18 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__capt__lt_module_gt__CAP1296___init__
-                0x000000004028b160       0x60 build/build/frozen_mpy.o
+                0x000000004028b1a8       0x60 build/build/frozen_mpy.o
  .rodata.raw_code_fcb__capt__lt_module_gt__CAP1296___init____lt_lambda_gt_2
-                0x000000004028b1c0       0x10 build/build/frozen_mpy.o
+                0x000000004028b208       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__capt__lt_module_gt__CAP1296___init____lt_lambda_gt_2
-                0x000000004028b1d0        0xc build/build/frozen_mpy.o
+                0x000000004028b218        0xc build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__capt__lt_module_gt__CAP1296___init____lt_lambda_gt_2
-                0x000000004028b1dc       0x22 build/build/frozen_mpy.o
- *fill*         0x000000004028b1fe        0x2 
+                0x000000004028b224       0x22 build/build/frozen_mpy.o
+ *fill*         0x000000004028b246        0x2 
  .rodata.raw_code_fcb__capt__lt_module_gt__CAP1296___init____lt_lambda_gt_
-                0x000000004028b200       0x10 build/build/frozen_mpy.o
+                0x000000004028b248       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__capt__lt_module_gt__CAP1296___init____lt_lambda_gt_
-                0x000000004028b210        0xc build/build/frozen_mpy.o
+                0x000000004028b258        0xc build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__capt__lt_module_gt__CAP1296___init____lt_lambda_gt_
-                0x000000004028b21c       0x22 build/build/frozen_mpy.o
- *fill*         0x000000004028b23e        0x2 
+                0x000000004028b264       0x22 build/build/frozen_mpy.o
+ *fill*         0x000000004028b286        0x2 
  .rodata.raw_code_fcb__capt__lt_module_gt___byte_to_keys
-                0x000000004028b240       0x10 build/build/frozen_mpy.o
+                0x000000004028b288       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__capt__lt_module_gt___byte_to_keys
-                0x000000004028b250        0xc build/build/frozen_mpy.o
+                0x000000004028b298        0xc build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__capt__lt_module_gt___byte_to_keys
-                0x000000004028b25c       0x2f build/build/frozen_mpy.o
- *fill*         0x000000004028b28b        0x1 
+                0x000000004028b2a4       0x2f build/build/frozen_mpy.o
+ *fill*         0x000000004028b2d3        0x1 
  .rodata.raw_code_fcb__capt__lt_module_gt___byte_to_keys__lt_listcomp_gt_
-                0x000000004028b28c       0x10 build/build/frozen_mpy.o
+                0x000000004028b2d4       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__capt__lt_module_gt___byte_to_keys__lt_listcomp_gt_
-                0x000000004028b29c        0x8 build/build/frozen_mpy.o
+                0x000000004028b2e4        0x8 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__capt__lt_module_gt___byte_to_keys__lt_listcomp_gt_
-                0x000000004028b2a4       0x28 build/build/frozen_mpy.o
+                0x000000004028b2ec       0x28 build/build/frozen_mpy.o
  .rodata.raw_code_fcb__capt__lt_module_gt___keys_to_byte
-                0x000000004028b2cc       0x10 build/build/frozen_mpy.o
- .rodata.const_table_data_fcb__capt__lt_module_gt___keys_to_byte
-                0x000000004028b2dc        0xc build/build/frozen_mpy.o
- .rodata.bytecode_data_fcb__capt__lt_module_gt___keys_to_byte
-                0x000000004028b2e8       0x2c build/build/frozen_mpy.o
- .rodata.raw_code_fcb__capt__lt_module_gt___keys_to_byte__lt_lambda_gt_
                 0x000000004028b314       0x10 build/build/frozen_mpy.o
+ .rodata.const_table_data_fcb__capt__lt_module_gt___keys_to_byte
+                0x000000004028b324        0xc build/build/frozen_mpy.o
+ .rodata.bytecode_data_fcb__capt__lt_module_gt___keys_to_byte
+                0x000000004028b330       0x2c build/build/frozen_mpy.o
+ .rodata.raw_code_fcb__capt__lt_module_gt___keys_to_byte__lt_lambda_gt_
+                0x000000004028b35c       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__capt__lt_module_gt___keys_to_byte__lt_lambda_gt_
-                0x000000004028b324        0x4 build/build/frozen_mpy.o
+                0x000000004028b36c        0x4 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__capt__lt_module_gt___keys_to_byte__lt_lambda_gt_
-                0x000000004028b328       0x14 build/build/frozen_mpy.o
+                0x000000004028b370       0x14 build/build/frozen_mpy.o
  .rodata.raw_code_fcb__adt__lt_module_gt_
-                0x000000004028b33c       0x10 build/build/frozen_mpy.o
-                0x000000004028b33c                raw_code_fcb__adt__lt_module_gt_
+                0x000000004028b384       0x10 build/build/frozen_mpy.o
+                0x000000004028b384                raw_code_fcb__adt__lt_module_gt_
  .rodata.const_table_data_fcb__adt__lt_module_gt_
-                0x000000004028b34c        0x4 build/build/frozen_mpy.o
+                0x000000004028b394        0x4 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__adt__lt_module_gt_
-                0x000000004028b350       0x2e build/build/frozen_mpy.o
- *fill*         0x000000004028b37e        0x2 
+                0x000000004028b398       0x2e build/build/frozen_mpy.o
+ *fill*         0x000000004028b3c6        0x2 
  .rodata.raw_code_fcb__adt__lt_module_gt__ADT75
-                0x000000004028b380       0x10 build/build/frozen_mpy.o
+                0x000000004028b3c8       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__adt__lt_module_gt__ADT75
-                0x000000004028b390        0x8 build/build/frozen_mpy.o
+                0x000000004028b3d8        0x8 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__adt__lt_module_gt__ADT75
-                0x000000004028b398       0x2a build/build/frozen_mpy.o
- *fill*         0x000000004028b3c2        0x2 
+                0x000000004028b3e0       0x2a build/build/frozen_mpy.o
+ *fill*         0x000000004028b40a        0x2 
  .rodata.raw_code_fcb__adt__lt_module_gt__ADT75_read_temp
-                0x000000004028b3c4       0x10 build/build/frozen_mpy.o
+                0x000000004028b40c       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__adt__lt_module_gt__ADT75_read_temp
-                0x000000004028b3d4        0x8 build/build/frozen_mpy.o
+                0x000000004028b41c        0x8 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__adt__lt_module_gt__ADT75_read_temp
-                0x000000004028b3dc       0x3e build/build/frozen_mpy.o
- *fill*         0x000000004028b41a        0x2 
+                0x000000004028b424       0x3e build/build/frozen_mpy.o
+ *fill*         0x000000004028b462        0x2 
  .rodata.raw_code_fcb__adt__lt_module_gt__ADT75___init__
-                0x000000004028b41c       0x10 build/build/frozen_mpy.o
- .rodata.const_table_data_fcb__adt__lt_module_gt__ADT75___init__
-                0x000000004028b42c        0xc build/build/frozen_mpy.o
- .rodata.bytecode_data_fcb__adt__lt_module_gt__ADT75___init__
-                0x000000004028b438       0x2c build/build/frozen_mpy.o
- .rodata.raw_code_fcb__adt__lt_module_gt__ADT75___init____lt_lambda_gt_
                 0x000000004028b464       0x10 build/build/frozen_mpy.o
- .rodata.const_table_data_fcb__adt__lt_module_gt__ADT75___init____lt_lambda_gt_
+ .rodata.const_table_data_fcb__adt__lt_module_gt__ADT75___init__
                 0x000000004028b474        0xc build/build/frozen_mpy.o
+ .rodata.bytecode_data_fcb__adt__lt_module_gt__ADT75___init__
+                0x000000004028b480       0x2c build/build/frozen_mpy.o
+ .rodata.raw_code_fcb__adt__lt_module_gt__ADT75___init____lt_lambda_gt_
+                0x000000004028b4ac       0x10 build/build/frozen_mpy.o
+ .rodata.const_table_data_fcb__adt__lt_module_gt__ADT75___init____lt_lambda_gt_
+                0x000000004028b4bc        0xc build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__adt__lt_module_gt__ADT75___init____lt_lambda_gt_
-                0x000000004028b480       0x22 build/build/frozen_mpy.o
- *fill*         0x000000004028b4a2        0x2 
+                0x000000004028b4c8       0x22 build/build/frozen_mpy.o
+ *fill*         0x000000004028b4ea        0x2 
  .rodata.raw_code_fcb__epd__lt_module_gt_
-                0x000000004028b4a4       0x10 build/build/frozen_mpy.o
-                0x000000004028b4a4                raw_code_fcb__epd__lt_module_gt_
+                0x000000004028b4ec       0x10 build/build/frozen_mpy.o
+                0x000000004028b4ec                raw_code_fcb__epd__lt_module_gt_
  .rodata.const_table_data_fcb__epd__lt_module_gt_
-                0x000000004028b4b4        0x4 build/build/frozen_mpy.o
+                0x000000004028b4fc        0x4 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__epd__lt_module_gt_
-                0x000000004028b4b8       0x67 build/build/frozen_mpy.o
- *fill*         0x000000004028b51f        0x1 
+                0x000000004028b500       0x67 build/build/frozen_mpy.o
+ *fill*         0x000000004028b567        0x1 
  .rodata.raw_code_fcb__epd__lt_module_gt__EPD
-                0x000000004028b520       0x10 build/build/frozen_mpy.o
+                0x000000004028b568       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__epd__lt_module_gt__EPD
-                0x000000004028b530       0x2c build/build/frozen_mpy.o
+                0x000000004028b578       0x2c build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD
-                0x000000004028b55c       0x75 build/build/frozen_mpy.o
- *fill*         0x000000004028b5d1        0x3 
+                0x000000004028b5a4       0x75 build/build/frozen_mpy.o
+ *fill*         0x000000004028b619        0x3 
  .rodata.raw_code_fcb__epd__lt_module_gt__EPD__send_data
-                0x000000004028b5d4       0x10 build/build/frozen_mpy.o
- .rodata.const_table_data_fcb__epd__lt_module_gt__EPD__send_data
-                0x000000004028b5e4        0x8 build/build/frozen_mpy.o
- .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD__send_data
-                0x000000004028b5ec       0x2f build/build/frozen_mpy.o
- *fill*         0x000000004028b61b        0x1 
- .rodata.raw_code_fcb__epd__lt_module_gt__EPD__send_command
                 0x000000004028b61c       0x10 build/build/frozen_mpy.o
+ .rodata.const_table_data_fcb__epd__lt_module_gt__EPD__send_data
+                0x000000004028b62c        0x8 build/build/frozen_mpy.o
+ .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD__send_data
+                0x000000004028b634       0x2f build/build/frozen_mpy.o
+ *fill*         0x000000004028b663        0x1 
+ .rodata.raw_code_fcb__epd__lt_module_gt__EPD__send_command
+                0x000000004028b664       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__epd__lt_module_gt__EPD__send_command
-                0x000000004028b62c        0xc build/build/frozen_mpy.o
+                0x000000004028b674        0xc build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD__send_command
-                0x000000004028b638       0x30 build/build/frozen_mpy.o
+                0x000000004028b680       0x30 build/build/frozen_mpy.o
  .rodata.raw_code_fcb__epd__lt_module_gt__EPD__spi_write
-                0x000000004028b668       0x10 build/build/frozen_mpy.o
+                0x000000004028b6b0       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__epd__lt_module_gt__EPD__spi_write
-                0x000000004028b678        0xc build/build/frozen_mpy.o
+                0x000000004028b6c0        0xc build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD__spi_write
-                0x000000004028b684       0x20 build/build/frozen_mpy.o
+                0x000000004028b6cc       0x20 build/build/frozen_mpy.o
  .rodata.raw_code_fcb__epd__lt_module_gt__EPD_show
-                0x000000004028b6a4       0x10 build/build/frozen_mpy.o
+                0x000000004028b6ec       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__epd__lt_module_gt__EPD_show
-                0x000000004028b6b4        0x4 build/build/frozen_mpy.o
+                0x000000004028b6fc        0x4 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD_show
-                0x000000004028b6b8       0x8a build/build/frozen_mpy.o
- *fill*         0x000000004028b742        0x2 
+                0x000000004028b700       0x8a build/build/frozen_mpy.o
+ *fill*         0x000000004028b78a        0x2 
  .rodata.raw_code_fcb__epd__lt_module_gt__EPD__rotate_buf
-                0x000000004028b744       0x10 build/build/frozen_mpy.o
+                0x000000004028b78c       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__epd__lt_module_gt__EPD__rotate_buf
-                0x000000004028b754        0xc build/build/frozen_mpy.o
+                0x000000004028b79c        0xc build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD__rotate_buf
-                0x000000004028b760       0x4b build/build/frozen_mpy.o
- *fill*         0x000000004028b7ab        0x1 
+                0x000000004028b7a8       0x4b build/build/frozen_mpy.o
+ *fill*         0x000000004028b7f3        0x1 
  .rodata.raw_code_fcb__epd__lt_module_gt__EPD_dirty
-                0x000000004028b7ac       0x10 build/build/frozen_mpy.o
+                0x000000004028b7f4       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__epd__lt_module_gt__EPD_dirty
-                0x000000004028b7bc        0x4 build/build/frozen_mpy.o
+                0x000000004028b804        0x4 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD_dirty
-                0x000000004028b7c0       0x15 build/build/frozen_mpy.o
- *fill*         0x000000004028b7d5        0x3 
+                0x000000004028b808       0x15 build/build/frozen_mpy.o
+ *fill*         0x000000004028b81d        0x3 
  .rodata.raw_code_fcb__epd__lt_module_gt__EPD_set_pixel
-                0x000000004028b7d8       0x10 build/build/frozen_mpy.o
+                0x000000004028b820       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__epd__lt_module_gt__EPD_set_pixel
-                0x000000004028b7e8       0x10 build/build/frozen_mpy.o
+                0x000000004028b830       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD_set_pixel
-                0x000000004028b7f8       0x2c build/build/frozen_mpy.o
+                0x000000004028b840       0x2c build/build/frozen_mpy.o
  .rodata.raw_code_fcb__epd__lt_module_gt__EPD__update
-                0x000000004028b824       0x10 build/build/frozen_mpy.o
+                0x000000004028b86c       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__epd__lt_module_gt__EPD__update
-                0x000000004028b834       0x10 build/build/frozen_mpy.o
+                0x000000004028b87c       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD__update
-                0x000000004028b844      0x161 build/build/frozen_mpy.o
- *fill*         0x000000004028b9a5        0x3 
- .rodata.raw_code_fcb__epd__lt_module_gt__EPD__busy_wait
-                0x000000004028b9a8       0x10 build/build/frozen_mpy.o
- .rodata.const_table_data_fcb__epd__lt_module_gt__EPD__busy_wait
-                0x000000004028b9b8        0x8 build/build/frozen_mpy.o
- .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD__busy_wait
-                0x000000004028b9c0       0x2d build/build/frozen_mpy.o
+                0x000000004028b88c      0x161 build/build/frozen_mpy.o
  *fill*         0x000000004028b9ed        0x3 
- .rodata.raw_code_fcb__epd__lt_module_gt__EPD_setup
+ .rodata.raw_code_fcb__epd__lt_module_gt__EPD__busy_wait
                 0x000000004028b9f0       0x10 build/build/frozen_mpy.o
+ .rodata.const_table_data_fcb__epd__lt_module_gt__EPD__busy_wait
+                0x000000004028ba00        0x8 build/build/frozen_mpy.o
+ .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD__busy_wait
+                0x000000004028ba08       0x2d build/build/frozen_mpy.o
+ *fill*         0x000000004028ba35        0x3 
+ .rodata.raw_code_fcb__epd__lt_module_gt__EPD_setup
+                0x000000004028ba38       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__epd__lt_module_gt__EPD_setup
-                0x000000004028ba00        0xc build/build/frozen_mpy.o
+                0x000000004028ba48        0xc build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD_setup
-                0x000000004028ba0c       0x50 build/build/frozen_mpy.o
+                0x000000004028ba54       0x50 build/build/frozen_mpy.o
  .rodata.raw_code_fcb__epd__lt_module_gt__EPD___init__
-                0x000000004028ba5c       0x10 build/build/frozen_mpy.o
+                0x000000004028baa4       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__epd__lt_module_gt__EPD___init__
-                0x000000004028ba6c       0x18 build/build/frozen_mpy.o
+                0x000000004028bab4       0x18 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD___init__
-                0x000000004028ba84       0xef build/build/frozen_mpy.o
- *fill*         0x000000004028bb73        0x1 
+                0x000000004028bacc       0xef build/build/frozen_mpy.o
+ *fill*         0x000000004028bbbb        0x1 
  .rodata.raw_code_fcb__epd__lt_module_gt__EPD___init____lt_listcomp_gt_
-                0x000000004028bb74       0x10 build/build/frozen_mpy.o
- .rodata.const_table_data_fcb__epd__lt_module_gt__EPD___init____lt_listcomp_gt_
-                0x000000004028bb84        0xc build/build/frozen_mpy.o
- .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD___init____lt_listcomp_gt_
-                0x000000004028bb90       0x2c build/build/frozen_mpy.o
- .rodata.raw_code_fcb__epd__lt_module_gt__EPD___init____lt_listcomp_gt___lt_listcomp_gt_
                 0x000000004028bbbc       0x10 build/build/frozen_mpy.o
+ .rodata.const_table_data_fcb__epd__lt_module_gt__EPD___init____lt_listcomp_gt_
+                0x000000004028bbcc        0xc build/build/frozen_mpy.o
+ .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD___init____lt_listcomp_gt_
+                0x000000004028bbd8       0x2c build/build/frozen_mpy.o
+ .rodata.raw_code_fcb__epd__lt_module_gt__EPD___init____lt_listcomp_gt___lt_listcomp_gt_
+                0x000000004028bc04       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_fcb__epd__lt_module_gt__EPD___init____lt_listcomp_gt___lt_listcomp_gt_
-                0x000000004028bbcc        0x4 build/build/frozen_mpy.o
+                0x000000004028bc14        0x4 build/build/frozen_mpy.o
  .rodata.bytecode_data_fcb__epd__lt_module_gt__EPD___init____lt_listcomp_gt___lt_listcomp_gt_
-                0x000000004028bbd0       0x1d build/build/frozen_mpy.o
- *fill*         0x000000004028bbed        0x3 
+                0x000000004028bc18       0x1d build/build/frozen_mpy.o
+ *fill*         0x000000004028bc35        0x3 
  .rodata.raw_code_port_diag__lt_module_gt_
-                0x000000004028bbf0       0x10 build/build/frozen_mpy.o
-                0x000000004028bbf0                raw_code_port_diag__lt_module_gt_
+                0x000000004028bc38       0x10 build/build/frozen_mpy.o
+                0x000000004028bc38                raw_code_port_diag__lt_module_gt_
  .rodata.const_table_data_port_diag__lt_module_gt_
-                0x000000004028bc00        0x4 build/build/frozen_mpy.o
+                0x000000004028bc48        0x4 build/build/frozen_mpy.o
  .rodata.bytecode_data_port_diag__lt_module_gt_
-                0x000000004028bc04       0x41 build/build/frozen_mpy.o
- *fill*         0x000000004028bc45        0x3 
+                0x000000004028bc4c       0x41 build/build/frozen_mpy.o
+ *fill*         0x000000004028bc8d        0x3 
  .rodata.raw_code_port_diag__lt_module_gt__main
-                0x000000004028bc48       0x10 build/build/frozen_mpy.o
+                0x000000004028bc90       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_port_diag__lt_module_gt__main
-                0x000000004028bc58       0x34 build/build/frozen_mpy.o
+                0x000000004028bca0       0x34 build/build/frozen_mpy.o
  .rodata.const_obj_port_diag__lt_module_gt__main_12
-                0x000000004028bc8c       0x10 build/build/frozen_mpy.o
+                0x000000004028bcd4       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_port_diag__lt_module_gt__main_11
-                0x000000004028bc9c       0x10 build/build/frozen_mpy.o
+                0x000000004028bce4       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_port_diag__lt_module_gt__main_10
-                0x000000004028bcac       0x10 build/build/frozen_mpy.o
+                0x000000004028bcf4       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_port_diag__lt_module_gt__main_9
-                0x000000004028bcbc       0x10 build/build/frozen_mpy.o
+                0x000000004028bd04       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_port_diag__lt_module_gt__main_8
-                0x000000004028bccc       0x10 build/build/frozen_mpy.o
+                0x000000004028bd14       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_port_diag__lt_module_gt__main_7
-                0x000000004028bcdc       0x10 build/build/frozen_mpy.o
+                0x000000004028bd24       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_port_diag__lt_module_gt__main_6
-                0x000000004028bcec       0x10 build/build/frozen_mpy.o
+                0x000000004028bd34       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_port_diag__lt_module_gt__main_5
-                0x000000004028bcfc       0x10 build/build/frozen_mpy.o
+                0x000000004028bd44       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_port_diag__lt_module_gt__main_4
-                0x000000004028bd0c       0x10 build/build/frozen_mpy.o
+                0x000000004028bd54       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_port_diag__lt_module_gt__main_3
-                0x000000004028bd1c       0x10 build/build/frozen_mpy.o
+                0x000000004028bd64       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_port_diag__lt_module_gt__main_2
-                0x000000004028bd2c       0x10 build/build/frozen_mpy.o
+                0x000000004028bd74       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_port_diag__lt_module_gt__main_1
-                0x000000004028bd3c       0x10 build/build/frozen_mpy.o
+                0x000000004028bd84       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_port_diag__lt_module_gt__main_0
-                0x000000004028bd4c       0x10 build/build/frozen_mpy.o
+                0x000000004028bd94       0x10 build/build/frozen_mpy.o
  .rodata.__compound_literal$1
-                0x000000004028bd5c        0x4 build/build/frozen_mpy.o
+                0x000000004028bda4        0x4 build/build/frozen_mpy.o
  .rodata.bytecode_data_port_diag__lt_module_gt__main
-                0x000000004028bd60      0x16f build/build/frozen_mpy.o
- *fill*         0x000000004028becf        0x1 
+                0x000000004028bda8      0x16f build/build/frozen_mpy.o
+ *fill*         0x000000004028bf17        0x1 
  .rodata.raw_code_ntptime__lt_module_gt_
-                0x000000004028bed0       0x10 build/build/frozen_mpy.o
-                0x000000004028bed0                raw_code_ntptime__lt_module_gt_
+                0x000000004028bf18       0x10 build/build/frozen_mpy.o
+                0x000000004028bf18                raw_code_ntptime__lt_module_gt_
  .rodata.const_table_data_ntptime__lt_module_gt_
-                0x000000004028bee0       0x10 build/build/frozen_mpy.o
+                0x000000004028bf28       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_ntptime__lt_module_gt__1
-                0x000000004028bef0       0x10 build/build/frozen_mpy.o
+                0x000000004028bf38       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_ntptime__lt_module_gt__0
-                0x000000004028bf00       0x10 build/build/frozen_mpy.o
+                0x000000004028bf48       0x10 build/build/frozen_mpy.o
  .rodata.__compound_literal$0
-                0x000000004028bf10        0x4 build/build/frozen_mpy.o
+                0x000000004028bf58        0x4 build/build/frozen_mpy.o
  .rodata.bytecode_data_ntptime__lt_module_gt_
-                0x000000004028bf14       0x68 build/build/frozen_mpy.o
+                0x000000004028bf5c       0x68 build/build/frozen_mpy.o
  .rodata.raw_code_ntptime__lt_module_gt__settime
-                0x000000004028bf7c       0x10 build/build/frozen_mpy.o
+                0x000000004028bfc4       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_ntptime__lt_module_gt__settime
-                0x000000004028bf8c       0x54 build/build/frozen_mpy.o
+                0x000000004028bfd4       0x54 build/build/frozen_mpy.o
  .rodata.raw_code_ntptime__lt_module_gt__time
-                0x000000004028bfe0       0x10 build/build/frozen_mpy.o
+                0x000000004028c028       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_ntptime__lt_module_gt__time
-                0x000000004028bff0       0x88 build/build/frozen_mpy.o
+                0x000000004028c038       0x88 build/build/frozen_mpy.o
  .rodata.raw_code__boot__lt_module_gt_
-                0x000000004028c078       0x10 build/build/frozen_mpy.o
-                0x000000004028c078                raw_code__boot__lt_module_gt_
+                0x000000004028c0c0       0x10 build/build/frozen_mpy.o
+                0x000000004028c0c0                raw_code__boot__lt_module_gt_
  .rodata.bytecode_data__boot__lt_module_gt_
-                0x000000004028c088       0xc7 build/build/frozen_mpy.o
- *fill*         0x000000004028c14f        0x1 
+                0x000000004028c0d0       0xc7 build/build/frozen_mpy.o
+ *fill*         0x000000004028c197        0x1 
  .rodata.raw_code_websocket_helper__lt_module_gt_
-                0x000000004028c150       0x10 build/build/frozen_mpy.o
-                0x000000004028c150                raw_code_websocket_helper__lt_module_gt_
+                0x000000004028c198       0x10 build/build/frozen_mpy.o
+                0x000000004028c198                raw_code_websocket_helper__lt_module_gt_
  .rodata.const_table_data_websocket_helper__lt_module_gt_
-                0x000000004028c160        0x8 build/build/frozen_mpy.o
+                0x000000004028c1a8        0x8 build/build/frozen_mpy.o
  .rodata.bytecode_data_websocket_helper__lt_module_gt_
-                0x000000004028c168       0x6a build/build/frozen_mpy.o
- *fill*         0x000000004028c1d2        0x2 
+                0x000000004028c1b0       0x6a build/build/frozen_mpy.o
+ *fill*         0x000000004028c21a        0x2 
  .rodata.raw_code_websocket_helper__lt_module_gt__client_handshake
-                0x000000004028c1d4       0x10 build/build/frozen_mpy.o
+                0x000000004028c21c       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_websocket_helper__lt_module_gt__client_handshake
-                0x000000004028c1e4        0xc build/build/frozen_mpy.o
+                0x000000004028c22c        0xc build/build/frozen_mpy.o
  .rodata.const_obj_websocket_helper__lt_module_gt__client_handshake_1
-                0x000000004028c1f0       0x10 build/build/frozen_mpy.o
+                0x000000004028c238       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_websocket_helper__lt_module_gt__client_handshake_0
-                0x000000004028c200       0x10 build/build/frozen_mpy.o
+                0x000000004028c248       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_websocket_helper__lt_module_gt__client_handshake
-                0x000000004028c210       0x48 build/build/frozen_mpy.o
+                0x000000004028c258       0x48 build/build/frozen_mpy.o
  .rodata.raw_code_websocket_helper__lt_module_gt__server_handshake
-                0x000000004028c258       0x10 build/build/frozen_mpy.o
- .rodata.const_table_data_websocket_helper__lt_module_gt__server_handshake
-                0x000000004028c268       0x28 build/build/frozen_mpy.o
- .rodata.const_obj_websocket_helper__lt_module_gt__server_handshake_7
-                0x000000004028c290       0x10 build/build/frozen_mpy.o
- .rodata.const_obj_websocket_helper__lt_module_gt__server_handshake_6
                 0x000000004028c2a0       0x10 build/build/frozen_mpy.o
+ .rodata.const_table_data_websocket_helper__lt_module_gt__server_handshake
+                0x000000004028c2b0       0x28 build/build/frozen_mpy.o
+ .rodata.const_obj_websocket_helper__lt_module_gt__server_handshake_7
+                0x000000004028c2d8       0x10 build/build/frozen_mpy.o
+ .rodata.const_obj_websocket_helper__lt_module_gt__server_handshake_6
+                0x000000004028c2e8       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_websocket_helper__lt_module_gt__server_handshake_5
-                0x000000004028c2b0       0x10 build/build/frozen_mpy.o
+                0x000000004028c2f8       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_websocket_helper__lt_module_gt__server_handshake_4
-                0x000000004028c2c0       0x10 build/build/frozen_mpy.o
+                0x000000004028c308       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_websocket_helper__lt_module_gt__server_handshake_3
-                0x000000004028c2d0       0x10 build/build/frozen_mpy.o
+                0x000000004028c318       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_websocket_helper__lt_module_gt__server_handshake_2
-                0x000000004028c2e0       0x10 build/build/frozen_mpy.o
+                0x000000004028c328       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_websocket_helper__lt_module_gt__server_handshake_1
-                0x000000004028c2f0       0x10 build/build/frozen_mpy.o
+                0x000000004028c338       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_websocket_helper__lt_module_gt__server_handshake_0
-                0x000000004028c300       0x10 build/build/frozen_mpy.o
+                0x000000004028c348       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_websocket_helper__lt_module_gt__server_handshake
-                0x000000004028c310      0x102 build/build/frozen_mpy.o
- *fill*         0x000000004028c412        0x2 
+                0x000000004028c358      0x102 build/build/frozen_mpy.o
+ *fill*         0x000000004028c45a        0x2 
  .rodata.raw_code_websocket_helper__lt_module_gt__server_handshake__lt_listcomp_gt_
-                0x000000004028c414       0x10 build/build/frozen_mpy.o
- .rodata.const_table_data_websocket_helper__lt_module_gt__server_handshake__lt_listcomp_gt_
-                0x000000004028c424        0x4 build/build/frozen_mpy.o
- .rodata.bytecode_data_websocket_helper__lt_module_gt__server_handshake__lt_listcomp_gt_
-                0x000000004028c428       0x24 build/build/frozen_mpy.o
- .rodata.raw_code_inisetup__lt_module_gt_
-                0x000000004028c44c       0x10 build/build/frozen_mpy.o
-                0x000000004028c44c                raw_code_inisetup__lt_module_gt_
- .rodata.const_table_data_inisetup__lt_module_gt_
                 0x000000004028c45c       0x10 build/build/frozen_mpy.o
+ .rodata.const_table_data_websocket_helper__lt_module_gt__server_handshake__lt_listcomp_gt_
+                0x000000004028c46c        0x4 build/build/frozen_mpy.o
+ .rodata.bytecode_data_websocket_helper__lt_module_gt__server_handshake__lt_listcomp_gt_
+                0x000000004028c470       0x24 build/build/frozen_mpy.o
+ .rodata.raw_code_inisetup__lt_module_gt_
+                0x000000004028c494       0x10 build/build/frozen_mpy.o
+                0x000000004028c494                raw_code_inisetup__lt_module_gt_
+ .rodata.const_table_data_inisetup__lt_module_gt_
+                0x000000004028c4a4       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_inisetup__lt_module_gt_
-                0x000000004028c46c       0x4d build/build/frozen_mpy.o
- *fill*         0x000000004028c4b9        0x3 
+                0x000000004028c4b4       0x4d build/build/frozen_mpy.o
+ *fill*         0x000000004028c501        0x3 
  .rodata.raw_code_inisetup__lt_module_gt__setup
-                0x000000004028c4bc       0x10 build/build/frozen_mpy.o
+                0x000000004028c504       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_inisetup__lt_module_gt__setup
-                0x000000004028c4cc        0x8 build/build/frozen_mpy.o
+                0x000000004028c514        0x8 build/build/frozen_mpy.o
  .rodata.const_obj_inisetup__lt_module_gt__setup_1
-                0x000000004028c4d4       0x10 build/build/frozen_mpy.o
+                0x000000004028c51c       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_inisetup__lt_module_gt__setup_0
-                0x000000004028c4e4       0x10 build/build/frozen_mpy.o
+                0x000000004028c52c       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_inisetup__lt_module_gt__setup
-                0x000000004028c4f4       0x73 build/build/frozen_mpy.o
- *fill*         0x000000004028c567        0x1 
+                0x000000004028c53c       0x73 build/build/frozen_mpy.o
+ *fill*         0x000000004028c5af        0x1 
  .rodata.raw_code_inisetup__lt_module_gt__fs_corrupted
-                0x000000004028c568       0x10 build/build/frozen_mpy.o
+                0x000000004028c5b0       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_inisetup__lt_module_gt__fs_corrupted
-                0x000000004028c578        0x4 build/build/frozen_mpy.o
+                0x000000004028c5c0        0x4 build/build/frozen_mpy.o
  .rodata.const_obj_inisetup__lt_module_gt__fs_corrupted_0
-                0x000000004028c57c       0x10 build/build/frozen_mpy.o
+                0x000000004028c5c4       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_inisetup__lt_module_gt__fs_corrupted
-                0x000000004028c58c       0x3f build/build/frozen_mpy.o
- *fill*         0x000000004028c5cb        0x1 
+                0x000000004028c5d4       0x3f build/build/frozen_mpy.o
+ *fill*         0x000000004028c613        0x1 
  .rodata.raw_code_inisetup__lt_module_gt__check_bootsec
-                0x000000004028c5cc       0x10 build/build/frozen_mpy.o
+                0x000000004028c614       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_inisetup__lt_module_gt__check_bootsec
-                0x000000004028c5dc       0x5a build/build/frozen_mpy.o
- *fill*         0x000000004028c636        0x2 
+                0x000000004028c624       0x5a build/build/frozen_mpy.o
+ *fill*         0x000000004028c67e        0x2 
  .rodata.raw_code_inisetup__lt_module_gt__wifi
-                0x000000004028c638       0x10 build/build/frozen_mpy.o
+                0x000000004028c680       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_inisetup__lt_module_gt__wifi
-                0x000000004028c648        0x8 build/build/frozen_mpy.o
+                0x000000004028c690        0x8 build/build/frozen_mpy.o
  .rodata.const_obj_inisetup__lt_module_gt__wifi_1
-                0x000000004028c650       0x10 build/build/frozen_mpy.o
+                0x000000004028c698       0x10 build/build/frozen_mpy.o
  .rodata.const_obj_inisetup__lt_module_gt__wifi_0
-                0x000000004028c660       0x10 build/build/frozen_mpy.o
+                0x000000004028c6a8       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_inisetup__lt_module_gt__wifi
-                0x000000004028c670       0x5c build/build/frozen_mpy.o
+                0x000000004028c6b8       0x5c build/build/frozen_mpy.o
  .rodata.raw_code_flashbdev__lt_module_gt_
-                0x000000004028c6cc       0x10 build/build/frozen_mpy.o
-                0x000000004028c6cc                raw_code_flashbdev__lt_module_gt_
+                0x000000004028c714       0x10 build/build/frozen_mpy.o
+                0x000000004028c714                raw_code_flashbdev__lt_module_gt_
  .rodata.const_table_data_flashbdev__lt_module_gt_
-                0x000000004028c6dc        0x4 build/build/frozen_mpy.o
+                0x000000004028c724        0x4 build/build/frozen_mpy.o
  .rodata.bytecode_data_flashbdev__lt_module_gt_
-                0x000000004028c6e0       0x65 build/build/frozen_mpy.o
- *fill*         0x000000004028c745        0x3 
+                0x000000004028c728       0x65 build/build/frozen_mpy.o
+ *fill*         0x000000004028c78d        0x3 
  .rodata.raw_code_flashbdev__lt_module_gt__FlashBdev
-                0x000000004028c748       0x10 build/build/frozen_mpy.o
+                0x000000004028c790       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_flashbdev__lt_module_gt__FlashBdev
-                0x000000004028c758       0x10 build/build/frozen_mpy.o
+                0x000000004028c7a0       0x10 build/build/frozen_mpy.o
  .rodata.bytecode_data_flashbdev__lt_module_gt__FlashBdev
-                0x000000004028c768       0x68 build/build/frozen_mpy.o
+                0x000000004028c7b0       0x68 build/build/frozen_mpy.o
  .rodata.raw_code_flashbdev__lt_module_gt__FlashBdev_ioctl
-                0x000000004028c7d0       0x10 build/build/frozen_mpy.o
- .rodata.const_table_data_flashbdev__lt_module_gt__FlashBdev_ioctl
-                0x000000004028c7e0        0xc build/build/frozen_mpy.o
- .rodata.bytecode_data_flashbdev__lt_module_gt__FlashBdev_ioctl
-                0x000000004028c7ec       0x2b build/build/frozen_mpy.o
- *fill*         0x000000004028c817        0x1 
- .rodata.raw_code_flashbdev__lt_module_gt__FlashBdev_writeblocks
                 0x000000004028c818       0x10 build/build/frozen_mpy.o
- .rodata.const_table_data_flashbdev__lt_module_gt__FlashBdev_writeblocks
+ .rodata.const_table_data_flashbdev__lt_module_gt__FlashBdev_ioctl
                 0x000000004028c828        0xc build/build/frozen_mpy.o
+ .rodata.bytecode_data_flashbdev__lt_module_gt__FlashBdev_ioctl
+                0x000000004028c834       0x2b build/build/frozen_mpy.o
+ *fill*         0x000000004028c85f        0x1 
+ .rodata.raw_code_flashbdev__lt_module_gt__FlashBdev_writeblocks
+                0x000000004028c860       0x10 build/build/frozen_mpy.o
+ .rodata.const_table_data_flashbdev__lt_module_gt__FlashBdev_writeblocks
+                0x000000004028c870        0xc build/build/frozen_mpy.o
  .rodata.bytecode_data_flashbdev__lt_module_gt__FlashBdev_writeblocks
-                0x000000004028c834       0x37 build/build/frozen_mpy.o
- *fill*         0x000000004028c86b        0x1 
+                0x000000004028c87c       0x37 build/build/frozen_mpy.o
+ *fill*         0x000000004028c8b3        0x1 
  .rodata.raw_code_flashbdev__lt_module_gt__FlashBdev_readblocks
-                0x000000004028c86c       0x10 build/build/frozen_mpy.o
+                0x000000004028c8b4       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_flashbdev__lt_module_gt__FlashBdev_readblocks
-                0x000000004028c87c        0xc build/build/frozen_mpy.o
+                0x000000004028c8c4        0xc build/build/frozen_mpy.o
  .rodata.bytecode_data_flashbdev__lt_module_gt__FlashBdev_readblocks
-                0x000000004028c888       0x27 build/build/frozen_mpy.o
- *fill*         0x000000004028c8af        0x1 
+                0x000000004028c8d0       0x27 build/build/frozen_mpy.o
+ *fill*         0x000000004028c8f7        0x1 
  .rodata.raw_code_flashbdev__lt_module_gt__FlashBdev___init__
-                0x000000004028c8b0       0x10 build/build/frozen_mpy.o
+                0x000000004028c8f8       0x10 build/build/frozen_mpy.o
  .rodata.const_table_data_flashbdev__lt_module_gt__FlashBdev___init__
-                0x000000004028c8c0        0x8 build/build/frozen_mpy.o
+                0x000000004028c908        0x8 build/build/frozen_mpy.o
  .rodata.bytecode_data_flashbdev__lt_module_gt__FlashBdev___init__
-                0x000000004028c8c8       0x17 build/build/frozen_mpy.o
- *fill*         0x000000004028c8df        0x1 
+                0x000000004028c910       0x17 build/build/frozen_mpy.o
+ *fill*         0x000000004028c927        0x1 
  .rodata.mp_qstr_frozen_const_pool
-                0x000000004028c8e0      0x314 build/build/frozen_mpy.o
-                0x000000004028c8e0                mp_qstr_frozen_const_pool
+                0x000000004028c928      0x32c build/build/frozen_mpy.o
+                0x000000004028c928                mp_qstr_frozen_const_pool
  .rodata.esp_help_text
-                0x000000004028cbf4      0x3fe build/help.o
-                0x000000004028cbf4                esp_help_text
+                0x000000004028cc54      0x3fe build/help.o
+                0x000000004028cc54                esp_help_text
  .rodata.str1.1
-                0x000000004028cff2       0x24 build/esp_mphal.o
+                0x000000004028d052       0x24 build/esp_mphal.o
                                          0x27 (size before relaxing)
- *fill*         0x000000004028d016        0x2 
+ *fill*         0x000000004028d076        0x2 
  .rodata.mp_debug_print
-                0x000000004028d018        0x8 build/esp_mphal.o
-                0x000000004028d018                mp_debug_print
+                0x000000004028d078        0x8 build/esp_mphal.o
+                0x000000004028d078                mp_debug_print
  .rodata.default_init_data
-                0x000000004028d020       0x80 build/esp_init_data.o
+                0x000000004028d080       0x80 build/esp_init_data.o
  .rodata.pin_num
-                0x000000004028d0a0        0x8 build/esppwm.o
+                0x000000004028d100        0x8 build/esppwm.o
  .rodata.str1.1
-                0x000000004028d0a8      0x119 build/modpyb.o
+                0x000000004028d108      0x119 build/modpyb.o
                                         0x137 (size before relaxing)
- *fill*         0x000000004028d1c1        0x3 
+ *fill*         0x000000004028d221        0x3 
  .rodata.pyb_info_obj
-                0x000000004028d1c4        0xc build/modpyb.o
-                0x000000004028d1c4                pyb_info_obj
+                0x000000004028d224        0xc build/modpyb.o
+                0x000000004028d224                pyb_info_obj
  .rodata.str1.1
-                0x000000004028d1d0       0x54 build/modmachine.o
+                0x000000004028d230       0x54 build/modmachine.o
  .rodata.allowed_args$5895
-                0x000000004028d224       0x28 build/modmachine.o
+                0x000000004028d284       0x28 build/modmachine.o
  .rodata.machine_module_globals
-                0x000000004028d24c       0x10 build/modmachine.o
+                0x000000004028d2ac       0x10 build/modmachine.o
  .rodata.machine_module_globals_table
-                0x000000004028d25c       0xf8 build/modmachine.o
+                0x000000004028d2bc       0xf8 build/modmachine.o
  .rodata.machine_enable_irq_obj
-                0x000000004028d354        0x8 build/modmachine.o
-                0x000000004028d354                machine_enable_irq_obj
- .rodata.machine_disable_irq_obj
-                0x000000004028d35c        0x8 build/modmachine.o
-                0x000000004028d35c                machine_disable_irq_obj
- .rodata.esp_timer_deinit_obj
-                0x000000004028d364        0x8 build/modmachine.o
- .rodata.esp_timer_init_obj
-                0x000000004028d36c        0xc build/modmachine.o
- .rodata.esp_timer_type
-                0x000000004028d378       0x3c build/modmachine.o
-                0x000000004028d378                esp_timer_type
- .rodata.machine_deepsleep_obj
                 0x000000004028d3b4        0x8 build/modmachine.o
- .rodata.machine_sleep_obj
+                0x000000004028d3b4                machine_enable_irq_obj
+ .rodata.machine_disable_irq_obj
                 0x000000004028d3bc        0x8 build/modmachine.o
- .rodata.machine_idle_obj
+                0x000000004028d3bc                machine_disable_irq_obj
+ .rodata.esp_timer_deinit_obj
                 0x000000004028d3c4        0x8 build/modmachine.o
+ .rodata.esp_timer_init_obj
+                0x000000004028d3cc        0xc build/modmachine.o
+ .rodata.esp_timer_type
+                0x000000004028d3d8       0x3c build/modmachine.o
+                0x000000004028d3d8                esp_timer_type
+ .rodata.machine_deepsleep_obj
+                0x000000004028d414        0x8 build/modmachine.o
+ .rodata.machine_sleep_obj
+                0x000000004028d41c        0x8 build/modmachine.o
+ .rodata.machine_idle_obj
+                0x000000004028d424        0x8 build/modmachine.o
  .rodata.machine_unique_id_obj
-                0x000000004028d3cc        0x8 build/modmachine.o
+                0x000000004028d42c        0x8 build/modmachine.o
  .rodata.machine_reset_cause_obj
-                0x000000004028d3d4        0x8 build/modmachine.o
+                0x000000004028d434        0x8 build/modmachine.o
  .rodata.machine_reset_obj
-                0x000000004028d3dc        0x8 build/modmachine.o
+                0x000000004028d43c        0x8 build/modmachine.o
  .rodata.machine_freq_obj
-                0x000000004028d3e4        0xc build/modmachine.o
+                0x000000004028d444        0xc build/modmachine.o
  .rodata.str1.1
-                0x000000004028d3f0       0x64 build/machine_pin.o
+                0x000000004028d450       0x64 build/machine_pin.o
  .rodata.allowed_args$5944
-                0x000000004028d454       0x18 build/machine_pin.o
+                0x000000004028d4b4       0x18 build/machine_pin.o
  .rodata.allowed_args$5893
-                0x000000004028d46c       0x18 build/machine_pin.o
+                0x000000004028d4cc       0x18 build/machine_pin.o
  .rodata.pin_irq_trigger_obj
-                0x000000004028d484        0xc build/machine_pin.o
+                0x000000004028d4e4        0xc build/machine_pin.o
  .rodata.pin_irq_type
-                0x000000004028d490       0x3c build/machine_pin.o
+                0x000000004028d4f0       0x3c build/machine_pin.o
  .rodata.pyb_pin_type
-                0x000000004028d4cc       0x3c build/machine_pin.o
-                0x000000004028d4cc                pyb_pin_type
+                0x000000004028d52c       0x3c build/machine_pin.o
+                0x000000004028d52c                pyb_pin_type
  .rodata.pin_pin_p
-                0x000000004028d508        0x4 build/machine_pin.o
+                0x000000004028d568        0x4 build/machine_pin.o
  .rodata.pyb_pin_irq_obj
-                0x000000004028d50c        0xc build/machine_pin.o
+                0x000000004028d56c        0xc build/machine_pin.o
  .rodata.pyb_pin_on_obj
-                0x000000004028d518        0x8 build/machine_pin.o
+                0x000000004028d578        0x8 build/machine_pin.o
  .rodata.pyb_pin_off_obj
-                0x000000004028d520        0x8 build/machine_pin.o
+                0x000000004028d580        0x8 build/machine_pin.o
  .rodata.pyb_pin_value_obj
-                0x000000004028d528        0xc build/machine_pin.o
+                0x000000004028d588        0xc build/machine_pin.o
  .rodata.pyb_pin_init_obj
-                0x000000004028d534        0xc build/machine_pin.o
-                0x000000004028d534                pyb_pin_init_obj
+                0x000000004028d594        0xc build/machine_pin.o
+                0x000000004028d594                pyb_pin_init_obj
  .rodata.pin_irq_obj
-                0x000000004028d540       0x80 build/machine_pin.o
+                0x000000004028d5a0       0x80 build/machine_pin.o
  .rodata.pyb_pin_obj
-                0x000000004028d5c0       0xcc build/machine_pin.o
-                0x000000004028d5c0                pyb_pin_obj
+                0x000000004028d620       0xcc build/machine_pin.o
+                0x000000004028d620                pyb_pin_obj
  .rodata.str1.1
-                0x000000004028d68c       0x36 build/machine_pwm.o
+                0x000000004028d6ec       0x36 build/machine_pwm.o
                                          0x38 (size before relaxing)
- *fill*         0x000000004028d6c2        0x2 
+ *fill*         0x000000004028d722        0x2 
  .rodata.allowed_args$4554
-                0x000000004028d6c4       0x10 build/machine_pwm.o
+                0x000000004028d724       0x10 build/machine_pwm.o
  .rodata.pyb_pwm_type
-                0x000000004028d6d4       0x3c build/machine_pwm.o
-                0x000000004028d6d4                pyb_pwm_type
+                0x000000004028d734       0x3c build/machine_pwm.o
+                0x000000004028d734                pyb_pwm_type
  .rodata.pyb_pwm_duty_obj
-                0x000000004028d710        0xc build/machine_pwm.o
+                0x000000004028d770        0xc build/machine_pwm.o
  .rodata.pyb_pwm_freq_obj
-                0x000000004028d71c        0xc build/machine_pwm.o
+                0x000000004028d77c        0xc build/machine_pwm.o
  .rodata.pyb_pwm_deinit_obj
-                0x000000004028d728        0x8 build/machine_pwm.o
+                0x000000004028d788        0x8 build/machine_pwm.o
  .rodata.pyb_pwm_init_obj
-                0x000000004028d730        0xc build/machine_pwm.o
-                0x000000004028d730                pyb_pwm_init_obj
+                0x000000004028d790        0xc build/machine_pwm.o
+                0x000000004028d790                pyb_pwm_init_obj
  .rodata.str1.1
-                0x000000004028d73c       0x1e build/machine_rtc.o
- *fill*         0x000000004028d75a        0x2 
+                0x000000004028d79c       0x1e build/machine_rtc.o
+ *fill*         0x000000004028d7ba        0x2 
  .rodata.allowed_args$5696
-                0x000000004028d75c       0x10 build/machine_rtc.o
+                0x000000004028d7bc       0x10 build/machine_rtc.o
  .rodata.pyb_rtc_type
-                0x000000004028d76c       0x3c build/machine_rtc.o
-                0x000000004028d76c                pyb_rtc_type
+                0x000000004028d7cc       0x3c build/machine_rtc.o
+                0x000000004028d7cc                pyb_rtc_type
  .rodata.pyb_rtc_irq_obj
-                0x000000004028d7a8        0xc build/machine_rtc.o
+                0x000000004028d808        0xc build/machine_rtc.o
  .rodata.pyb_rtc_alarm_left_obj
-                0x000000004028d7b4        0xc build/machine_rtc.o
+                0x000000004028d814        0xc build/machine_rtc.o
  .rodata.pyb_rtc_alarm_obj
-                0x000000004028d7c0        0x8 build/machine_rtc.o
+                0x000000004028d820        0x8 build/machine_rtc.o
  .rodata.pyb_rtc_memory_obj
-                0x000000004028d7c8        0xc build/machine_rtc.o
+                0x000000004028d828        0xc build/machine_rtc.o
  .rodata.pyb_rtc_datetime_obj
-                0x000000004028d7d4        0xc build/machine_rtc.o
+                0x000000004028d834        0xc build/machine_rtc.o
  .rodata.pyb_rtc_obj
-                0x000000004028d7e0        0x4 build/machine_rtc.o
+                0x000000004028d840        0x4 build/machine_rtc.o
  .rodata.str1.1
-                0x000000004028d7e4       0x1c build/machine_adc.o
+                0x000000004028d844       0x1c build/machine_adc.o
  .rodata.pyb_adc_read_obj
-                0x000000004028d800        0x8 build/machine_adc.o
+                0x000000004028d860        0x8 build/machine_adc.o
  .rodata.pyb_adc_type
-                0x000000004028d808       0x3c build/machine_adc.o
-                0x000000004028d808                pyb_adc_type
+                0x000000004028d868       0x3c build/machine_adc.o
+                0x000000004028d868                pyb_adc_type
  .rodata.str1.1
-                0x000000004028d844       0xa9 build/machine_uart.o
+                0x000000004028d8a4       0xa9 build/machine_uart.o
                                          0xb2 (size before relaxing)
- *fill*         0x000000004028d8ed        0x3 
+ *fill*         0x000000004028d94d        0x3 
  .rodata.pyb_uart_init_helper
-                0x000000004028d8f0       0x24 build/machine_uart.o
+                0x000000004028d950       0x24 build/machine_uart.o
  .rodata.allowed_args$4962
-                0x000000004028d914       0x38 build/machine_uart.o
+                0x000000004028d974       0x38 build/machine_uart.o
  .rodata.pyb_uart_type
-                0x000000004028d94c       0x3c build/machine_uart.o
-                0x000000004028d94c                pyb_uart_type
+                0x000000004028d9ac       0x3c build/machine_uart.o
+                0x000000004028d9ac                pyb_uart_type
  .rodata.uart_stream_p
-                0x000000004028d988       0x10 build/machine_uart.o
+                0x000000004028d9e8       0x10 build/machine_uart.o
  .rodata.pyb_uart_any_obj
-                0x000000004028d998        0x8 build/machine_uart.o
+                0x000000004028d9f8        0x8 build/machine_uart.o
  .rodata.pyb_uart_init_obj
-                0x000000004028d9a0        0xc build/machine_uart.o
-                0x000000004028d9a0                pyb_uart_init_obj
+                0x000000004028da00        0xc build/machine_uart.o
+                0x000000004028da00                pyb_uart_init_obj
  .rodata._parity_name
-                0x000000004028d9ac        0xc build/machine_uart.o
+                0x000000004028da0c        0xc build/machine_uart.o
  .rodata.machine_wdt_deinit_obj
-                0x000000004028d9b8        0x8 build/machine_wdt.o
+                0x000000004028da18        0x8 build/machine_wdt.o
  .rodata.machine_wdt_feed_obj
-                0x000000004028d9c0        0x8 build/machine_wdt.o
+                0x000000004028da20        0x8 build/machine_wdt.o
  .rodata.esp_wdt_type
-                0x000000004028d9c8       0x3c build/machine_wdt.o
-                0x000000004028d9c8                esp_wdt_type
+                0x000000004028da28       0x3c build/machine_wdt.o
+                0x000000004028da28                esp_wdt_type
  .rodata.str1.1
-                0x000000004028da04       0x43 build/machine_hspi.o
- *fill*         0x000000004028da47        0x1 
+                0x000000004028da64       0x43 build/machine_hspi.o
+ *fill*         0x000000004028daa7        0x1 
  .rodata.allowed_args$5259
-                0x000000004028da48       0x18 build/machine_hspi.o
+                0x000000004028daa8       0x18 build/machine_hspi.o
  .rodata.machine_hspi_type
-                0x000000004028da60       0x3c build/machine_hspi.o
-                0x000000004028da60                machine_hspi_type
+                0x000000004028dac0       0x3c build/machine_hspi.o
+                0x000000004028dac0                machine_hspi_type
  .rodata.machine_hspi_p
-                0x000000004028da9c        0xc build/machine_hspi.o
+                0x000000004028dafc        0xc build/machine_hspi.o
  .rodata.str1.1
-                0x000000004028daa8        0x9 build/machine_ep_spi.o
- *fill*         0x000000004028dab1        0x3 
+                0x000000004028db08        0x9 build/machine_ep_spi.o
+ *fill*         0x000000004028db11        0x3 
  .rodata.machine_ep_spi_type
-                0x000000004028dab4       0x3c build/machine_ep_spi.o
-                0x000000004028dab4                machine_ep_spi_type
+                0x000000004028db14       0x3c build/machine_ep_spi.o
+                0x000000004028db14                machine_ep_spi_type
  .rodata.machine_ep_spi_init_obj
-                0x000000004028daf0        0x8 build/machine_ep_spi.o
+                0x000000004028db50        0x8 build/machine_ep_spi.o
  .rodata.mp_machine_ep_spi_write_obj
-                0x000000004028daf8        0x8 build/machine_ep_spi.o
-                0x000000004028daf8                mp_machine_ep_spi_write_obj
+                0x000000004028db58        0x8 build/machine_ep_spi.o
+                0x000000004028db58                mp_machine_ep_spi_write_obj
  .rodata.applyMask
-                0x000000004028db00       0x20 build/qrcode.o
+                0x000000004028db60       0x20 build/qrcode.o
  .rodata.CSWTCH$84
-                0x000000004028db20       0x1b build/qrcode.o
- *fill*         0x000000004028db3b        0x1 
+                0x000000004028db80       0x1b build/qrcode.o
+ *fill*         0x000000004028db9b        0x1 
  .rodata.NUM_RAW_DATA_MODULES
-                0x000000004028db3c       0x50 build/qrcode.o
+                0x000000004028db9c       0x50 build/qrcode.o
  .rodata.NUM_ERROR_CORRECTION_BLOCKS
-                0x000000004028db8c       0xa0 build/qrcode.o
+                0x000000004028dbec       0xa0 build/qrcode.o
  .rodata.NUM_ERROR_CORRECTION_CODEWORDS
-                0x000000004028dc2c      0x140 build/qrcode.o
+                0x000000004028dc8c      0x140 build/qrcode.o
  .rodata.str1.1
-                0x000000004028dd6c       0x4e build/modqr.o
- *fill*         0x000000004028ddba        0x2 
+                0x000000004028ddcc       0x4e build/modqr.o
+ *fill*         0x000000004028de1a        0x2 
  .rodata.qr_module
-                0x000000004028ddbc        0x8 build/modqr.o
-                0x000000004028ddbc                qr_module
+                0x000000004028de1c        0x8 build/modqr.o
+                0x000000004028de1c                qr_module
  .rodata.qr_module_globals
-                0x000000004028ddc4       0x10 build/modqr.o
+                0x000000004028de24       0x10 build/modqr.o
  .rodata.qr_module_globals_table
-                0x000000004028ddd4       0x30 build/modqr.o
+                0x000000004028de34       0x30 build/modqr.o
  .rodata.qr_matrix_obj
-                0x000000004028de04        0x8 build/modqr.o
-                0x000000004028de04                qr_matrix_obj
+                0x000000004028de64        0x8 build/modqr.o
+                0x000000004028de64                qr_matrix_obj
  .rodata.qr_write_obj
-                0x000000004028de0c        0x8 build/modqr.o
-                0x000000004028de0c                qr_write_obj
+                0x000000004028de6c        0x8 build/modqr.o
+                0x000000004028de6c                qr_write_obj
  .rodata.qr_type
-                0x000000004028de14       0x3c build/modqr.o
-                0x000000004028de14                qr_type
+                0x000000004028de74       0x3c build/modqr.o
+                0x000000004028de74                qr_type
  .rodata.str1.1
-                0x000000004028de50       0x99 build/modesp.o
+                0x000000004028deb0       0x99 build/modesp.o
                                          0x9f (size before relaxing)
- *fill*         0x000000004028dee9        0x3 
+ *fill*         0x000000004028df49        0x3 
  .rodata.esp_module
-                0x000000004028deec        0x8 build/modesp.o
-                0x000000004028deec                esp_module
+                0x000000004028df4c        0x8 build/modesp.o
+                0x000000004028df4c                esp_module
  .rodata.esp_module_globals
-                0x000000004028def4       0x10 build/modesp.o
+                0x000000004028df54       0x10 build/modesp.o
  .rodata.esp_module_globals_table
-                0x000000004028df04       0xa8 build/modesp.o
+                0x000000004028df64       0xa8 build/modesp.o
  .rodata.esp_set_native_code_location_obj
-                0x000000004028dfac        0x8 build/modesp.o
- .rodata.esp_esf_free_bufs_obj
-                0x000000004028dfb4        0x8 build/modesp.o
- .rodata.esp_free_obj
-                0x000000004028dfbc        0x8 build/modesp.o
- .rodata.esp_malloc_obj
-                0x000000004028dfc4        0x8 build/modesp.o
- .rodata.esp_meminfo_obj
-                0x000000004028dfcc        0x8 build/modesp.o
- .rodata.esp_freemem_obj
-                0x000000004028dfd4        0x8 build/modesp.o
- .rodata.esp_check_fw_obj
-                0x000000004028dfdc        0x8 build/modesp.o
- .rodata.esp_flash_user_start_obj
-                0x000000004028dfe4        0x8 build/modesp.o
- .rodata.esp_flash_size_obj
-                0x000000004028dfec        0x8 build/modesp.o
- .rodata.esp_flash_erase_obj
-                0x000000004028dff4        0x8 build/modesp.o
- .rodata.esp_flash_write_obj
-                0x000000004028dffc        0x8 build/modesp.o
- .rodata.esp_flash_read_obj
-                0x000000004028e004        0x8 build/modesp.o
- .rodata.esp_flash_id_obj
                 0x000000004028e00c        0x8 build/modesp.o
- .rodata.esp_deepsleep_obj
-                0x000000004028e014        0xc build/modesp.o
- .rodata.esp_sleep_type_obj
-                0x000000004028e020        0xc build/modesp.o
- .rodata.esp_osdebug_obj
+ .rodata.esp_esf_free_bufs_obj
+                0x000000004028e014        0x8 build/modesp.o
+ .rodata.esp_free_obj
+                0x000000004028e01c        0x8 build/modesp.o
+ .rodata.esp_malloc_obj
+                0x000000004028e024        0x8 build/modesp.o
+ .rodata.esp_meminfo_obj
                 0x000000004028e02c        0x8 build/modesp.o
+ .rodata.esp_freemem_obj
+                0x000000004028e034        0x8 build/modesp.o
+ .rodata.esp_check_fw_obj
+                0x000000004028e03c        0x8 build/modesp.o
+ .rodata.esp_flash_user_start_obj
+                0x000000004028e044        0x8 build/modesp.o
+ .rodata.esp_flash_size_obj
+                0x000000004028e04c        0x8 build/modesp.o
+ .rodata.esp_flash_erase_obj
+                0x000000004028e054        0x8 build/modesp.o
+ .rodata.esp_flash_write_obj
+                0x000000004028e05c        0x8 build/modesp.o
+ .rodata.esp_flash_read_obj
+                0x000000004028e064        0x8 build/modesp.o
+ .rodata.esp_flash_id_obj
+                0x000000004028e06c        0x8 build/modesp.o
+ .rodata.esp_deepsleep_obj
+                0x000000004028e074        0xc build/modesp.o
+ .rodata.esp_sleep_type_obj
+                0x000000004028e080        0xc build/modesp.o
+ .rodata.esp_osdebug_obj
+                0x000000004028e08c        0x8 build/modesp.o
  .rodata.str1.1
-                0x000000004028e034      0x17d build/modnetwork.o
- *fill*         0x000000004028e1b1        0x3 
+                0x000000004028e094      0x17d build/modnetwork.o
+ *fill*         0x000000004028e211        0x3 
  .rodata.allowed_args$6085
-                0x000000004028e1b4       0x18 build/modnetwork.o
+                0x000000004028e214       0x18 build/modnetwork.o
  .rodata.network_module
-                0x000000004028e1cc        0x8 build/modnetwork.o
-                0x000000004028e1cc                network_module
+                0x000000004028e22c        0x8 build/modnetwork.o
+                0x000000004028e22c                network_module
  .rodata.esp_phy_mode_obj
-                0x000000004028e1d4        0xc build/modnetwork.o
- .rodata.esp_config_obj
-                0x000000004028e1e0        0xc build/modnetwork.o
- .rodata.esp_ifconfig_obj
-                0x000000004028e1ec        0xc build/modnetwork.o
- .rodata.esp_isconnected_obj
-                0x000000004028e1f8        0x8 build/modnetwork.o
- .rodata.esp_scan_obj
-                0x000000004028e200        0x8 build/modnetwork.o
- .rodata.esp_status_obj
-                0x000000004028e208        0xc build/modnetwork.o
- .rodata.esp_disconnect_obj
-                0x000000004028e214        0x8 build/modnetwork.o
- .rodata.esp_connect_obj
-                0x000000004028e21c        0xc build/modnetwork.o
- .rodata.esp_active_obj
-                0x000000004028e228        0xc build/modnetwork.o
- .rodata.get_wlan_obj
                 0x000000004028e234        0xc build/modnetwork.o
+ .rodata.esp_config_obj
+                0x000000004028e240        0xc build/modnetwork.o
+ .rodata.esp_ifconfig_obj
+                0x000000004028e24c        0xc build/modnetwork.o
+ .rodata.esp_isconnected_obj
+                0x000000004028e258        0x8 build/modnetwork.o
+ .rodata.esp_scan_obj
+                0x000000004028e260        0x8 build/modnetwork.o
+ .rodata.esp_status_obj
+                0x000000004028e268        0xc build/modnetwork.o
+ .rodata.esp_disconnect_obj
+                0x000000004028e274        0x8 build/modnetwork.o
+ .rodata.esp_connect_obj
+                0x000000004028e27c        0xc build/modnetwork.o
+ .rodata.esp_active_obj
+                0x000000004028e288        0xc build/modnetwork.o
+ .rodata.get_wlan_obj
+                0x000000004028e294        0xc build/modnetwork.o
  .rodata.wlan_objs
-                0x000000004028e240       0x10 build/modnetwork.o
+                0x000000004028e2a0       0x10 build/modnetwork.o
  .rodata.wlan_if_type
-                0x000000004028e250       0x3c build/modnetwork.o
-                0x000000004028e250                wlan_if_type
+                0x000000004028e2b0       0x3c build/modnetwork.o
+                0x000000004028e2b0                wlan_if_type
  .rodata.str1.1
-                0x000000004028e28c       0x31 build/modutime.o
- *fill*         0x000000004028e2bd        0x3 
+                0x000000004028e2ec       0x31 build/modutime.o
+ *fill*         0x000000004028e31d        0x3 
  .rodata.utime_module
-                0x000000004028e2c0        0x8 build/modutime.o
-                0x000000004028e2c0                utime_module
+                0x000000004028e320        0x8 build/modutime.o
+                0x000000004028e320                utime_module
  .rodata.time_module_globals
-                0x000000004028e2c8       0x10 build/modutime.o
+                0x000000004028e328       0x10 build/modutime.o
  .rodata.time_module_globals_table
-                0x000000004028e2d8       0x60 build/modutime.o
+                0x000000004028e338       0x60 build/modutime.o
  .rodata.time_time_obj
-                0x000000004028e338        0x8 build/modutime.o
-                0x000000004028e338                time_time_obj
+                0x000000004028e398        0x8 build/modutime.o
+                0x000000004028e398                time_time_obj
  .rodata.time_mktime_obj
-                0x000000004028e340        0x8 build/modutime.o
-                0x000000004028e340                time_mktime_obj
+                0x000000004028e3a0        0x8 build/modutime.o
+                0x000000004028e3a0                time_mktime_obj
  .rodata.time_localtime_obj
-                0x000000004028e348        0xc build/modutime.o
-                0x000000004028e348                time_localtime_obj
+                0x000000004028e3a8        0xc build/modutime.o
+                0x000000004028e3a8                time_localtime_obj
  .rodata.uos_module
-                0x000000004028e354        0x8 build/moduos.o
-                0x000000004028e354                uos_module
+                0x000000004028e3b4        0x8 build/moduos.o
+                0x000000004028e3b4                uos_module
  .rodata.os_module_globals
-                0x000000004028e35c       0x10 build/moduos.o
+                0x000000004028e3bc       0x10 build/moduos.o
  .rodata.os_module_globals_table
-                0x000000004028e36c       0x90 build/moduos.o
+                0x000000004028e3cc       0x90 build/moduos.o
  .rodata.os_dupterm_notify_obj
-                0x000000004028e3fc        0x8 build/moduos.o
+                0x000000004028e45c        0x8 build/moduos.o
  .rodata.os_dupterm_obj
-                0x000000004028e404        0xc build/moduos.o
+                0x000000004028e464        0xc build/moduos.o
  .rodata.os_urandom_obj
-                0x000000004028e410        0x8 build/moduos.o
+                0x000000004028e470        0x8 build/moduos.o
  .rodata.os_uname_obj
-                0x000000004028e418        0x8 build/moduos.o
+                0x000000004028e478        0x8 build/moduos.o
  .rodata.str1.1
-                0x000000004028e420       0x34 build/moduos.o
+                0x000000004028e480       0x34 build/moduos.o
                                          0x3c (size before relaxing)
  .rodata.os_uname_info_machine_obj
-                0x000000004028e454       0x10 build/moduos.o
+                0x000000004028e4b4       0x10 build/moduos.o
  .rodata.os_uname_info_version_obj
-                0x000000004028e464       0x10 build/moduos.o
+                0x000000004028e4c4       0x10 build/moduos.o
  .rodata.os_uname_info_nodename_obj
-                0x000000004028e474       0x10 build/moduos.o
+                0x000000004028e4d4       0x10 build/moduos.o
  .rodata.os_uname_info_sysname_obj
-                0x000000004028e484       0x10 build/moduos.o
+                0x000000004028e4e4       0x10 build/moduos.o
  .rodata.os_uname_info_fields
-                0x000000004028e494       0x14 build/moduos.o
+                0x000000004028e4f4       0x14 build/moduos.o
  .rodata.str1.1
-                0x000000004028e4a8       0x6e build/ets_alt_task.o
+                0x000000004028e508       0x6e build/ets_alt_task.o
  .rodata.g_dn_types
-                0x000000004028e516        0x6 build/lib/axtls/ssl/asn1.o
+                0x000000004028e576        0x6 build/lib/axtls/ssl/asn1.o
  .rodata.sig_sha512
-                0x000000004028e51c        0x9 build/lib/axtls/ssl/asn1.o
+                0x000000004028e57c        0x9 build/lib/axtls/ssl/asn1.o
  .rodata.sig_sha384
-                0x000000004028e525        0x9 build/lib/axtls/ssl/asn1.o
+                0x000000004028e585        0x9 build/lib/axtls/ssl/asn1.o
  .rodata.sig_sha256
-                0x000000004028e52e        0x9 build/lib/axtls/ssl/asn1.o
+                0x000000004028e58e        0x9 build/lib/axtls/ssl/asn1.o
  .rodata.sig_sha1WithRSAEncrypt
-                0x000000004028e537        0x5 build/lib/axtls/ssl/asn1.o
+                0x000000004028e597        0x5 build/lib/axtls/ssl/asn1.o
  .rodata.sig_oid_prefix
-                0x000000004028e53c        0x8 build/lib/axtls/ssl/asn1.o
- .rodata        0x000000004028e544      0x25c build/lib/axtls/ssl/loader.o
+                0x000000004028e59c        0x8 build/lib/axtls/ssl/asn1.o
+ .rodata        0x000000004028e5a4      0x25c build/lib/axtls/ssl/loader.o
  .rodata.default_private_key$3655
-                0x000000004028e7a0      0x261 build/lib/axtls/ssl/loader.o
+                0x000000004028e800      0x261 build/lib/axtls/ssl/loader.o
  .rodata.str1.1
-                0x000000004028ea01       0x74 build/lib/axtls/ssl/tls1.o
- *fill*         0x000000004028ea75        0x3 
+                0x000000004028ea61       0x74 build/lib/axtls/ssl/tls1.o
+ *fill*         0x000000004028ead5        0x3 
  .rodata.cipher_info
-                0x000000004028ea78       0x50 build/lib/axtls/ssl/tls1.o
+                0x000000004028ead8       0x50 build/lib/axtls/ssl/tls1.o
  .rodata.ssl_prot_prefs
-                0x000000004028eac8        0x4 build/lib/axtls/ssl/tls1.o
-                0x000000004028eac8                ssl_prot_prefs
+                0x000000004028eb28        0x4 build/lib/axtls/ssl/tls1.o
+                0x000000004028eb28                ssl_prot_prefs
  .rodata.g_chg_cipher_spec_pkt
-                0x000000004028eacc        0x1 build/lib/axtls/ssl/tls1.o
+                0x000000004028eb2c        0x1 build/lib/axtls/ssl/tls1.o
  .rodata.g_hello_done
-                0x000000004028eacd        0x4 build/lib/axtls/ssl/tls1_svr.o
+                0x000000004028eb2d        0x4 build/lib/axtls/ssl/tls1_svr.o
  .rodata.g_asn1_sha256
-                0x000000004028ead1       0x13 build/lib/axtls/ssl/tls1_clnt.o
+                0x000000004028eb31       0x13 build/lib/axtls/ssl/tls1_clnt.o
  .rodata.g_sig_alg
-                0x000000004028eae4        0xe build/lib/axtls/ssl/tls1_clnt.o
- .rodata.Rcon   0x000000004028eaf2       0x1e build/lib/axtls/crypto/aes.o
+                0x000000004028eb44        0xe build/lib/axtls/ssl/tls1_clnt.o
+ .rodata.Rcon   0x000000004028eb52       0x1e build/lib/axtls/crypto/aes.o
  .rodata.aes_isbox
-                0x000000004028eb10      0x100 build/lib/axtls/crypto/aes.o
+                0x000000004028eb70      0x100 build/lib/axtls/crypto/aes.o
  .rodata.aes_sbox
-                0x000000004028ec10      0x100 build/lib/axtls/crypto/aes.o
+                0x000000004028ec70      0x100 build/lib/axtls/crypto/aes.o
  .rodata.round_ac$2131
-                0x000000004028ed10      0x100 build/lib/axtls/crypto/md5.o
+                0x000000004028ed70      0x100 build/lib/axtls/crypto/md5.o
  .rodata.round_order$2133
-                0x000000004028ee10       0x40 build/lib/axtls/crypto/md5.o
+                0x000000004028ee70       0x40 build/lib/axtls/crypto/md5.o
  .rodata.round1_s$2132
-                0x000000004028ee50       0x10 build/lib/axtls/crypto/md5.o
+                0x000000004028eeb0       0x10 build/lib/axtls/crypto/md5.o
  .rodata.PADDING
-                0x000000004028ee60       0x40 build/lib/axtls/crypto/md5.o
+                0x000000004028eec0       0x40 build/lib/axtls/crypto/md5.o
  .rodata.str1.1
-                0x000000004028eea0       0x1a build/extmod/modbtree.o
- *fill*         0x000000004028eeba        0x2 
+                0x000000004028ef00       0x1a build/extmod/modbtree.o
+ *fill*         0x000000004028ef1a        0x2 
  .rodata.allowed_args$5570
-                0x000000004028eebc       0x20 build/extmod/modbtree.o
+                0x000000004028ef1c       0x20 build/extmod/modbtree.o
  .rodata.mod_btree_open_obj
-                0x000000004028eedc        0xc build/extmod/modbtree.o
+                0x000000004028ef3c        0xc build/extmod/modbtree.o
  .rodata.btree_items_obj
-                0x000000004028eee8        0xc build/extmod/modbtree.o
+                0x000000004028ef48        0xc build/extmod/modbtree.o
  .rodata.btree_values_obj
-                0x000000004028eef4        0xc build/extmod/modbtree.o
+                0x000000004028ef54        0xc build/extmod/modbtree.o
  .rodata.btree_keys_obj
-                0x000000004028ef00        0xc build/extmod/modbtree.o
+                0x000000004028ef60        0xc build/extmod/modbtree.o
  .rodata.btree_seq_obj
-                0x000000004028ef0c        0xc build/extmod/modbtree.o
+                0x000000004028ef6c        0xc build/extmod/modbtree.o
  .rodata.btree_get_obj
-                0x000000004028ef18        0xc build/extmod/modbtree.o
+                0x000000004028ef78        0xc build/extmod/modbtree.o
  .rodata.btree_put_obj
-                0x000000004028ef24        0xc build/extmod/modbtree.o
+                0x000000004028ef84        0xc build/extmod/modbtree.o
  .rodata.btree_close_obj
-                0x000000004028ef30        0x8 build/extmod/modbtree.o
+                0x000000004028ef90        0x8 build/extmod/modbtree.o
  .rodata.btree_flush_obj
-                0x000000004028ef38        0x8 build/extmod/modbtree.o
+                0x000000004028ef98        0x8 build/extmod/modbtree.o
  .rodata.btree_type
-                0x000000004028ef40       0x3c build/extmod/modbtree.o
+                0x000000004028efa0       0x3c build/extmod/modbtree.o
  .rodata.__bt_seq
-                0x000000004028ef7c       0x24 build/lib/berkeley-db-1.xx/btree/bt_seq.o
+                0x000000004028efdc       0x24 build/lib/berkeley-db-1.xx/btree/bt_seq.o
  .rodata.str1.1
-                0x000000004028efa0       0x25 build/lib/berkeley-db-1.xx/mpool/mpool.o
+                0x000000004028f000       0x25 build/lib/berkeley-db-1.xx/mpool/mpool.o
  .rodata.str1.1
-                0x000000004028efc5       0x7f build/extmod/modlwip.o
+                0x000000004028f025       0x7f build/extmod/modlwip.o
  .rodata.lwip_print_pcbs_obj
-                0x000000004028f044        0x8 build/extmod/modlwip.o
-                0x000000004028f044                lwip_print_pcbs_obj
+                0x000000004028f0a4        0x8 build/extmod/modlwip.o
+                0x000000004028f0a4                lwip_print_pcbs_obj
  .rodata.lwip_getaddrinfo_obj
-                0x000000004028f04c        0xc build/extmod/modlwip.o
-                0x000000004028f04c                lwip_getaddrinfo_obj
+                0x000000004028f0ac        0xc build/extmod/modlwip.o
+                0x000000004028f0ac                lwip_getaddrinfo_obj
  .rodata.mod_lwip_callback_obj
-                0x000000004028f058        0x8 build/extmod/modlwip.o
-                0x000000004028f058                mod_lwip_callback_obj
- .rodata.mod_lwip_reset_obj
-                0x000000004028f060        0x8 build/extmod/modlwip.o
-                0x000000004028f060                mod_lwip_reset_obj
- .rodata.lwip_socket_stream_p
-                0x000000004028f068       0x10 build/extmod/modlwip.o
- .rodata.lwip_socket_makefile_obj
-                0x000000004028f078        0xc build/extmod/modlwip.o
- .rodata.lwip_socket_setsockopt_obj
-                0x000000004028f084        0xc build/extmod/modlwip.o
- .rodata.lwip_socket_setblocking_obj
-                0x000000004028f090        0x8 build/extmod/modlwip.o
- .rodata.lwip_socket_settimeout_obj
-                0x000000004028f098        0x8 build/extmod/modlwip.o
- .rodata.lwip_socket_sendall_obj
-                0x000000004028f0a0        0x8 build/extmod/modlwip.o
- .rodata.lwip_socket_recvfrom_obj
-                0x000000004028f0a8        0x8 build/extmod/modlwip.o
- .rodata.lwip_socket_sendto_obj
-                0x000000004028f0b0        0x8 build/extmod/modlwip.o
- .rodata.lwip_socket_recv_obj
                 0x000000004028f0b8        0x8 build/extmod/modlwip.o
- .rodata.lwip_socket_send_obj
+                0x000000004028f0b8                mod_lwip_callback_obj
+ .rodata.mod_lwip_reset_obj
                 0x000000004028f0c0        0x8 build/extmod/modlwip.o
+                0x000000004028f0c0                mod_lwip_reset_obj
+ .rodata.lwip_socket_stream_p
+                0x000000004028f0c8       0x10 build/extmod/modlwip.o
+ .rodata.lwip_socket_makefile_obj
+                0x000000004028f0d8        0xc build/extmod/modlwip.o
+ .rodata.lwip_socket_setsockopt_obj
+                0x000000004028f0e4        0xc build/extmod/modlwip.o
+ .rodata.lwip_socket_setblocking_obj
+                0x000000004028f0f0        0x8 build/extmod/modlwip.o
+ .rodata.lwip_socket_settimeout_obj
+                0x000000004028f0f8        0x8 build/extmod/modlwip.o
+ .rodata.lwip_socket_sendall_obj
+                0x000000004028f100        0x8 build/extmod/modlwip.o
+ .rodata.lwip_socket_recvfrom_obj
+                0x000000004028f108        0x8 build/extmod/modlwip.o
+ .rodata.lwip_socket_sendto_obj
+                0x000000004028f110        0x8 build/extmod/modlwip.o
+ .rodata.lwip_socket_recv_obj
+                0x000000004028f118        0x8 build/extmod/modlwip.o
+ .rodata.lwip_socket_send_obj
+                0x000000004028f120        0x8 build/extmod/modlwip.o
  .rodata.lwip_socket_connect_obj
-                0x000000004028f0c8        0x8 build/extmod/modlwip.o
+                0x000000004028f128        0x8 build/extmod/modlwip.o
  .rodata.lwip_socket_accept_obj
-                0x000000004028f0d0        0x8 build/extmod/modlwip.o
+                0x000000004028f130        0x8 build/extmod/modlwip.o
  .rodata.lwip_socket_listen_obj
-                0x000000004028f0d8        0x8 build/extmod/modlwip.o
+                0x000000004028f138        0x8 build/extmod/modlwip.o
  .rodata.lwip_socket_bind_obj
-                0x000000004028f0e0        0x8 build/extmod/modlwip.o
+                0x000000004028f140        0x8 build/extmod/modlwip.o
  .rodata.lwip_socket_type
-                0x000000004028f0e8       0x3c build/extmod/modlwip.o
+                0x000000004028f148       0x3c build/extmod/modlwip.o
  .rodata.error_lookup_table
-                0x000000004028f124       0x44 build/extmod/modlwip.o
- .rodata.half   0x000000004028f168        0x8 build/lib/libm/math.o
- .rodata.dp_l   0x000000004028f170        0x8 build/lib/libm/math.o
- .rodata.dp_h   0x000000004028f178        0x8 build/lib/libm/math.o
- .rodata.bp     0x000000004028f180        0x8 build/lib/libm/math.o
- .rodata.PIo2   0x000000004028f188       0x2c build/lib/libm/kf_rem_pio2.o
+                0x000000004028f184       0x44 build/extmod/modlwip.o
+ .rodata.half   0x000000004028f1c8        0x8 build/lib/libm/math.o
+ .rodata.dp_l   0x000000004028f1d0        0x8 build/lib/libm/math.o
+ .rodata.dp_h   0x000000004028f1d8        0x8 build/lib/libm/math.o
+ .rodata.bp     0x000000004028f1e0        0x8 build/lib/libm/math.o
+ .rodata.PIo2   0x000000004028f1e8       0x2c build/lib/libm/kf_rem_pio2.o
  .rodata.init_jk
-                0x000000004028f1b4        0xc build/lib/libm/kf_rem_pio2.o
+                0x000000004028f214        0xc build/lib/libm/kf_rem_pio2.o
  .rodata.npio2_hw
-                0x000000004028f1c0       0x80 build/lib/libm/ef_rem_pio2.o
+                0x000000004028f220       0x80 build/lib/libm/ef_rem_pio2.o
  .rodata.two_over_pi
-                0x000000004028f240      0x318 build/lib/libm/ef_rem_pio2.o
+                0x000000004028f2a0      0x318 build/lib/libm/ef_rem_pio2.o
  .rodata.atanlo
-                0x000000004028f558       0x10 build/lib/libm/atanf.o
+                0x000000004028f5b8       0x10 build/lib/libm/atanf.o
  .rodata.atanhi
-                0x000000004028f568       0x10 build/lib/libm/atanf.o
+                0x000000004028f5c8       0x10 build/lib/libm/atanf.o
  .rodata.str1.1
-                0x000000004028f578        0xe build/lib/mp-readline/readline.o
+                0x000000004028f5d8        0xe build/lib/mp-readline/readline.o
                                          0x16 (size before relaxing)
  .rodata.str1.1
-                0x000000004028f586       0x1e build/lib/netutils/netutils.o
+                0x000000004028f5e6       0x1e build/lib/netutils/netutils.o
  .rodata.days_in_month$3442
-                0x000000004028f5a4        0xc build/lib/timeutils/timeutils.o
+                0x000000004028f604        0xc build/lib/timeutils/timeutils.o
  .rodata.days_since_jan1
-                0x000000004028f5b0       0x1a build/lib/timeutils/timeutils.o
+                0x000000004028f610       0x1a build/lib/timeutils/timeutils.o
  .rodata.str1.1
-                0x000000004028f5ca       0xf2 build/lib/utils/pyexec.o
+                0x000000004028f62a       0xf2 build/lib/utils/pyexec.o
                                         0x146 (size before relaxing)
  .rodata.str1.1
-                0x000000004028f6bc        0xf build/lib/utils/sys_stdio_mphal.o
- *fill*         0x000000004028f6cb        0x1 
+                0x000000004028f71c        0xf build/lib/utils/sys_stdio_mphal.o
+ *fill*         0x000000004028f72b        0x1 
  .rodata.stdio_buffer_obj_type
-                0x000000004028f6cc       0x3c build/lib/utils/sys_stdio_mphal.o
+                0x000000004028f72c       0x3c build/lib/utils/sys_stdio_mphal.o
  .rodata.stdio_buffer_obj_stream_p
-                0x000000004028f708       0x10 build/lib/utils/sys_stdio_mphal.o
+                0x000000004028f768       0x10 build/lib/utils/sys_stdio_mphal.o
  .rodata.mp_sys_stderr_obj
-                0x000000004028f718        0x8 build/lib/utils/sys_stdio_mphal.o
-                0x000000004028f718                mp_sys_stderr_obj
+                0x000000004028f778        0x8 build/lib/utils/sys_stdio_mphal.o
+                0x000000004028f778                mp_sys_stderr_obj
  .rodata.mp_sys_stdout_obj
-                0x000000004028f720        0x8 build/lib/utils/sys_stdio_mphal.o
-                0x000000004028f720                mp_sys_stdout_obj
+                0x000000004028f780        0x8 build/lib/utils/sys_stdio_mphal.o
+                0x000000004028f780                mp_sys_stdout_obj
  .rodata.mp_sys_stdin_obj
-                0x000000004028f728        0x8 build/lib/utils/sys_stdio_mphal.o
-                0x000000004028f728                mp_sys_stdin_obj
- .rodata.stdio_obj_type
-                0x000000004028f730       0x3c build/lib/utils/sys_stdio_mphal.o
- .rodata.stdio_obj_stream_p
-                0x000000004028f76c       0x10 build/lib/utils/sys_stdio_mphal.o
- .rodata.stdio_obj___exit___obj
-                0x000000004028f77c        0xc build/lib/utils/sys_stdio_mphal.o
- .rodata.stdio_buffer_obj
                 0x000000004028f788        0x8 build/lib/utils/sys_stdio_mphal.o
+                0x000000004028f788                mp_sys_stdin_obj
+ .rodata.stdio_obj_type
+                0x000000004028f790       0x3c build/lib/utils/sys_stdio_mphal.o
+ .rodata.stdio_obj_stream_p
+                0x000000004028f7cc       0x10 build/lib/utils/sys_stdio_mphal.o
+ .rodata.stdio_obj___exit___obj
+                0x000000004028f7dc        0xc build/lib/utils/sys_stdio_mphal.o
+ .rodata.stdio_buffer_obj
+                0x000000004028f7e8        0x8 build/lib/utils/sys_stdio_mphal.o
  .rodata.str1.1
-                0x000000004028f790       0x44 build/lib/oofatfs/ff.o
+                0x000000004028f7f0       0x44 build/lib/oofatfs/ff.o
  .rodata.cst$2570
-                0x000000004028f7d4        0xe build/lib/oofatfs/ff.o
+                0x000000004028f834        0xe build/lib/oofatfs/ff.o
  .rodata.cst32$2571
-                0x000000004028f7e2        0xe build/lib/oofatfs/ff.o
+                0x000000004028f842        0xe build/lib/oofatfs/ff.o
  .rodata.LfnOfs
-                0x000000004028f7f0        0xd build/lib/oofatfs/ff.o
- .rodata.ExCvt  0x000000004028f7fd       0x80 build/lib/oofatfs/ff.o
- *fill*         0x000000004028f87d        0x3 
+                0x000000004028f850        0xd build/lib/oofatfs/ff.o
+ .rodata.ExCvt  0x000000004028f85d       0x80 build/lib/oofatfs/ff.o
+ *fill*         0x000000004028f8dd        0x3 
  .rodata.ff_wtoupper
-                0x000000004028f880       0x24 build/lib/oofatfs/option/unicode.o
+                0x000000004028f8e0       0x24 build/lib/oofatfs/option/unicode.o
  .rodata.cvt2$1819
-                0x000000004028f8a4       0xbc build/lib/oofatfs/option/unicode.o
+                0x000000004028f904       0xbc build/lib/oofatfs/option/unicode.o
  .rodata.cvt1$1818
-                0x000000004028f960      0x1f2 build/lib/oofatfs/option/unicode.o
- .rodata.Tbl    0x000000004028fb52      0x100 build/lib/oofatfs/option/unicode.o
-                0x000000004028fc52                _irom0_text_end = ABSOLUTE (.)
+                0x000000004028f9c0      0x1f2 build/lib/oofatfs/option/unicode.o
+ .rodata.Tbl    0x000000004028fbb2      0x100 build/lib/oofatfs/option/unicode.o
+                0x000000004028fcb2                _irom0_text_end = ABSOLUTE (.)
 
 .text           0x0000000040100000     0x74f0
                 0x0000000040100000                _stext = .

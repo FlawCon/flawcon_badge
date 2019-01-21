@@ -1,11 +1,11 @@
 import time
 from micropython import const
 from machine import Pin, I2C, EPSPI, UART
-from _capt import CAP1296
-from _adt import ADT75
-from _epd import EPD, RESOLUTION
-from _gfx import GFX
-from _font import Font
+from fcb._capt import CAP1296
+from fcb._adt import ADT75
+from fcb._epd import EPD, RESOLUTION
+from fcb._gfx import GFX
+from fcb._font import Font
 
 
 class Event:
