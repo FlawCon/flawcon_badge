@@ -30,8 +30,8 @@ _CAPT_MAPPING = (Event.LEFT, Event.RIGHT, Event.UP, Event.DOWN, Event.BUTTON_A, 
 class FCB:
     def __init__(self):
         self._uart = UART(0, 115200)
-        self._i2c = I2C(cl=Pin(5), sda=Pin(4), freq=100000)
-        self._capt = CAP1296(i2c=self._i2c, alert_pin=Pin(10, Pin.In), intr=self._handle_touch_intr)
+        self._i2c = I2C(scl=Pin(5), sda=Pin(4), freq=100000)
+        self._capt = CAP1296(i2c=self._i2c, alert_pin=Pin(10, Pin.IN), intr=self._handle_touch_intr)
         self._adt = ADT75(i2c=self._i2c)
         self._epd = EPD(spi=EPSPI(), cs_pin=Pin(15, Pin.OUT), reset_pin=Pin(0, Pin.OUT), busy_pin=Pin(16, Pin.IN))
         self._gfx = GFX(RESOLUTION[0][0], RESOLUTION[0][1], self._epd.set_pixel)

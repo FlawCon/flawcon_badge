@@ -1352,8 +1352,6 @@ Q(__name__)
 
 Q(__name__)
 
-Q(__name__)
-
 Q(__neg__)
 
 Q(__new__)
@@ -1725,8 +1723,6 @@ Q(count)
 Q(count)
 
 Q(count)
-
-Q(crc8)
 
 Q(data)
 
@@ -2410,8 +2406,6 @@ Q(on)
 
 Q(on)
 
-Q(onewire)
-
 Q(open)
 
 Q(open)
@@ -2566,11 +2560,7 @@ Q(read)
 
 Q(read)
 
-Q(readbit)
-
 Q(readblocks)
-
-Q(readbyte)
 
 Q(readfrom)
 
@@ -2655,8 +2645,6 @@ Q(replace)
 Q(replace)
 
 Q(repr)
-
-Q(reset)
 
 Q(reset)
 
@@ -3176,11 +3164,7 @@ Q(write)
 
 Q(write_readinto)
 
-Q(writebit)
-
 Q(writeblocks)
-
-Q(writebyte)
 
 Q(writeto)
 

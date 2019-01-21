@@ -193,9 +193,7 @@ enum {
     MP_QSTR__handle_touch_intr,
     MP_QSTR__handle_uart,
     MP_QSTR__uart,
-    MP_QSTR_cl,
     MP_QSTR__i2c,
-    MP_QSTR_In,
     MP_QSTR__capt,
     MP_QSTR__adt,
     MP_QSTR__epd,
@@ -237,7 +235,7 @@ const qstr_pool_t mp_qstr_frozen_const_pool = {
     (qstr_pool_t*)&mp_qstr_const_pool, // previous pool
     MP_QSTRnumber_of, // previous pool size
     10, // allocated entries
-    199, // used entries
+    197, // used entries
     {
         (const byte*)"\xe7\xe7\x0c" "flashbdev.py",
         (const byte*)"\xc0\xf8\x09" "FlashBdev",
@@ -401,9 +399,7 @@ const qstr_pool_t mp_qstr_frozen_const_pool = {
         (const byte*)"\x14\xf8\x12" "_handle_touch_intr",
         (const byte*)"\x5d\x92\x0c" "_handle_uart",
         (const byte*)"\x88\x38\x05" "_uart",
-        (const byte*)"\xea\x6e\x02" "cl",
         (const byte*)"\xc2\x0f\x04" "_i2c",
-        (const byte*)"\x02\x73\x02" "In",
         (const byte*)"\x1c\x90\x05" "_capt",
         (const byte*)"\xcb\x3c\x04" "_adt",
         (const byte*)"\x4b\x4b\x04" "_epd",
@@ -1341,11 +1337,26 @@ const mp_raw_code_t raw_code_websocket_helper__lt_module_gt_ = {
 };
 
 // frozen bytecode for file _boot.py, scope _boot_<module>
-STATIC const byte bytecode_data__boot__lt_module_gt_[199] = {
-    0x06, 0x01, 0x00, 0x00, 0x00, 0x00, 0x14,
+STATIC const byte bytecode_data__boot__lt_module_gt_[210] = {
+    0x06, 0x01, 0x00, 0x00, 0x00, 0x00, 0x15,
     MP_QSTR__lt_module_gt_ & 0xff, MP_QSTR__lt_module_gt_ >> 8,
     MP_QSTR__boot_dot_py & 0xff, MP_QSTR__boot_dot_py >> 8,
-    0x29, 0x3c, 0x28, 0x50, 0x23, 0x26, 0x5c, 0x28, 0x4e, 0x49, 0x28, 0x4f, 0x28, 0x00, 0x00, 0xff,
+    0x29, 0x2a, 0x4f, 0x28, 0x3c, 0x28, 0x50, 0x23, 0x26, 0x5c, 0x28, 0x4e, 0x49, 0x28, 0x00, 0x00, 0xff,
+    0x80, 
+    0x11, 
+    0x68, MP_QSTR_esp & 0xff, MP_QSTR_esp >> 8, 
+    0x24, MP_QSTR_esp & 0xff, MP_QSTR_esp >> 8, 
+    0x1b, MP_QSTR_esp & 0xff, MP_QSTR_esp >> 8, 
+    0x1e, MP_QSTR_osdebug & 0xff, MP_QSTR_osdebug >> 8, 
+    0x11, 
+    0x66, 0x01, 
+    0x32, 
+    0x1b, MP_QSTR_esp & 0xff, MP_QSTR_esp >> 8, 
+    0x1e, MP_QSTR_sleep_type & 0xff, MP_QSTR_sleep_type >> 8, 
+    0x1b, MP_QSTR_esp & 0xff, MP_QSTR_esp >> 8, 
+    0x1d, MP_QSTR_SLEEP_MODEM & 0xff, MP_QSTR_SLEEP_MODEM >> 8, 
+    0x66, 0x01, 
+    0x32, 
     0x80, 
     0x11, 
     0x68, MP_QSTR_gc & 0xff, MP_QSTR_gc >> 8, 
@@ -1407,16 +1418,6 @@ STATIC const byte bytecode_data__boot__lt_module_gt_[199] = {
     0x32, 
     0x80, 
     0x11, 
-    0x68, MP_QSTR_esp & 0xff, MP_QSTR_esp >> 8, 
-    0x24, MP_QSTR_esp & 0xff, MP_QSTR_esp >> 8, 
-    0x1b, MP_QSTR_esp & 0xff, MP_QSTR_esp >> 8, 
-    0x1e, MP_QSTR_sleep_type & 0xff, MP_QSTR_sleep_type >> 8, 
-    0x1b, MP_QSTR_esp & 0xff, MP_QSTR_esp >> 8, 
-    0x1d, MP_QSTR_SLEEP_MODEM & 0xff, MP_QSTR_SLEEP_MODEM >> 8, 
-    0x66, 0x01, 
-    0x32, 
-    0x80, 
-    0x11, 
     0x68, MP_QSTR_fcb & 0xff, MP_QSTR_fcb >> 8, 
     0x24, MP_QSTR_fcb & 0xff, MP_QSTR_fcb >> 8, 
     0x1b, MP_QSTR_fcb & 0xff, MP_QSTR_fcb >> 8, 
@@ -1434,7 +1435,7 @@ const mp_raw_code_t raw_code__boot__lt_module_gt_ = {
         .bytecode = bytecode_data__boot__lt_module_gt_,
         .const_table = NULL,
         #if MICROPY_PERSISTENT_CODE_SAVE
-        .bc_len = 199,
+        .bc_len = 210,
         .n_obj = 0,
         .n_raw_code = 0,
         #endif
@@ -4344,7 +4345,7 @@ STATIC const byte bytecode_data_fcb_fcb__lt_module_gt__FCB___init__[269] = {
     0xb0, 
     0x26, MP_QSTR__uart & 0xff, MP_QSTR__uart >> 8, 
     0x1c, MP_QSTR_I2C & 0xff, MP_QSTR_I2C >> 8, 
-    0x16, MP_QSTR_cl & 0xff, MP_QSTR_cl >> 8, 
+    0x16, MP_QSTR_scl & 0xff, MP_QSTR_scl >> 8, 
     0x1c, MP_QSTR_Pin & 0xff, MP_QSTR_Pin >> 8, 
     0x85, 
     0x64, 0x01, 
@@ -4365,7 +4366,7 @@ STATIC const byte bytecode_data_fcb_fcb__lt_module_gt__FCB___init__[269] = {
     0x1c, MP_QSTR_Pin & 0xff, MP_QSTR_Pin >> 8, 
     0x8a, 
     0x1c, MP_QSTR_Pin & 0xff, MP_QSTR_Pin >> 8, 
-    0x1d, MP_QSTR_In & 0xff, MP_QSTR_In >> 8, 
+    0x1d, MP_QSTR_IN & 0xff, MP_QSTR_IN >> 8, 
     0x64, 0x02, 
     0x16, MP_QSTR_intr & 0xff, MP_QSTR_intr >> 8, 
     0xb0, 
