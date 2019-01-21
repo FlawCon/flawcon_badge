@@ -5,8 +5,8 @@ from flashbdev import bdev
 def wifi():
     import ubinascii
     ap_if = network.WLAN(network.AP_IF)
-    essid = b"MicroPython-%s" % ubinascii.hexlify(ap_if.config("mac")[-3:])
-    ap_if.config(essid=essid, authmode=network.AUTH_WPA_WPA2_PSK, password=b"micropythoN")
+    essid = b"FlawCon-%s" % ubinascii.hexlify(ap_if.config("mac")[-3:])
+    ap_if.config(essid=essid, authmode=network.AUTH_WPA_WPA2_PSK, password=b"HackThePlanet")
 
 def check_bootsec():
     buf = bytearray(bdev.SEC_SIZE)
@@ -27,7 +27,7 @@ def fs_corrupted():
 The FAT filesystem starting at sector %d with size %d sectors appears to
 be corrupted. If you had important data there, you may want to make a flash
 snapshot to try to recover it. Otherwise, perform factory reprogramming
-of MicroPython firmware (completely erase flash, followed by firmware
+of the firmware (completely erase flash, followed by firmware
 programming).
 """ % (bdev.START_SEC, bdev.blocks))
         time.sleep(3)
@@ -42,13 +42,7 @@ def setup():
     with open("boot.py", "w") as f:
         f.write("""\
 # This file is executed on every boot (including wake-boot from deepsleep)
-#import esp
-#esp.osdebug(None)
-import uos, machine
-#uos.dupterm(None, 1) # disable REPL on UART(0)
 import gc
-#import webrepl
-#webrepl.start()
 gc.collect()
 """)
     return vfs

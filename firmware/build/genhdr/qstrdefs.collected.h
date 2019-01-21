@@ -162,6 +162,10 @@ Q(EPERM)
 
 Q(EPERM)
 
+Q(EPSPI)
+
+Q(EPSPI)
+
 Q(ETIMEDOUT)
 
 Q(ETIMEDOUT)
@@ -734,8 +738,6 @@ Q(__name__)
 
 Q(__name__)
 
-Q(__name__)
-
 Q(__neg__)
 
 Q(__new__)
@@ -814,8 +816,6 @@ Q(_lt_stdin_gt_)
 
 Q(_lt_string_gt_)
 
-Q(_onewire)
-
 Q(_percent__hash_o)
 
 Q(_percent__hash_x)
@@ -830,10 +830,6 @@ Q(_slash_)
 
 Q(_slash_)
 
-Q(_slash_)
-
-Q(_slash_lib)
-
 Q(_slash_lib)
 
 Q(_space_)
@@ -843,14 +839,6 @@ Q(_star_)
 Q(_star_)
 
 Q(_star_)
-
-Q(_webrepl)
-
-Q(_webrepl)
-
-Q(_webrepl)
-
-Q(_webrepl)
 
 Q(a2b_base64)
 
@@ -893,8 +881,6 @@ Q(and_)
 Q(any)
 
 Q(any)
-
-Q(apa102_write)
 
 Q(append)
 
@@ -1082,8 +1068,6 @@ Q(close)
 
 Q(close)
 
-Q(close)
-
 Q(closure)
 
 Q(closure)
@@ -1165,8 +1149,6 @@ Q(deque)
 Q(dhcp_hostname)
 
 Q(dhcp_hostname)
-
-Q(dht_readinto)
 
 Q(dict)
 
@@ -1459,6 +1441,8 @@ Q(index)
 Q(index)
 
 Q(info)
+
+Q(init)
 
 Q(init)
 
@@ -1780,8 +1764,6 @@ Q(namedtuple)
 
 Q(native)
 
-Q(neopixel_write)
-
 Q(network)
 
 Q(network)
@@ -1839,8 +1821,6 @@ Q(pack_into)
 Q(pagesize)
 
 Q(parity)
-
-Q(password)
 
 Q(password)
 
@@ -1942,11 +1922,7 @@ Q(range)
 
 Q(range)
 
-Q(rb)
-
 Q(re)
-
-Q(read)
 
 Q(read)
 
@@ -1981,8 +1957,6 @@ Q(readfrom_into)
 Q(readfrom_mem)
 
 Q(readfrom_mem_into)
-
-Q(readinto)
 
 Q(readinto)
 
@@ -2543,8 +2517,6 @@ Q(viper)
 Q(vline)
 
 Q(wake)
-
-Q(wb)
 
 Q(websocket)
 

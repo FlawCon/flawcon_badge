@@ -48,7 +48,7 @@ build/modesp.o: modesp.c \
  user_config.h etshal.h \
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/os_type.h \
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/gpio.h \
- modmachine.h ../micropython/drivers/dht/dht.h uart.h \
+ modmachine.h uart.h \
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/eagle_soc.h \
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/user_interface.h \
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/ip_addr.h \
@@ -64,7 +64,7 @@ build/modesp.o: modesp.c \
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/spi_flash.h \
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/gpio.h \
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/mem.h \
- ets_alt_task.h espneopixel.h espapa102.h modmachine.h
+ ets_alt_task.h espapa102.h modmachine.h
 modesp.c :
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h :
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h :
@@ -115,7 +115,7 @@ modesp.c :
  user_config.h etshal.h :
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/os_type.h :
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/gpio.h :
- modmachine.h ../micropython/drivers/dht/dht.h uart.h :
+ modmachine.h uart.h :
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/eagle_soc.h :
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/user_interface.h :
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/ip_addr.h :
@@ -131,4 +131,4 @@ modesp.c :
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/spi_flash.h :
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/gpio.h :
  /media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/mem.h :
- ets_alt_task.h espneopixel.h espapa102.h modmachine.h :
+ ets_alt_task.h espapa102.h modmachine.h :

@@ -64,7 +64,6 @@ endif
 SRC_C = \
 	strtoll.c \
 	main.c \
-	mp_main.c \
 	help.c \
 	esp_mphal.c \
 	esp_init_data.c \
@@ -72,7 +71,6 @@ SRC_C = \
 	lexerstr32.c \
 	uart.c \
 	esppwm.c \
-	espneopixel.c \
 	espapa102.c \
 	intr.c \
 	modpyb.c \
@@ -84,6 +82,7 @@ SRC_C = \
 	machine_uart.c \
 	machine_wdt.c \
 	machine_hspi.c \
+	machine_ep_spi.c \
 	modesp.c \
 	modnetwork.c \
 	modutime.c \
@@ -96,7 +95,6 @@ SRC_C = \
 
 EXTMOD_SRC_C = $(addprefix extmod/,\
 	modlwip.c \
-	modonewire.c \
         )
 
 LIB_SRC_C = $(addprefix lib/,\
@@ -135,7 +133,6 @@ endif
 
 DRIVERS_SRC_C = $(addprefix drivers/,\
 	bus/softspi.c \
-	dht/dht.c \
         )
 
 SRC_S = \

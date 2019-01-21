@@ -90,7 +90,7 @@ typedef signed int intptr_t;
 typedef unsigned int uintptr_t;
 # 10 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stdint.h" 2 3 4
 # 2 "./mpconfigport.h" 2
-# 138 "./mpconfigport.h"
+# 137 "./mpconfigport.h"
 typedef int32_t mp_int_t;
 typedef uint32_t mp_uint_t;
 typedef long mp_off_t;
@@ -324,7 +324,7 @@ typedef unsigned long timer_t;
 
 typedef unsigned long useconds_t;
 typedef long suseconds_t;
-# 144 "./mpconfigport.h" 2
+# 143 "./mpconfigport.h" 2
 
 
 void *esp_native_code_commit(void*, size_t);
@@ -332,15 +332,14 @@ void *esp_native_code_commit(void*, size_t);
 
 
 extern const struct _mp_print_t mp_debug_print;
-# 165 "./mpconfigport.h"
+# 164 "./mpconfigport.h"
 extern const struct _mp_obj_module_t esp_module;
 extern const struct _mp_obj_module_t network_module;
 extern const struct _mp_obj_module_t utime_module;
 extern const struct _mp_obj_module_t uos_module;
 extern const struct _mp_obj_module_t mp_module_lwip;
 extern const struct _mp_obj_module_t mp_module_machine;
-extern const struct _mp_obj_module_t mp_module_onewire;
-# 207 "./mpconfigport.h"
+# 204 "./mpconfigport.h"
 # 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/alloca.h" 1 3
 # 10 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/alloca.h" 3
 # 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 1 3
@@ -560,7 +559,7 @@ extern struct _reent *const _global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
 # 12 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/alloca.h" 2 3
-# 208 "./mpconfigport.h" 2
+# 205 "./mpconfigport.h" 2
 # 63 "../micropython/py/mpconfig.h" 2
 # 614 "../micropython/py/mpconfig.h"
 typedef float mp_float_t;
@@ -763,6 +762,10 @@ Q(EOPNOTSUPP)
 Q(EPERM)
 
 Q(EPERM)
+
+Q(EPSPI)
+
+Q(EPSPI)
 
 Q(ETIMEDOUT)
 
@@ -1336,8 +1339,6 @@ Q(__name__)
 
 Q(__name__)
 
-Q(__name__)
-
 Q(__neg__)
 
 Q(__new__)
@@ -1416,8 +1417,6 @@ Q(_lt_stdin_gt_)
 
 Q(_lt_string_gt_)
 
-Q(_onewire)
-
 Q(_percent__hash_o)
 
 Q(_percent__hash_x)
@@ -1432,10 +1431,6 @@ Q(_slash_)
 
 Q(_slash_)
 
-Q(_slash_)
-
-Q(_slash_lib)
-
 Q(_slash_lib)
 
 Q(_space_)
@@ -1445,14 +1440,6 @@ Q(_star_)
 Q(_star_)
 
 Q(_star_)
-
-Q(_webrepl)
-
-Q(_webrepl)
-
-Q(_webrepl)
-
-Q(_webrepl)
 
 Q(a2b_base64)
 
@@ -1495,8 +1482,6 @@ Q(and_)
 Q(any)
 
 Q(any)
-
-Q(apa102_write)
 
 Q(append)
 
@@ -1684,8 +1669,6 @@ Q(close)
 
 Q(close)
 
-Q(close)
-
 Q(closure)
 
 Q(closure)
@@ -1767,8 +1750,6 @@ Q(deque)
 Q(dhcp_hostname)
 
 Q(dhcp_hostname)
-
-Q(dht_readinto)
 
 Q(dict)
 
@@ -2061,6 +2042,8 @@ Q(index)
 Q(index)
 
 Q(info)
+
+Q(init)
 
 Q(init)
 
@@ -2382,8 +2365,6 @@ Q(namedtuple)
 
 Q(native)
 
-Q(neopixel_write)
-
 Q(network)
 
 Q(network)
@@ -2441,8 +2422,6 @@ Q(pack_into)
 Q(pagesize)
 
 Q(parity)
-
-Q(password)
 
 Q(password)
 
@@ -2544,11 +2523,7 @@ Q(range)
 
 Q(range)
 
-Q(rb)
-
 Q(re)
-
-Q(read)
 
 Q(read)
 
@@ -2583,8 +2558,6 @@ Q(readfrom_into)
 Q(readfrom_mem)
 
 Q(readfrom_mem_into)
-
-Q(readinto)
 
 Q(readinto)
 
@@ -3145,8 +3118,6 @@ Q(viper)
 Q(vline)
 
 Q(wake)
-
-Q(wb)
 
 Q(websocket)
 

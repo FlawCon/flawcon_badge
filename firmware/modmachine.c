@@ -308,6 +308,9 @@ STATIC const mp_rom_map_elem_t machine_module_globals_table[] = {
     #if MICROPY_PY_MACHINE_SPI
     { MP_ROM_QSTR(MP_QSTR_SPI), MP_ROM_PTR(&machine_hspi_type) },
     #endif
+    #if MICROPY_PY_MACHINE_EP_SPI
+    { MP_ROM_QSTR(MP_QSTR_EPSPI), MP_ROM_PTR(&machine_ep_spi_type) },
+    #endif
 
     // wake abilities
     { MP_ROM_QSTR(MP_QSTR_DEEPSLEEP), MP_ROM_INT(MACHINE_WAKE_DEEPSLEEP) },

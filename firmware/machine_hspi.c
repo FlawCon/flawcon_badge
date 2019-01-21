@@ -174,6 +174,7 @@ STATIC const mp_machine_spi_p_t machine_hspi_p = {
     .transfer = machine_hspi_transfer,
 };
 
+
 const mp_obj_type_t machine_hspi_type = {
     { &mp_type_type },
     .name = MP_QSTR_HSPI,

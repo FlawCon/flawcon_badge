@@ -86,9 +86,10 @@
 #define MICROPY_PY_MACHINE_PULSE    (1)
 #define MICROPY_PY_MACHINE_I2C      (1)
 #define MICROPY_PY_MACHINE_SPI      (1)
+#define MICROPY_PY_MACHINE_EP_SPI      (1)
 #define MICROPY_PY_MACHINE_SPI_MAKE_NEW machine_hspi_make_new
 #define MICROPY_PY_WEBSOCKET        (1)
-#define MICROPY_PY_WEBREPL          (1)
+#define MICROPY_PY_WEBREPL          (0)
 #define MICROPY_PY_WEBREPL_DELAY    (20)
 #define MICROPY_PY_FRAMEBUF         (1)
 #define MICROPY_PY_MICROPYTHON_MEM_INFO (1)
@@ -112,8 +113,6 @@
 #define MICROPY_FATFS_MAX_SS           (4096)
 #define MICROPY_FATFS_LFN_CODE_PAGE    (437) /* 1=SFN/ANSI 437=LFN/U.S.(OEM) */
 #define MICROPY_VFS_FAT                (1)
-#define MICROPY_ESP8266_APA102         (1)
-#define MICROPY_ESP8266_NEOPIXEL       (1)
 
 #define MICROPY_EVENT_POLL_HOOK {ets_event_poll();}
 #define MICROPY_VM_HOOK_COUNT (10)
@@ -168,7 +167,6 @@ extern const struct _mp_obj_module_t utime_module;
 extern const struct _mp_obj_module_t uos_module;
 extern const struct _mp_obj_module_t mp_module_lwip;
 extern const struct _mp_obj_module_t mp_module_machine;
-extern const struct _mp_obj_module_t mp_module_onewire;
 
 #define MICROPY_PORT_BUILTIN_MODULES \
     { MP_ROM_QSTR(MP_QSTR_esp), MP_ROM_PTR(&esp_module) }, \
@@ -177,7 +175,6 @@ extern const struct _mp_obj_module_t mp_module_onewire;
     { MP_ROM_QSTR(MP_QSTR_utime), MP_ROM_PTR(&utime_module) }, \
     { MP_ROM_QSTR(MP_QSTR_uos), MP_ROM_PTR(&uos_module) }, \
     { MP_ROM_QSTR(MP_QSTR_machine), MP_ROM_PTR(&mp_module_machine) }, \
-    { MP_ROM_QSTR(MP_QSTR__onewire), MP_ROM_PTR(&mp_module_onewire) }, \
 
 #define MICROPY_PORT_BUILTIN_MODULE_WEAK_LINKS \
     { MP_ROM_QSTR(MP_QSTR_binascii), MP_ROM_PTR(&mp_module_ubinascii) }, \

@@ -1,36 +1,854 @@
-# 1 "main.c"
+# 1 "machine_ep_spi.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "main.c"
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/user_interface.h" 1 3 4
-# 28 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/user_interface.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/os_type.h" 1 3 4
-# 28 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/os_type.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/ets_sys.h" 1 3 4
-# 28 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/ets_sys.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/c_types.h" 1 3 4
-# 28 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/c_types.h" 3 4
+# 1 "machine_ep_spi.c"
+# 27 "machine_ep_spi.c"
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h" 1 3
+# 29 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h" 3
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 1 3
+# 15 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 3
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/newlib.h" 1 3
+# 16 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 2 3
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 1 3
+
+
+
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/ieeefp.h" 1 3
+# 5 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 2 3
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/features.h" 1 3
+# 6 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 2 3
+# 170 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 3
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/xtensa/config/core-isa.h" 1 3
+# 171 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 2 3
+# 17 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 2 3
+# 30 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h" 2 3
+
+
+
+
+
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 1 3 4
+# 214 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 3 4
+typedef unsigned int size_t;
+# 36 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h" 2 3
+
+
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stdarg.h" 1 3 4
+# 40 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stdarg.h" 3 4
+typedef __builtin_va_list __gnuc_va_list;
+# 39 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h" 2 3
+
+
+
+
+
+
+
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 1 3
+# 13 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 1 3
+# 14 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 2 3
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 1 3
+# 12 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 3
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_types.h" 1 3
+
+
+
+
+
+
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 1 3
+# 25 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
+typedef signed char __int8_t ;
+typedef unsigned char __uint8_t ;
+# 35 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
+typedef signed short __int16_t;
+typedef unsigned short __uint16_t;
+# 45 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
+typedef __int16_t __int_least16_t;
+typedef __uint16_t __uint_least16_t;
+# 57 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
+typedef signed int __int32_t;
+typedef unsigned int __uint32_t;
+# 75 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
+typedef __int32_t __int_least32_t;
+typedef __uint32_t __uint_least32_t;
+# 98 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
+typedef signed long long __int64_t;
+typedef unsigned long long __uint64_t;
+# 8 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_types.h" 2 3
+# 13 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 2 3
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/lock.h" 1 3
+
+
+
+
+
+typedef int _LOCK_T;
+typedef int _LOCK_RECURSIVE_T;
+# 14 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 2 3
+
+
+typedef long _off_t;
+
+
+
+
+
+
+
+typedef short __dev_t;
+
+
+
+
+typedef unsigned short __uid_t;
+
+
+typedef unsigned short __gid_t;
+
+
+
+__extension__ typedef long long _off64_t;
+
+
+
+
+
+
+
+typedef long _fpos_t;
+# 56 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 3
+typedef int _ssize_t;
+
+
+
+
+
+
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 1 3 4
+# 356 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 3 4
+typedef unsigned int wint_t;
+# 64 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 2 3
+
+
+
+typedef struct
+{
+  int __count;
+  union
+  {
+    wint_t __wch;
+    unsigned char __wchb[4];
+  } __value;
+} _mbstate_t;
+
+
+
+typedef _LOCK_RECURSIVE_T _flock_t;
+
+
+
+
+typedef void *_iconv_t;
+# 15 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 2 3
+
+
+
+
+
+
+typedef unsigned long __ULong;
+# 37 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+struct _reent;
+
+
+
+
+
+
+struct _Bigint
+{
+  struct _Bigint *_next;
+  int _k, _maxwds, _sign, _wds;
+  __ULong _x[1];
+};
+
+
+struct __tm
+{
+  int __tm_sec;
+  int __tm_min;
+  int __tm_hour;
+  int __tm_mday;
+  int __tm_mon;
+  int __tm_year;
+  int __tm_wday;
+  int __tm_yday;
+  int __tm_isdst;
+};
+
+
+
+
+
+
+
+struct _on_exit_args {
+ void * _fnargs[32];
+ void * _dso_handle[32];
+
+ __ULong _fntypes;
+
+
+ __ULong _is_cxa;
+};
+# 89 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+struct _atexit {
+ struct _atexit *_next;
+ int _ind;
+
+ void (*_fns[32])(void);
+        struct _on_exit_args _on_exit_args;
+};
+# 105 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+struct __sbuf {
+ unsigned char *_base;
+ int _size;
+};
+# 169 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+struct __sFILE {
+  unsigned char *_p;
+  int _r;
+  int _w;
+  short _flags;
+  short _file;
+  struct __sbuf _bf;
+  int _lbfsize;
+
+
+
+
+
+
+  void * _cookie;
+
+  int (* _read) (struct _reent *, void *, char *, int)
+                     ;
+  int (* _write) (struct _reent *, void *, const char *, int)
+                            ;
+  _fpos_t (* _seek) (struct _reent *, void *, _fpos_t, int);
+  int (* _close) (struct _reent *, void *);
+
+
+  struct __sbuf _ub;
+  unsigned char *_up;
+  int _ur;
+
+
+  unsigned char _ubuf[3];
+  unsigned char _nbuf[1];
+
+
+  struct __sbuf _lb;
+
+
+  int _blksize;
+  _off_t _offset;
+
+
+  struct _reent *_data;
+
+
+
+  _flock_t _lock;
+
+  _mbstate_t _mbstate;
+  int _flags2;
+};
+# 273 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+typedef struct __sFILE __FILE;
+
+
+
+struct _glue
+{
+  struct _glue *_next;
+  int _niobs;
+  __FILE *_iobs;
+};
+# 305 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+struct _rand48 {
+  unsigned short _seed[3];
+  unsigned short _mult[3];
+  unsigned short _add;
+
+
+
+
+};
+# 580 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+struct _reent
+{
+  int _errno;
+
+
+
+
+  __FILE *_stdin, *_stdout, *_stderr;
+
+  int _inc;
+  char _emergency[25];
+
+  int _current_category;
+  const char *_current_locale;
+
+  int __sdidinit;
+
+  void (* __cleanup) (struct _reent *);
+
+
+  struct _Bigint *_result;
+  int _result_k;
+  struct _Bigint *_p5s;
+  struct _Bigint **_freelist;
+
+
+  int _cvtlen;
+  char *_cvtbuf;
+
+  union
+    {
+      struct
+        {
+          unsigned int _unused_rand;
+          char * _strtok_last;
+          char _asctime_buf[26];
+          struct __tm _localtime_buf;
+          int _gamma_signgam;
+          __extension__ unsigned long long _rand_next;
+          struct _rand48 _r48;
+          _mbstate_t _mblen_state;
+          _mbstate_t _mbtowc_state;
+          _mbstate_t _wctomb_state;
+          char _l64a_buf[8];
+          char _signal_buf[24];
+          int _getdate_err;
+          _mbstate_t _mbrlen_state;
+          _mbstate_t _mbrtowc_state;
+          _mbstate_t _mbsrtowcs_state;
+          _mbstate_t _wcrtomb_state;
+          _mbstate_t _wcsrtombs_state;
+   int _h_errno;
+        } _reent;
+
+
+
+      struct
+        {
+
+          unsigned char * _nextf[30];
+          unsigned int _nmalloc[30];
+        } _unused;
+    } _new;
+
+
+  struct _atexit *_atexit;
+  struct _atexit _atexit0;
+
+
+  void (**(_sig_func))(int);
+
+
+
+
+  struct _glue __sglue;
+  __FILE __sf[3];
+};
+# 818 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+extern struct _reent *_impure_ptr ;
+extern struct _reent *const _global_impure_ptr ;
+
+void _reclaim_reent (struct _reent *);
+# 47 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h" 2 3
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 1 3
+# 69 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 1 3 4
+# 147 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 3 4
+typedef int ptrdiff_t;
+# 327 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 3 4
+typedef short unsigned int wchar_t;
+# 70 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 2 3
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/types.h" 1 3
+# 19 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/types.h" 3
+typedef long int __off_t;
+typedef int __pid_t;
+
+__extension__ typedef long long int __loff_t;
+# 71 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 2 3
+# 92 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
+typedef unsigned char u_char;
+typedef unsigned short u_short;
+typedef unsigned int u_int;
+typedef unsigned long u_long;
+
+
+
+typedef unsigned short ushort;
+typedef unsigned int uint;
+typedef unsigned long ulong;
+
+
+
+typedef unsigned long clock_t;
+
+
+
+
+typedef long time_t;
+
+
+
+
+
+
+
+struct timespec {
+  time_t tv_sec;
+  long tv_nsec;
+};
+
+
+struct itimerspec {
+  struct timespec it_interval;
+  struct timespec it_value;
+};
+
+typedef long daddr_t;
+typedef char * caddr_t;
+
+
+
+
+
+
+typedef unsigned short ino_t;
+# 166 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
+typedef _off_t off_t;
+typedef __dev_t dev_t;
+typedef __uid_t uid_t;
+typedef __gid_t gid_t;
+
+
+
+
+
+typedef int pid_t;
+
+
+
+
+
+
+
+typedef long key_t;
+
+typedef _ssize_t ssize_t;
+# 199 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
+typedef unsigned int mode_t __attribute__ ((__mode__ (__SI__)));
+
+
+
+
+typedef unsigned short nlink_t;
+# 226 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
+typedef long fd_mask;
+
+
+
+
+
+
+
+typedef struct _types_fd_set {
+ fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
+} _types_fd_set;
+# 257 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
+typedef unsigned long clockid_t;
+
+
+
+
+typedef unsigned long timer_t;
+
+
+
+typedef unsigned long useconds_t;
+typedef long suseconds_t;
+# 48 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h" 2 3
+
+
+
+typedef __FILE FILE;
+
+
+
+
+typedef _fpos_t fpos_t;
+
+
+
+
+
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/stdio.h" 1 3
+# 63 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h" 2 3
+# 168 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h" 3
+FILE * tmpfile (void);
+char * tmpnam (char *);
+int fclose (FILE *);
+int fflush (FILE *);
+FILE * freopen (const char *, const char *, FILE *);
+void setbuf (FILE *, char *);
+int setvbuf (FILE *, char *, int, size_t);
+int fprintf (FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int fscanf (FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int printf (const char *, ...) __attribute__ ((__format__ (__printf__, 1, 2)))
+                                                            ;
+int scanf (const char *, ...) __attribute__ ((__format__ (__scanf__, 1, 2)))
+                                                           ;
+int sscanf (const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int vfprintf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)))
+                                                            ;
+int vsprintf (char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int fgetc (FILE *);
+char * fgets (char *, int, FILE *);
+int fputc (int, FILE *);
+int fputs (const char *, FILE *);
+int getc (FILE *);
+int getchar (void);
+char * gets (char *);
+int putc (int, FILE *);
+int putchar (int);
+int puts (const char *);
+int ungetc (int, FILE *);
+size_t fread (void *, size_t _size, size_t _n, FILE *);
+size_t fwrite (const void * , size_t _size, size_t _n, FILE *);
+
+
+
+int fgetpos (FILE *, fpos_t *);
+
+int fseek (FILE *, long, int);
+
+
+
+int fsetpos (FILE *, const fpos_t *);
+
+long ftell ( FILE *);
+void rewind (FILE *);
+void clearerr (FILE *);
+int feof (FILE *);
+int ferror (FILE *);
+void perror (const char *);
+
+FILE * fopen (const char *_name, const char *_type);
+int sprintf (char *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int remove (const char *);
+int rename (const char *, const char *);
+# 236 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h" 3
+int fseeko (FILE *, off_t, int);
+off_t ftello ( FILE *);
+
+
+
+
+int asiprintf (char **, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+char * asniprintf (char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+char * asnprintf (char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int asprintf (char **, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+
+int diprintf (int, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+
+int fcloseall (void);
+int fiprintf (FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int fiscanf (FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int iprintf (const char *, ...) __attribute__ ((__format__ (__printf__, 1, 2)))
+                                                            ;
+int iscanf (const char *, ...) __attribute__ ((__format__ (__scanf__, 1, 2)))
+                                                           ;
+int siprintf (char *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int siscanf (const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int snprintf (char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int sniprintf (char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+char * tempnam (const char *, const char *);
+int vasiprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+char * vasniprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+char * vasnprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vasprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vdiprintf (int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vfiprintf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vfiscanf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int vfscanf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int viprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)))
+                                                            ;
+int viscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)))
+                                                           ;
+int vscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)))
+                                                           ;
+int vsiprintf (char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vsiscanf (const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int vsniprintf (char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vsnprintf (char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vsscanf (const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+# 313 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h" 3
+FILE * fdopen (int, const char *);
+
+int fileno (FILE *);
+int getw (FILE *);
+int pclose (FILE *);
+FILE * popen (const char *, const char *);
+int putw (int, FILE *);
+void setbuffer (FILE *, char *, int);
+int setlinebuf (FILE *);
+int getc_unlocked (FILE *);
+int getchar_unlocked (void);
+void flockfile (FILE *);
+int ftrylockfile (FILE *);
+void funlockfile (FILE *);
+int putc_unlocked (int, FILE *);
+int putchar_unlocked (int);
+# 338 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h" 3
+int dprintf (int, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+
+FILE * fmemopen (void *, size_t, const char *);
+
+
+FILE * open_memstream (char **, size_t *);
+
+
+
+int vdprintf (int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+
+
+
+
+
+
+
+int _asiprintf_r (struct _reent *, char **, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+char * _asniprintf_r (struct _reent *, char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+char * _asnprintf_r (struct _reent *, char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _asprintf_r (struct _reent *, char **, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _diprintf_r (struct _reent *, int, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _dprintf_r (struct _reent *, int, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _fclose_r (struct _reent *, FILE *);
+int _fcloseall_r (struct _reent *);
+FILE * _fdopen_r (struct _reent *, int, const char *);
+int _fflush_r (struct _reent *, FILE *);
+int _fgetc_r (struct _reent *, FILE *);
+char * _fgets_r (struct _reent *, char *, int, FILE *);
+
+
+
+
+int _fgetpos_r (struct _reent *, FILE *, fpos_t *);
+int _fsetpos_r (struct _reent *, FILE *, const fpos_t *);
+
+int _fiprintf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _fiscanf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
+FILE * _fmemopen_r (struct _reent *, void *, size_t, const char *);
+FILE * _fopen_r (struct _reent *, const char *, const char *);
+FILE * _freopen_r (struct _reent *, const char *, const char *, FILE *);
+int _fprintf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _fpurge_r (struct _reent *, FILE *);
+int _fputc_r (struct _reent *, int, FILE *);
+int _fputs_r (struct _reent *, const char *, FILE *);
+size_t _fread_r (struct _reent *, void *, size_t _size, size_t _n, FILE *);
+int _fscanf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
+int _fseek_r (struct _reent *, FILE *, long, int);
+int _fseeko_r (struct _reent *, FILE *, _off_t, int);
+long _ftell_r (struct _reent *, FILE *);
+_off_t _ftello_r (struct _reent *, FILE *);
+void _rewind_r (struct _reent *, FILE *);
+size_t _fwrite_r (struct _reent *, const void * , size_t _size, size_t _n, FILE *);
+int _getc_r (struct _reent *, FILE *);
+int _getc_unlocked_r (struct _reent *, FILE *);
+int _getchar_r (struct _reent *);
+int _getchar_unlocked_r (struct _reent *);
+char * _gets_r (struct _reent *, char *);
+int _iprintf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int _iscanf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+FILE * _open_memstream_r (struct _reent *, char **, size_t *);
+void _perror_r (struct _reent *, const char *);
+int _printf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int _putc_r (struct _reent *, int, FILE *);
+int _putc_unlocked_r (struct _reent *, int, FILE *);
+int _putchar_unlocked_r (struct _reent *, int);
+int _putchar_r (struct _reent *, int);
+int _puts_r (struct _reent *, const char *);
+int _remove_r (struct _reent *, const char *);
+int _rename_r (struct _reent *, const char *_old, const char *_new)
+                                          ;
+int _scanf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int _siprintf_r (struct _reent *, char *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _siscanf_r (struct _reent *, const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
+int _sniprintf_r (struct _reent *, char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _snprintf_r (struct _reent *, char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _sprintf_r (struct _reent *, char *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _sscanf_r (struct _reent *, const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
+char * _tempnam_r (struct _reent *, const char *, const char *);
+FILE * _tmpfile_r (struct _reent *);
+char * _tmpnam_r (struct _reent *, char *);
+int _ungetc_r (struct _reent *, int, FILE *);
+int _vasiprintf_r (struct _reent *, char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+char * _vasniprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+char * _vasnprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vasprintf_r (struct _reent *, char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vdiprintf_r (struct _reent *, int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vdprintf_r (struct _reent *, int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfiprintf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfiscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _vfprintf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _viprintf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int _viscanf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int _vprintf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int _vscanf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int _vsiprintf_r (struct _reent *, char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vsiscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _vsniprintf_r (struct _reent *, char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vsnprintf_r (struct _reent *, char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vsprintf_r (struct _reent *, char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vsscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+
+
+
+int fpurge (FILE *);
+ssize_t __getdelim (char **, size_t *, int, FILE *);
+ssize_t __getline (char **, size_t *, FILE *);
+# 515 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h" 3
+int __srget_r (struct _reent *, FILE *);
+int __swbuf_r (struct _reent *, int, FILE *);
+# 535 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h" 3
+FILE *funopen (const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
+
+
+
+                                   ;
+FILE *_funopen_r (struct _reent *, const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
+
+
+
+                                   ;
+
+
+
+
+
+
+
+typedef ssize_t cookie_read_function_t(void *__cookie, char *__buf, size_t __n);
+typedef ssize_t cookie_write_function_t(void *__cookie, const char *__buf,
+     size_t __n);
+
+
+
+
+typedef int cookie_seek_function_t(void *__cookie, off_t *__off, int __whence);
+
+typedef int cookie_close_function_t(void *__cookie);
+typedef struct
+{
+
+
+  cookie_read_function_t *read;
+  cookie_write_function_t *write;
+  cookie_seek_function_t *seek;
+  cookie_close_function_t *close;
+} cookie_io_functions_t;
+FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __functions)
+                                                         ;
+FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
+                                                         ;
+# 683 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h" 3
+
+# 28 "machine_ep_spi.c" 2
 # 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stdint.h" 1 3 4
 # 9 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stdint.h" 3 4
 # 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 1 3 4
-# 12 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 1 3 4
-# 15 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/newlib.h" 1 3 4
-# 16 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 2 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 1 3 4
-
-
-
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/ieeefp.h" 1 3 4
-# 5 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 2 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/features.h" 1 3 4
-# 6 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 2 3 4
-# 170 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/xtensa/config/core-isa.h" 1 3 4
-# 171 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 2 3 4
-# 17 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 2 3 4
-# 13 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 2 3 4
 # 41 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
 typedef signed char int8_t ;
 typedef unsigned char uint8_t ;
@@ -93,7 +911,111 @@ typedef uint64_t uint_least64_t;
 typedef signed int intptr_t;
 typedef unsigned int uintptr_t;
 # 10 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stdint.h" 2 3 4
-# 29 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/c_types.h" 2 3 4
+# 29 "machine_ep_spi.c" 2
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 1 3
+# 12 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 3
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/cdefs.h" 1 3
+# 13 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 2 3
+
+
+
+
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 1 3 4
+# 18 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 2 3
+
+
+
+void * memchr (const void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void * memcpy (void *, const void *, size_t);
+void * memmove (void *, const void *, size_t);
+void * memset (void *, int, size_t);
+char *strcat (char *, const char *);
+char *strchr (const char *, int);
+int strcmp (const char *, const char *);
+int strcoll (const char *, const char *);
+char *strcpy (char *, const char *);
+size_t strcspn (const char *, const char *);
+char *strerror (int);
+size_t strlen (const char *);
+char *strncat (char *, const char *, size_t);
+int strncmp (const char *, const char *, size_t);
+char *strncpy (char *, const char *, size_t);
+char *strpbrk (const char *, const char *);
+char *strrchr (const char *, int);
+size_t strspn (const char *, const char *);
+char *strstr (const char *, const char *);
+
+
+char *strtok (char *, const char *);
+
+
+size_t strxfrm (char *, const char *, size_t);
+
+
+char *strtok_r (char *, const char *, char **);
+
+int bcmp (const void *, const void *, size_t);
+void bcopy (const void *, void *, size_t);
+void bzero (void *, size_t);
+int ffs (int);
+char *index (const char *, int);
+void * memccpy (void *, const void *, int, size_t);
+void * mempcpy (void *, const void *, size_t);
+void * memmem (const void *, size_t, const void *, size_t);
+void * memrchr (const void *, int, size_t);
+char *rindex (const char *, int);
+char *stpcpy (char *, const char *);
+char *stpncpy (char *, const char *, size_t);
+int strcasecmp (const char *, const char *);
+char *strcasestr (const char *, const char *);
+char *strchrnul (const char *, int);
+
+
+char *strdup (const char *);
+
+
+char *_strdup_r (struct _reent *, const char *);
+
+
+char *strndup (const char *, size_t);
+
+
+char *_strndup_r (struct _reent *, const char *, size_t);
+# 86 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 3
+int strerror_r (int, char *, size_t) __asm__ ("" "__xpg_strerror_r");
+
+
+
+
+
+size_t strlcat (char *, const char *, size_t);
+size_t strlcpy (char *, const char *, size_t);
+int strncasecmp (const char *, const char *, size_t);
+size_t strnlen (const char *, size_t);
+char *strsep (char **, const char *);
+char *strlwr (char *);
+char *strupr (char *);
+
+char *strsignal (int __signo);
+
+
+
+
+
+
+char * _strerror_r (struct _reent *, int, int, int *);
+# 139 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 3
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/string.h" 1 3
+# 140 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 2 3
+
+
+# 30 "machine_ep_spi.c" 2
+
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/ets_sys.h" 1 3 4
+# 28 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/ets_sys.h" 3 4
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/c_types.h" 1 3 4
+# 29 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/c_types.h" 3 4
 # 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stdbool.h" 1 3 4
 # 30 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/c_types.h" 2 3 4
 
@@ -178,456 +1100,1564 @@ void ets_intr_unlock(void);
 void ets_isr_attach(int i, ets_isr_t func, void *arg);
 
 void NmiTimSetFunc(void (*func)(void));
-# 29 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/os_type.h" 2 3 4
-# 29 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/user_interface.h" 2 3 4
+# 32 "machine_ep_spi.c" 2
+# 1 "etshal.h" 1
 
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/ip_addr.h" 1 3 4
-# 35 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/ip_addr.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/opt.h" 1 3 4
-# 45 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/opt.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwipopts.h" 1 3 4
-# 46 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/opt.h" 2 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/debug.h" 1 3 4
-# 35 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/debug.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/arch.h" 1 3 4
-# 43 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/arch.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/arch/cc.h" 1 3 4
-# 38 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/arch/cc.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/c_types.h" 1 3 4
-# 39 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/arch/cc.h" 2 3 4
+
+
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/os_type.h" 1 3 4
+# 28 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/os_type.h" 3 4
 # 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/ets_sys.h" 1 3 4
-# 40 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/arch/cc.h" 2 3 4
+# 29 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/os_type.h" 2 3 4
+# 5 "etshal.h" 2
+
+
+
+
+void ets_delay_us(uint16_t us);
+void ets_intr_lock(void);
+void ets_intr_unlock(void);
+void ets_isr_mask(uint32_t mask);
+void ets_isr_unmask(uint32_t mask);
+void ets_isr_attach(int irq_no, void (*handler)(void *), void *arg);
+void ets_install_putc1();
+void uart_div_modify(uint8_t uart, uint32_t divisor);
+void ets_set_idle_cb(void (*handler)(void *), void *arg);
+
+void ets_timer_arm_new(ETSTimer *tim, uint32_t millis, _Bool repeat, _Bool is_milli_timer);
+void ets_timer_setfn(ETSTimer *tim, ETSTimerFunc callback, void *cb_data);
+void ets_timer_disarm(ETSTimer *tim);
+
+extern void ets_wdt_disable(void);
+extern void wdt_feed(void);
+
+
+
+typedef char MD5_CTX[88];
+
+
+void MD5Init(MD5_CTX *context);
+void MD5Update(MD5_CTX *context, const void *data, unsigned int len);
+void MD5Final(unsigned char digest[16], MD5_CTX *context);
+
+
+void *pvPortMalloc(size_t sz, const char *fname, unsigned line);
+void *pvPortZalloc(size_t sz, const char *fname, unsigned line);
+void *pvPortRealloc(void *p, unsigned sz, const char *fname, unsigned line);
+void vPortFree(void *p, const char *fname, unsigned line);
+
+uint32_t SPIRead(uint32_t offset, void *buf, uint32_t len);
+uint32_t SPIWrite(uint32_t offset, const void *buf, uint32_t len);
+uint32_t SPIEraseSector(int sector);
+# 33 "machine_ep_spi.c" 2
+# 1 "ets_alt_task.h" 1
+
+
+
+extern int ets_loop_iter_disable;
+extern int ets_loop_dont_feed_sw_wdt;
+extern uint32_t system_time_high_word;
+
+_Bool ets_loop_iter(void);
+# 34 "machine_ep_spi.c" 2
+
+# 1 "../micropython/py/runtime.h" 1
+# 29 "../micropython/py/runtime.h"
+# 1 "../micropython/py/mpstate.h" 1
+# 31 "../micropython/py/mpstate.h"
+# 1 "../micropython/py/mpconfig.h" 1
+# 62 "../micropython/py/mpconfig.h"
+# 1 "./mpconfigport.h" 1
+# 137 "./mpconfigport.h"
+typedef int32_t mp_int_t;
+typedef uint32_t mp_uint_t;
+typedef long mp_off_t;
+typedef uint32_t sys_prot_t;
+
+
+
+
+void *esp_native_code_commit(void*, size_t);
+
+
+
+extern const struct _mp_print_t mp_debug_print;
+# 164 "./mpconfigport.h"
+extern const struct _mp_obj_module_t esp_module;
+extern const struct _mp_obj_module_t network_module;
+extern const struct _mp_obj_module_t utime_module;
+extern const struct _mp_obj_module_t uos_module;
+extern const struct _mp_obj_module_t mp_module_lwip;
+extern const struct _mp_obj_module_t mp_module_machine;
+# 204 "./mpconfigport.h"
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/alloca.h" 1 3
+# 205 "./mpconfigport.h" 2
+# 63 "../micropython/py/mpconfig.h" 2
+# 614 "../micropython/py/mpconfig.h"
+typedef float mp_float_t;
+# 32 "../micropython/py/mpstate.h" 2
+# 1 "../micropython/py/mpthread.h" 1
+# 33 "../micropython/py/mpstate.h" 2
+# 1 "../micropython/py/misc.h" 1
+# 35 "../micropython/py/misc.h"
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 1 3 4
+# 36 "../micropython/py/misc.h" 2
+
+typedef unsigned char byte;
+typedef unsigned int uint;
+# 87 "../micropython/py/misc.h"
+void *m_malloc(size_t num_bytes);
+void *m_malloc_maybe(size_t num_bytes);
+void *m_malloc_with_finaliser(size_t num_bytes);
+void *m_malloc0(size_t num_bytes);
+
+
+
+
+
+void *m_realloc(void *ptr, size_t new_num_bytes);
+void *m_realloc_maybe(void *ptr, size_t new_num_bytes, _Bool allow_move);
+void m_free(void *ptr);
+
+__attribute__((noreturn)) void m_malloc_fail(size_t num_bytes);
+# 120 "../micropython/py/misc.h"
+typedef uint32_t unichar;
+
+
+
+
+
+
+
+unichar utf8_get_char(const byte *s);
+const byte *utf8_next_char(const byte *s);
+size_t utf8_charlen(const byte *str, size_t len);
+
+
+
+
+
+
+_Bool unichar_isspace(unichar c);
+_Bool unichar_isalpha(unichar c);
+_Bool unichar_isprint(unichar c);
+_Bool unichar_isdigit(unichar c);
+_Bool unichar_isxdigit(unichar c);
+_Bool unichar_isident(unichar c);
+_Bool unichar_isupper(unichar c);
+_Bool unichar_islower(unichar c);
+unichar unichar_tolower(unichar c);
+unichar unichar_toupper(unichar c);
+mp_uint_t unichar_xdigit_value(unichar c);
+
+
+
+
+
+typedef struct _vstr_t {
+    size_t alloc;
+    size_t len;
+    char *buf;
+    _Bool fixed_buf : 1;
+} vstr_t;
+
+
+
+
+void vstr_init(vstr_t *vstr, size_t alloc);
+void vstr_init_len(vstr_t *vstr, size_t len);
+void vstr_init_fixed_buf(vstr_t *vstr, size_t alloc, char *buf);
+struct _mp_print_t;
+void vstr_init_print(vstr_t *vstr, size_t alloc, struct _mp_print_t *print);
+void vstr_clear(vstr_t *vstr);
+vstr_t *vstr_new(size_t alloc);
+void vstr_free(vstr_t *vstr);
+static inline void vstr_reset(vstr_t *vstr) { vstr->len = 0; }
+static inline char *vstr_str(vstr_t *vstr) { return vstr->buf; }
+static inline size_t vstr_len(vstr_t *vstr) { return vstr->len; }
+void vstr_hint_size(vstr_t *vstr, size_t size);
+char *vstr_extend(vstr_t *vstr, size_t size);
+char *vstr_add_len(vstr_t *vstr, size_t len);
+char *vstr_null_terminated_str(vstr_t *vstr);
+void vstr_add_byte(vstr_t *vstr, byte v);
+void vstr_add_char(vstr_t *vstr, unichar chr);
+void vstr_add_str(vstr_t *vstr, const char *str);
+void vstr_add_strn(vstr_t *vstr, const char *str, size_t len);
+void vstr_ins_byte(vstr_t *vstr, size_t byte_pos, byte b);
+void vstr_ins_char(vstr_t *vstr, size_t char_pos, unichar chr);
+void vstr_cut_head_bytes(vstr_t *vstr, size_t bytes_to_cut);
+void vstr_cut_tail_bytes(vstr_t *vstr, size_t bytes_to_cut);
+void vstr_cut_out_bytes(vstr_t *vstr, size_t byte_pos, size_t bytes_to_cut);
+void vstr_printf(vstr_t *vstr, const char *fmt, ...);
+# 206 "../micropython/py/misc.h"
+int DEBUG_printf(const char *fmt, ...);
+
+extern mp_uint_t mp_verbose_flag;
+# 34 "../micropython/py/mpstate.h" 2
+# 1 "../micropython/py/nlr.h" 1
+# 32 "../micropython/py/nlr.h"
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 1 3 4
+# 34 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 3 4
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/syslimits.h" 1 3 4
+
+
+
+
+
+
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 1 3 4
+# 168 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 3 4
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/limits.h" 1 3 4
+# 169 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 2 3 4
+# 8 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/syslimits.h" 2 3 4
+# 35 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 2 3 4
+# 33 "../micropython/py/nlr.h" 2
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/assert.h" 1 3
+# 39 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/assert.h" 3
+void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
+                                 ;
+void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
+                                 ;
+# 34 "../micropython/py/nlr.h" 2
+# 71 "../micropython/py/nlr.h"
+typedef struct _nlr_buf_t nlr_buf_t;
+struct _nlr_buf_t {
+
+    nlr_buf_t *prev;
+    void *ret_val;
+
+
+
+
+    void *regs[(10)];
+
+
+
+
+
+};
+# 114 "../micropython/py/nlr.h"
+unsigned int nlr_push(nlr_buf_t *);
+
+
+unsigned int nlr_push_tail(nlr_buf_t *top);
+void nlr_pop(void);
+__attribute__((noreturn)) void nlr_jump(void *val);
+
+
+
+
+__attribute__((noreturn)) void nlr_jump_fail(void *val);
+# 35 "../micropython/py/mpstate.h" 2
+# 1 "../micropython/py/obj.h" 1
+# 31 "../micropython/py/obj.h"
+# 1 "../micropython/py/qstr.h" 1
+# 39 "../micropython/py/qstr.h"
+enum {
+
+
+
+
+
+    MP_QSTRnumber_of,
+};
+
+typedef size_t qstr;
+
+typedef struct _qstr_pool_t {
+    struct _qstr_pool_t *prev;
+    size_t total_prev_len;
+    size_t alloc;
+    size_t len;
+    const byte *qstrs[];
+} qstr_pool_t;
+
+
+
+
+void qstr_init(void);
+
+mp_uint_t qstr_compute_hash(const byte *data, size_t len);
+qstr qstr_find_strn(const char *str, size_t str_len);
+
+qstr qstr_from_str(const char *str);
+qstr qstr_from_strn(const char *str, size_t len);
+
+mp_uint_t qstr_hash(qstr q);
+const char *qstr_str(qstr q);
+size_t qstr_len(qstr q);
+const byte *qstr_data(qstr q, size_t *len);
+
+void qstr_pool_info(size_t *n_pool, size_t *n_qstr, size_t *n_str_data_bytes, size_t *n_total_bytes);
+void qstr_dump_data(void);
+# 32 "../micropython/py/obj.h" 2
+# 1 "../micropython/py/mpprint.h" 1
+# 48 "../micropython/py/mpprint.h"
+typedef void (*mp_print_strn_t)(void *data, const char *str, size_t len);
+
+typedef struct _mp_print_t {
+    void *data;
+    mp_print_strn_t print_strn;
+} mp_print_t;
+
+
+
+extern const mp_print_t mp_plat_print;
+
+
+extern const mp_print_t mp_sys_stdout_print;
+
+
+int mp_print_str(const mp_print_t *print, const char *str);
+int mp_print_strn(const mp_print_t *print, const char *str, size_t len, int flags, char fill, int width);
+
+int mp_print_float(const mp_print_t *print, mp_float_t f, char fmt, int flags, char fill, int width, int prec);
+
+
+int mp_printf(const mp_print_t *print, const char *fmt, ...);
+# 33 "../micropython/py/obj.h" 2
+# 1 "../micropython/py/runtime0.h" 1
+# 49 "../micropython/py/runtime0.h"
+typedef enum {
+
+
+    MP_UNARY_OP_POSITIVE,
+    MP_UNARY_OP_NEGATIVE,
+    MP_UNARY_OP_INVERT,
+    MP_UNARY_OP_NOT,
+
+
+    MP_UNARY_OP_NUM_BYTECODE,
+
+    MP_UNARY_OP_BOOL = MP_UNARY_OP_NUM_BYTECODE,
+    MP_UNARY_OP_LEN,
+    MP_UNARY_OP_HASH,
+    MP_UNARY_OP_ABS,
+    MP_UNARY_OP_INT,
+    MP_UNARY_OP_SIZEOF,
+
+    MP_UNARY_OP_NUM_RUNTIME,
+} mp_unary_op_t;
+
+
+
+typedef enum {
+
+    MP_BINARY_OP_LESS,
+    MP_BINARY_OP_MORE,
+    MP_BINARY_OP_EQUAL,
+    MP_BINARY_OP_LESS_EQUAL,
+    MP_BINARY_OP_MORE_EQUAL,
+    MP_BINARY_OP_NOT_EQUAL,
+    MP_BINARY_OP_IN,
+    MP_BINARY_OP_IS,
+    MP_BINARY_OP_EXCEPTION_MATCH,
+
+
+    MP_BINARY_OP_INPLACE_OR,
+    MP_BINARY_OP_INPLACE_XOR,
+    MP_BINARY_OP_INPLACE_AND,
+    MP_BINARY_OP_INPLACE_LSHIFT,
+    MP_BINARY_OP_INPLACE_RSHIFT,
+    MP_BINARY_OP_INPLACE_ADD,
+    MP_BINARY_OP_INPLACE_SUBTRACT,
+    MP_BINARY_OP_INPLACE_MULTIPLY,
+    MP_BINARY_OP_INPLACE_FLOOR_DIVIDE,
+    MP_BINARY_OP_INPLACE_TRUE_DIVIDE,
+    MP_BINARY_OP_INPLACE_MODULO,
+    MP_BINARY_OP_INPLACE_POWER,
+
+
+    MP_BINARY_OP_OR,
+    MP_BINARY_OP_XOR,
+    MP_BINARY_OP_AND,
+    MP_BINARY_OP_LSHIFT,
+    MP_BINARY_OP_RSHIFT,
+    MP_BINARY_OP_ADD,
+    MP_BINARY_OP_SUBTRACT,
+    MP_BINARY_OP_MULTIPLY,
+    MP_BINARY_OP_FLOOR_DIVIDE,
+    MP_BINARY_OP_TRUE_DIVIDE,
+    MP_BINARY_OP_MODULO,
+    MP_BINARY_OP_POWER,
+
+
+
+    MP_BINARY_OP_NUM_BYTECODE,
+# 133 "../micropython/py/runtime0.h"
+    MP_BINARY_OP_DIVMOD
+
+        = MP_BINARY_OP_NUM_BYTECODE
+
+    ,
+
+
+
+    MP_BINARY_OP_CONTAINS,
+
+    MP_BINARY_OP_NUM_RUNTIME,
+
+
+    MP_BINARY_OP_NOT_IN,
+    MP_BINARY_OP_IS_NOT,
+} mp_binary_op_t;
+
+typedef enum {
+    MP_F_CONST_NONE_OBJ = 0,
+    MP_F_CONST_FALSE_OBJ,
+    MP_F_CONST_TRUE_OBJ,
+    MP_F_CONVERT_OBJ_TO_NATIVE,
+    MP_F_CONVERT_NATIVE_TO_OBJ,
+    MP_F_NATIVE_SWAP_GLOBALS,
+    MP_F_LOAD_NAME,
+    MP_F_LOAD_GLOBAL,
+    MP_F_LOAD_BUILD_CLASS,
+    MP_F_LOAD_ATTR,
+    MP_F_LOAD_METHOD,
+    MP_F_LOAD_SUPER_METHOD,
+    MP_F_STORE_NAME,
+    MP_F_STORE_GLOBAL,
+    MP_F_STORE_ATTR,
+    MP_F_OBJ_SUBSCR,
+    MP_F_OBJ_IS_TRUE,
+    MP_F_UNARY_OP,
+    MP_F_BINARY_OP,
+    MP_F_BUILD_TUPLE,
+    MP_F_BUILD_LIST,
+    MP_F_LIST_APPEND,
+    MP_F_BUILD_MAP,
+    MP_F_STORE_MAP,
+
+    MP_F_STORE_SET,
+    MP_F_BUILD_SET,
+
+    MP_F_MAKE_FUNCTION_FROM_RAW_CODE,
+    MP_F_NATIVE_CALL_FUNCTION_N_KW,
+    MP_F_CALL_METHOD_N_KW,
+    MP_F_CALL_METHOD_N_KW_VAR,
+    MP_F_NATIVE_GETITER,
+    MP_F_NATIVE_ITERNEXT,
+    MP_F_NLR_PUSH,
+    MP_F_NLR_POP,
+    MP_F_NATIVE_RAISE,
+    MP_F_IMPORT_NAME,
+    MP_F_IMPORT_FROM,
+    MP_F_IMPORT_ALL,
+
+    MP_F_NEW_SLICE,
+
+    MP_F_UNPACK_SEQUENCE,
+    MP_F_UNPACK_EX,
+    MP_F_DELETE_NAME,
+    MP_F_DELETE_GLOBAL,
+    MP_F_NEW_CELL,
+    MP_F_MAKE_CLOSURE_FROM_RAW_CODE,
+    MP_F_ARG_CHECK_NUM_SIG,
+    MP_F_SETUP_CODE_STATE,
+    MP_F_SMALL_INT_FLOOR_DIVIDE,
+    MP_F_SMALL_INT_MODULO,
+    MP_F_NATIVE_YIELD_FROM,
+    MP_F_NUMBER_OF,
+} mp_fun_kind_t;
+
+extern const void *const mp_fun_table[MP_F_NUMBER_OF];
+# 34 "../micropython/py/obj.h" 2
+# 42 "../micropython/py/obj.h"
+typedef void *mp_obj_t;
+typedef const void *mp_const_obj_t;
+
+
+
+
+typedef struct _mp_obj_type_t mp_obj_type_t;
+
+
+
+struct _mp_obj_base_t {
+    const mp_obj_type_t *type ;
+};
+typedef struct _mp_obj_base_t mp_obj_base_t;
+# 136 "../micropython/py/obj.h"
+static inline _Bool MP_OBJ_IS_SMALL_INT(mp_const_obj_t o)
+    { return ((((mp_int_t)(o)) & 1) != 0); }
+
+
+
+
+
+
+
+static inline _Bool mp_obj_is_float(mp_const_obj_t o)
+    { return (((mp_uint_t)(o)) & 3) == 2 && (((mp_uint_t)(o)) & 0xff800007) != 0x00000006; }
+static inline mp_float_t mp_obj_float_get(mp_const_obj_t o) {
+    union {
+        mp_float_t f;
+        mp_uint_t u;
+    } num = {.u = ((mp_uint_t)o - 0x80800000) & ~3};
+    return num.f;
+}
+static inline mp_obj_t mp_obj_new_float(mp_float_t f) {
+    union {
+        mp_float_t f;
+        mp_uint_t u;
+    } num = {.f = f};
+    return (mp_obj_t)(((num.u & ~0x3) | 2) + 0x80800000);
+}
+
+
+static inline _Bool MP_OBJ_IS_QSTR(mp_const_obj_t o)
+    { return (((mp_uint_t)(o)) & 0xff800007) == 0x00000006; }
+
+
+
+static inline _Bool MP_OBJ_IS_OBJ(mp_const_obj_t o)
+    { return ((((mp_int_t)(o)) & 3) == 0); }
+# 246 "../micropython/py/obj.h"
+typedef mp_const_obj_t mp_rom_obj_t;
+# 342 "../micropython/py/obj.h"
+typedef struct _mp_map_elem_t {
+    mp_obj_t key;
+    mp_obj_t value;
+} mp_map_elem_t;
+
+typedef struct _mp_rom_map_elem_t {
+    mp_rom_obj_t key;
+    mp_rom_obj_t value;
+} mp_rom_map_elem_t;
+
+
+
+
+
+
+typedef struct _mp_map_t {
+    size_t all_keys_are_qstrs : 1;
+    size_t is_fixed : 1;
+    size_t is_ordered : 1;
+    size_t used : (8 * sizeof(size_t) - 3);
+    size_t alloc;
+    mp_map_elem_t *table;
+} mp_map_t;
+
+
+typedef enum _mp_map_lookup_kind_t {
+    MP_MAP_LOOKUP = 0,
+    MP_MAP_LOOKUP_ADD_IF_NOT_FOUND = 1,
+    MP_MAP_LOOKUP_REMOVE_IF_FOUND = 2,
+    MP_MAP_LOOKUP_ADD_IF_NOT_FOUND_OR_REMOVE_IF_FOUND = 3,
+} mp_map_lookup_kind_t;
+
+extern const mp_map_t mp_const_empty_map;
+
+static inline _Bool MP_MAP_SLOT_IS_FILLED(const mp_map_t *map, size_t pos) { return ((map)->table[pos].key != (((mp_obj_t)(void*)0)) && (map)->table[pos].key != (((mp_obj_t)(void*)4))); }
+
+void mp_map_init(mp_map_t *map, size_t n);
+void mp_map_init_fixed_table(mp_map_t *map, size_t n, const mp_obj_t *table);
+mp_map_t *mp_map_new(size_t n);
+void mp_map_deinit(mp_map_t *map);
+void mp_map_free(mp_map_t *map);
+mp_map_elem_t *mp_map_lookup(mp_map_t *map, mp_obj_t index, mp_map_lookup_kind_t lookup_kind);
+void mp_map_clear(mp_map_t *map);
+void mp_map_dump(mp_map_t *map);
+
+
+
+typedef struct _mp_set_t {
+    size_t alloc;
+    size_t used;
+    mp_obj_t *table;
+} mp_set_t;
+
+static inline _Bool MP_SET_SLOT_IS_FILLED(const mp_set_t *set, size_t pos) { return ((set)->table[pos] != (((mp_obj_t)(void*)0)) && (set)->table[pos] != (((mp_obj_t)(void*)4))); }
+
+void mp_set_init(mp_set_t *set, size_t n);
+mp_obj_t mp_set_lookup(mp_set_t *set, mp_obj_t index, mp_map_lookup_kind_t lookup_kind);
+mp_obj_t mp_set_remove_first(mp_set_t *set);
+void mp_set_clear(mp_set_t *set);
+
+
+
+typedef mp_obj_t (*mp_fun_0_t)(void);
+typedef mp_obj_t (*mp_fun_1_t)(mp_obj_t);
+typedef mp_obj_t (*mp_fun_2_t)(mp_obj_t, mp_obj_t);
+typedef mp_obj_t (*mp_fun_3_t)(mp_obj_t, mp_obj_t, mp_obj_t);
+typedef mp_obj_t (*mp_fun_var_t)(size_t n, const mp_obj_t *);
+
+
+typedef mp_obj_t (*mp_fun_kw_t)(size_t n, const mp_obj_t *, mp_map_t *);
+
+typedef enum {
+    PRINT_STR = 0,
+    PRINT_REPR = 1,
+    PRINT_EXC = 2,
+    PRINT_JSON = 3,
+    PRINT_RAW = 4,
+    PRINT_EXC_SUBCLASS = 0x80,
+} mp_print_kind_t;
+
+typedef struct _mp_obj_iter_buf_t {
+    mp_obj_base_t base;
+    mp_obj_t buf[3];
+} mp_obj_iter_buf_t;
+
+
+
+
+
+typedef void (*mp_print_fun_t)(const mp_print_t *print, mp_obj_t o, mp_print_kind_t kind);
+typedef mp_obj_t (*mp_make_new_fun_t)(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *args);
+typedef mp_obj_t (*mp_call_fun_t)(mp_obj_t fun, size_t n_args, size_t n_kw, const mp_obj_t *args);
+typedef mp_obj_t (*mp_unary_op_fun_t)(mp_unary_op_t op, mp_obj_t);
+typedef mp_obj_t (*mp_binary_op_fun_t)(mp_binary_op_t op, mp_obj_t, mp_obj_t);
+typedef void (*mp_attr_fun_t)(mp_obj_t self_in, qstr attr, mp_obj_t *dest);
+typedef mp_obj_t (*mp_subscr_fun_t)(mp_obj_t self_in, mp_obj_t index, mp_obj_t value);
+typedef mp_obj_t (*mp_getiter_fun_t)(mp_obj_t self_in, mp_obj_iter_buf_t *iter_buf);
+
+
+typedef struct _mp_buffer_info_t {
+
+
+
+
+
+    void *buf;
+    size_t len;
+    int typecode;
+
+
+
+
+} mp_buffer_info_t;
+
+
+
+typedef struct _mp_buffer_p_t {
+    mp_int_t (*get_buffer)(mp_obj_t obj, mp_buffer_info_t *bufinfo, mp_uint_t flags);
+} mp_buffer_p_t;
+_Bool mp_get_buffer(mp_obj_t obj, mp_buffer_info_t *bufinfo, mp_uint_t flags);
+void mp_get_buffer_raise(mp_obj_t obj, mp_buffer_info_t *bufinfo, mp_uint_t flags);
+
+struct _mp_obj_type_t {
+
+    mp_obj_base_t base;
+
+
+    uint16_t flags;
+
+
+    uint16_t name;
+
+
+    mp_print_fun_t print;
+
+
+    mp_make_new_fun_t make_new;
+
+
+    mp_call_fun_t call;
+
+
+
+    mp_unary_op_fun_t unary_op;
+    mp_binary_op_fun_t binary_op;
+# 499 "../micropython/py/obj.h"
+    mp_attr_fun_t attr;
+
+
+
+
+
+
+    mp_subscr_fun_t subscr;
+
+
+
+
+    mp_getiter_fun_t getiter;
+
+
+
+    mp_fun_1_t iternext;
+
+
+    mp_buffer_p_t buffer_p;
+
+
+    const void *protocol;
+
+
+
+
+
+    const void *parent;
+
+
+    struct _mp_obj_dict_t *locals_dict;
+};
+
+
+extern const mp_obj_type_t mp_type_type;
+extern const mp_obj_type_t mp_type_object;
+extern const mp_obj_type_t mp_type_NoneType;
+extern const mp_obj_type_t mp_type_bool;
+extern const mp_obj_type_t mp_type_int;
+extern const mp_obj_type_t mp_type_str;
+extern const mp_obj_type_t mp_type_bytes;
+extern const mp_obj_type_t mp_type_bytearray;
+extern const mp_obj_type_t mp_type_memoryview;
+extern const mp_obj_type_t mp_type_float;
+extern const mp_obj_type_t mp_type_complex;
+extern const mp_obj_type_t mp_type_tuple;
+extern const mp_obj_type_t mp_type_list;
+extern const mp_obj_type_t mp_type_map;
+extern const mp_obj_type_t mp_type_enumerate;
+extern const mp_obj_type_t mp_type_filter;
+extern const mp_obj_type_t mp_type_deque;
+extern const mp_obj_type_t mp_type_dict;
+extern const mp_obj_type_t mp_type_ordereddict;
+extern const mp_obj_type_t mp_type_range;
+extern const mp_obj_type_t mp_type_set;
+extern const mp_obj_type_t mp_type_frozenset;
+extern const mp_obj_type_t mp_type_slice;
+extern const mp_obj_type_t mp_type_zip;
+extern const mp_obj_type_t mp_type_array;
+extern const mp_obj_type_t mp_type_super;
+extern const mp_obj_type_t mp_type_gen_wrap;
+extern const mp_obj_type_t mp_type_native_gen_wrap;
+extern const mp_obj_type_t mp_type_gen_instance;
+extern const mp_obj_type_t mp_type_fun_builtin_0;
+extern const mp_obj_type_t mp_type_fun_builtin_1;
+extern const mp_obj_type_t mp_type_fun_builtin_2;
+extern const mp_obj_type_t mp_type_fun_builtin_3;
+extern const mp_obj_type_t mp_type_fun_builtin_var;
+extern const mp_obj_type_t mp_type_fun_bc;
+extern const mp_obj_type_t mp_type_module;
+extern const mp_obj_type_t mp_type_staticmethod;
+extern const mp_obj_type_t mp_type_classmethod;
+extern const mp_obj_type_t mp_type_property;
+extern const mp_obj_type_t mp_type_stringio;
+extern const mp_obj_type_t mp_type_bytesio;
+extern const mp_obj_type_t mp_type_reversed;
+extern const mp_obj_type_t mp_type_polymorph_iter;
+
+
+extern const mp_obj_type_t mp_type_BaseException;
+extern const mp_obj_type_t mp_type_ArithmeticError;
+extern const mp_obj_type_t mp_type_AssertionError;
+extern const mp_obj_type_t mp_type_AttributeError;
+extern const mp_obj_type_t mp_type_EOFError;
+extern const mp_obj_type_t mp_type_Exception;
+extern const mp_obj_type_t mp_type_GeneratorExit;
+extern const mp_obj_type_t mp_type_ImportError;
+extern const mp_obj_type_t mp_type_IndentationError;
+extern const mp_obj_type_t mp_type_IndexError;
+extern const mp_obj_type_t mp_type_KeyboardInterrupt;
+extern const mp_obj_type_t mp_type_KeyError;
+extern const mp_obj_type_t mp_type_LookupError;
+extern const mp_obj_type_t mp_type_MemoryError;
+extern const mp_obj_type_t mp_type_NameError;
+extern const mp_obj_type_t mp_type_NotImplementedError;
+extern const mp_obj_type_t mp_type_OSError;
+extern const mp_obj_type_t mp_type_TimeoutError;
+extern const mp_obj_type_t mp_type_OverflowError;
+extern const mp_obj_type_t mp_type_RuntimeError;
+extern const mp_obj_type_t mp_type_StopAsyncIteration;
+extern const mp_obj_type_t mp_type_StopIteration;
+extern const mp_obj_type_t mp_type_SyntaxError;
+extern const mp_obj_type_t mp_type_SystemExit;
+extern const mp_obj_type_t mp_type_TypeError;
+extern const mp_obj_type_t mp_type_UnicodeError;
+extern const mp_obj_type_t mp_type_ValueError;
+extern const mp_obj_type_t mp_type_ViperTypeError;
+extern const mp_obj_type_t mp_type_ZeroDivisionError;
+# 617 "../micropython/py/obj.h"
+extern const struct _mp_obj_none_t mp_const_none_obj;
+extern const struct _mp_obj_bool_t mp_const_false_obj;
+extern const struct _mp_obj_bool_t mp_const_true_obj;
+extern const struct _mp_obj_str_t mp_const_empty_bytes_obj;
+extern const struct _mp_obj_tuple_t mp_const_empty_tuple_obj;
+extern const struct _mp_obj_singleton_t mp_const_ellipsis_obj;
+extern const struct _mp_obj_singleton_t mp_const_notimplemented_obj;
+extern const struct _mp_obj_exception_t mp_const_GeneratorExit_obj;
+
+
+
+mp_obj_t mp_obj_new_type(qstr name, mp_obj_t bases_tuple, mp_obj_t locals_dict);
+static inline mp_obj_t mp_obj_new_bool(mp_int_t x) { return x ? (((mp_obj_t)&mp_const_true_obj)) : (((mp_obj_t)&mp_const_false_obj)); }
+mp_obj_t mp_obj_new_cell(mp_obj_t obj);
+mp_obj_t mp_obj_new_int(mp_int_t value);
+mp_obj_t mp_obj_new_int_from_uint(mp_uint_t value);
+mp_obj_t mp_obj_new_int_from_str_len(const char **str, size_t len, _Bool neg, unsigned int base);
+mp_obj_t mp_obj_new_int_from_ll(long long val);
+mp_obj_t mp_obj_new_int_from_ull(unsigned long long val);
+mp_obj_t mp_obj_new_str(const char* data, size_t len);
+mp_obj_t mp_obj_new_str_via_qstr(const char* data, size_t len);
+mp_obj_t mp_obj_new_str_from_vstr(const mp_obj_type_t *type, vstr_t *vstr);
+mp_obj_t mp_obj_new_bytes(const byte* data, size_t len);
+mp_obj_t mp_obj_new_bytearray(size_t n, void *items);
+mp_obj_t mp_obj_new_bytearray_by_ref(size_t n, void *items);
+
+mp_obj_t mp_obj_new_int_from_float(mp_float_t val);
+mp_obj_t mp_obj_new_complex(mp_float_t real, mp_float_t imag);
+
+mp_obj_t mp_obj_new_exception(const mp_obj_type_t *exc_type);
+mp_obj_t mp_obj_new_exception_arg1(const mp_obj_type_t *exc_type, mp_obj_t arg);
+mp_obj_t mp_obj_new_exception_args(const mp_obj_type_t *exc_type, size_t n_args, const mp_obj_t *args);
+mp_obj_t mp_obj_new_exception_msg(const mp_obj_type_t *exc_type, const char *msg);
+mp_obj_t mp_obj_new_exception_msg_varg(const mp_obj_type_t *exc_type, const char *fmt, ...);
+mp_obj_t mp_obj_new_fun_bc(mp_obj_t def_args, mp_obj_t def_kw_args, const byte *code, const mp_uint_t *const_table);
+mp_obj_t mp_obj_new_fun_native(mp_obj_t def_args_in, mp_obj_t def_kw_args, const void *fun_data, const mp_uint_t *const_table);
+mp_obj_t mp_obj_new_fun_viper(size_t n_args, void *fun_data, mp_uint_t type_sig);
+mp_obj_t mp_obj_new_fun_asm(size_t n_args, void *fun_data, mp_uint_t type_sig);
+mp_obj_t mp_obj_new_gen_wrap(mp_obj_t fun);
+mp_obj_t mp_obj_new_closure(mp_obj_t fun, size_t n_closed, const mp_obj_t *closed);
+mp_obj_t mp_obj_new_tuple(size_t n, const mp_obj_t *items);
+mp_obj_t mp_obj_new_list(size_t n, mp_obj_t *items);
+mp_obj_t mp_obj_new_dict(size_t n_args);
+mp_obj_t mp_obj_new_set(size_t n_args, mp_obj_t *items);
+mp_obj_t mp_obj_new_slice(mp_obj_t start, mp_obj_t stop, mp_obj_t step);
+mp_obj_t mp_obj_new_bound_meth(mp_obj_t meth, mp_obj_t self);
+mp_obj_t mp_obj_new_getitem_iter(mp_obj_t *args, mp_obj_iter_buf_t *iter_buf);
+mp_obj_t mp_obj_new_module(qstr module_name);
+mp_obj_t mp_obj_new_memoryview(byte typecode, size_t nitems, void *items);
+
+mp_obj_type_t *mp_obj_get_type(mp_const_obj_t o_in);
+const char *mp_obj_get_type_str(mp_const_obj_t o_in);
+_Bool mp_obj_is_subclass_fast(mp_const_obj_t object, mp_const_obj_t classinfo);
+mp_obj_t mp_instance_cast_to_native_base(mp_const_obj_t self_in, mp_const_obj_t native_type);
+
+void mp_obj_print_helper(const mp_print_t *print, mp_obj_t o_in, mp_print_kind_t kind);
+void mp_obj_print(mp_obj_t o, mp_print_kind_t kind);
+void mp_obj_print_exception(const mp_print_t *print, mp_obj_t exc);
+
+_Bool mp_obj_is_true(mp_obj_t arg);
+_Bool mp_obj_is_callable(mp_obj_t o_in);
+_Bool mp_obj_equal(mp_obj_t o1, mp_obj_t o2);
+
+static inline _Bool mp_obj_is_integer(mp_const_obj_t o) { return (MP_OBJ_IS_SMALL_INT(o) || (MP_OBJ_IS_OBJ(o) && (((mp_obj_base_t*)((void*)o))->type == (&mp_type_int)))) || (MP_OBJ_IS_OBJ(o) && (((mp_obj_base_t*)((void*)o))->type == (&mp_type_bool))); }
+mp_int_t mp_obj_get_int(mp_const_obj_t arg);
+mp_int_t mp_obj_get_int_truncated(mp_const_obj_t arg);
+_Bool mp_obj_get_int_maybe(mp_const_obj_t arg, mp_int_t *value);
+
+mp_float_t mp_obj_get_float(mp_obj_t self_in);
+_Bool mp_obj_get_float_maybe(mp_obj_t arg, mp_float_t *value);
+void mp_obj_get_complex(mp_obj_t self_in, mp_float_t *real, mp_float_t *imag);
+
+
+void mp_obj_get_array(mp_obj_t o, size_t *len, mp_obj_t **items);
+void mp_obj_get_array_fixed_n(mp_obj_t o, size_t len, mp_obj_t **items);
+size_t mp_get_index(const mp_obj_type_t *type, size_t len, mp_obj_t index, _Bool is_slice);
+mp_obj_t mp_obj_id(mp_obj_t o_in);
+mp_obj_t mp_obj_len(mp_obj_t o_in);
+mp_obj_t mp_obj_len_maybe(mp_obj_t o_in);
+mp_obj_t mp_obj_subscr(mp_obj_t base, mp_obj_t index, mp_obj_t val);
+mp_obj_t mp_generic_unary_op(mp_unary_op_t op, mp_obj_t o_in);
+
+
+mp_obj_t mp_obj_cell_get(mp_obj_t self_in);
+void mp_obj_cell_set(mp_obj_t self_in, mp_obj_t obj);
+
+
+
+mp_int_t mp_obj_int_get_truncated(mp_const_obj_t self_in);
+
+mp_int_t mp_obj_int_get_checked(mp_const_obj_t self_in);
+
+
+
+_Bool mp_obj_is_exception_type(mp_obj_t self_in);
+_Bool mp_obj_is_exception_instance(mp_obj_t self_in);
+_Bool mp_obj_exception_match(mp_obj_t exc, mp_const_obj_t exc_type);
+void mp_obj_exception_clear_traceback(mp_obj_t self_in);
+void mp_obj_exception_add_traceback(mp_obj_t self_in, qstr file, size_t line, qstr block);
+void mp_obj_exception_get_traceback(mp_obj_t self_in, size_t *n, size_t **values);
+mp_obj_t mp_obj_exception_get_value(mp_obj_t self_in);
+mp_obj_t mp_obj_exception_make_new(const mp_obj_type_t *type_in, size_t n_args, size_t n_kw, const mp_obj_t *args);
+mp_obj_t mp_alloc_emergency_exception_buf(mp_obj_t size_in);
+void mp_init_emergency_exception_buf(void);
+
+
+_Bool mp_obj_str_equal(mp_obj_t s1, mp_obj_t s2);
+qstr mp_obj_str_get_qstr(mp_obj_t self_in);
+const char *mp_obj_str_get_str(mp_obj_t self_in);
+const char *mp_obj_str_get_data(mp_obj_t self_in, size_t *len);
+mp_obj_t mp_obj_str_intern(mp_obj_t str);
+mp_obj_t mp_obj_str_intern_checked(mp_obj_t obj);
+void mp_str_print_quoted(const mp_print_t *print, const byte *str_data, size_t str_len, _Bool is_bytes);
+
+
+
+
+
+
+static inline mp_int_t mp_float_hash(mp_float_t val) { return (mp_int_t)val; }
+
+mp_obj_t mp_obj_float_binary_op(mp_binary_op_t op, mp_float_t lhs_val, mp_obj_t rhs);
+
+
+void mp_obj_complex_get(mp_obj_t self_in, mp_float_t *real, mp_float_t *imag);
+mp_obj_t mp_obj_complex_binary_op(mp_binary_op_t op, mp_float_t lhs_real, mp_float_t lhs_imag, mp_obj_t rhs_in);
+
+
+
+
+
+void mp_obj_tuple_get(mp_obj_t self_in, size_t *len, mp_obj_t **items);
+void mp_obj_tuple_del(mp_obj_t self_in);
+mp_int_t mp_obj_tuple_hash(mp_obj_t self_in);
+
+
+mp_obj_t mp_obj_list_append(mp_obj_t self_in, mp_obj_t arg);
+mp_obj_t mp_obj_list_remove(mp_obj_t self_in, mp_obj_t value);
+void mp_obj_list_get(mp_obj_t self_in, size_t *len, mp_obj_t **items);
+void mp_obj_list_set_len(mp_obj_t self_in, size_t len);
+void mp_obj_list_store(mp_obj_t self_in, mp_obj_t index, mp_obj_t value);
+mp_obj_t mp_obj_list_sort(size_t n_args, const mp_obj_t *args, mp_map_t *kwargs);
+
+
+typedef struct _mp_obj_dict_t {
+    mp_obj_base_t base;
+    mp_map_t map;
+} mp_obj_dict_t;
+void mp_obj_dict_init(mp_obj_dict_t *dict, size_t n_args);
+size_t mp_obj_dict_len(mp_obj_t self_in);
+mp_obj_t mp_obj_dict_get(mp_obj_t self_in, mp_obj_t index);
+mp_obj_t mp_obj_dict_store(mp_obj_t self_in, mp_obj_t key, mp_obj_t value);
+mp_obj_t mp_obj_dict_delete(mp_obj_t self_in, mp_obj_t key);
+static inline mp_map_t *mp_obj_dict_get_map(mp_obj_t dict) {
+    return &((mp_obj_dict_t*)((void*)dict))->map;
+}
+
+
+void mp_obj_set_store(mp_obj_t self_in, mp_obj_t item);
+
+
+void mp_obj_slice_get(mp_obj_t self_in, mp_obj_t *start, mp_obj_t *stop, mp_obj_t *step);
+
+
+
+typedef struct _mp_obj_fun_builtin_fixed_t {
+    mp_obj_base_t base;
+    union {
+        mp_fun_0_t _0;
+        mp_fun_1_t _1;
+        mp_fun_2_t _2;
+        mp_fun_3_t _3;
+    } fun;
+} mp_obj_fun_builtin_fixed_t;
+
+typedef struct _mp_obj_fun_builtin_var_t {
+    mp_obj_base_t base;
+    uint32_t sig;
+    union {
+        mp_fun_var_t var;
+        mp_fun_kw_t kw;
+    } fun;
+} mp_obj_fun_builtin_var_t;
+
+qstr mp_obj_fun_get_name(mp_const_obj_t fun);
+qstr mp_obj_code_get_name(const byte *code_info);
+
+mp_obj_t mp_identity(mp_obj_t self);
+extern const mp_obj_fun_builtin_fixed_t mp_identity_obj;
+mp_obj_t mp_identity_getiter(mp_obj_t self, mp_obj_iter_buf_t *iter_buf);
+
+
+typedef struct _mp_obj_module_t {
+    mp_obj_base_t base;
+    mp_obj_dict_t *globals;
+} mp_obj_module_t;
+static inline mp_obj_dict_t *mp_obj_module_get_globals(mp_obj_t module) {
+    return ((mp_obj_module_t*)((void*)module))->globals;
+}
+
+_Bool mp_obj_is_package(mp_obj_t module);
+
+
+
+typedef struct _mp_obj_static_class_method_t {
+    mp_obj_base_t base;
+    mp_obj_t fun;
+} mp_obj_static_class_method_t;
+typedef struct _mp_rom_obj_static_class_method_t {
+    mp_obj_base_t base;
+    mp_rom_obj_t fun;
+} mp_rom_obj_static_class_method_t;
+
+
+const mp_obj_t *mp_obj_property_get(mp_obj_t self_in);
+
+
+
+
+typedef struct {
+    mp_uint_t start;
+    mp_uint_t stop;
+    mp_int_t step;
+} mp_bound_slice_t;
+
+void mp_seq_multiply(const void *items, size_t item_sz, size_t len, size_t times, void *dest);
+
+_Bool mp_seq_get_fast_slice_indexes(mp_uint_t len, mp_obj_t slice, mp_bound_slice_t *indexes);
+
+
+
+_Bool mp_seq_cmp_bytes(mp_uint_t op, const byte *data1, size_t len1, const byte *data2, size_t len2);
+_Bool mp_seq_cmp_objs(mp_uint_t op, const mp_obj_t *items1, size_t len1, const mp_obj_t *items2, size_t len2);
+mp_obj_t mp_seq_index_obj(const mp_obj_t *items, size_t len, size_t n_args, const mp_obj_t *args);
+mp_obj_t mp_seq_count_obj(const mp_obj_t *items, size_t len, mp_obj_t value);
+mp_obj_t mp_seq_extract_slice(size_t len, const mp_obj_t *seq, mp_bound_slice_t *indexes);
+# 36 "../micropython/py/mpstate.h" 2
+# 1 "../micropython/py/objlist.h" 1
+# 31 "../micropython/py/objlist.h"
+typedef struct _mp_obj_list_t {
+    mp_obj_base_t base;
+    size_t alloc;
+    size_t len;
+    mp_obj_t *items;
+} mp_obj_list_t;
+
+void mp_obj_list_init(mp_obj_list_t *o, size_t n);
+# 37 "../micropython/py/mpstate.h" 2
+# 1 "../micropython/py/objexcept.h" 1
+# 30 "../micropython/py/objexcept.h"
+# 1 "../micropython/py/objtuple.h" 1
+# 31 "../micropython/py/objtuple.h"
+typedef struct _mp_obj_tuple_t {
+    mp_obj_base_t base;
+    size_t len;
+    mp_obj_t items[];
+} mp_obj_tuple_t;
+
+typedef struct _mp_rom_obj_tuple_t {
+    mp_obj_base_t base;
+    size_t len;
+    mp_rom_obj_t items[];
+} mp_rom_obj_tuple_t;
+
+void mp_obj_tuple_print(const mp_print_t *print, mp_obj_t o_in, mp_print_kind_t kind);
+mp_obj_t mp_obj_tuple_unary_op(mp_unary_op_t op, mp_obj_t self_in);
+mp_obj_t mp_obj_tuple_binary_op(mp_binary_op_t op, mp_obj_t lhs, mp_obj_t rhs);
+mp_obj_t mp_obj_tuple_subscr(mp_obj_t base, mp_obj_t index, mp_obj_t value);
+mp_obj_t mp_obj_tuple_getiter(mp_obj_t o_in, mp_obj_iter_buf_t *iter_buf);
+
+extern const mp_obj_type_t mp_type_attrtuple;
+# 59 "../micropython/py/objtuple.h"
+void mp_obj_attrtuple_print_helper(const mp_print_t *print, const qstr *fields, mp_obj_tuple_t *o);
+
+
+mp_obj_t mp_obj_new_attrtuple(const qstr *fields, size_t n, const mp_obj_t *items);
+# 31 "../micropython/py/objexcept.h" 2
+
+typedef struct _mp_obj_exception_t {
+    mp_obj_base_t base;
+    size_t traceback_alloc : (8 * sizeof(size_t) / 2);
+    size_t traceback_len : (8 * sizeof(size_t) / 2);
+    size_t *traceback_data;
+    mp_obj_tuple_t *args;
+} mp_obj_exception_t;
+
+void mp_obj_exception_print(const mp_print_t *print, mp_obj_t o_in, mp_print_kind_t kind);
+void mp_obj_exception_attr(mp_obj_t self_in, qstr attr, mp_obj_t *dest);
+# 38 "../micropython/py/mpstate.h" 2
+# 58 "../micropython/py/mpstate.h"
+typedef struct _mp_sched_item_t {
+    mp_obj_t func;
+    mp_obj_t arg;
+} mp_sched_item_t;
+
+
+typedef struct _mp_state_mem_t {
+
+
+
+
+
+
+    byte *gc_alloc_table_start;
+    size_t gc_alloc_table_byte_len;
+
+    byte *gc_finaliser_table_start;
+
+    byte *gc_pool_start;
+    byte *gc_pool_end;
+
+    int gc_stack_overflow;
+    uint16_t gc_stack[(64)];
+    uint16_t gc_lock_depth;
+
+
+
+
+    uint16_t gc_auto_collect_enabled;
+
+
+    size_t gc_alloc_amount;
+    size_t gc_alloc_threshold;
+
+
+    size_t gc_last_free_atb_index;
+# 103 "../micropython/py/mpstate.h"
+} mp_state_mem_t;
+
+
+
+typedef struct _mp_state_vm_t {
+
+
+
+
+
+
+
+    qstr_pool_t *last_pool;
+
+
+    mp_obj_exception_t mp_emergency_exception_obj;
+# 127 "../micropython/py/mpstate.h"
+    byte *mp_emergency_exception_buf;
+
+
+
+
+
+    mp_obj_exception_t mp_kbd_exception;
+
+
+
+    mp_obj_dict_t mp_loaded_modules_dict;
+
+
+    volatile mp_obj_t mp_pending_exception;
+
+
+    mp_sched_item_t sched_stack[(4)];
+# 152 "../micropython/py/mpstate.h"
+    mp_obj_dict_t dict_main;
+
+
+    mp_obj_list_t mp_sys_path_obj;
+    mp_obj_list_t mp_sys_argv_obj;
+
+
+
+    mp_obj_dict_t *mp_module_builtins_override_dict;
+
+
+
+    const char *readline_hist[8]; mp_obj_t pin_irq_handler[16]; byte *uart0_rxbuf;
+# 173 "../micropython/py/mpstate.h"
+    mp_obj_t dupterm_objs[(2)];
+
+
+
+
+
+
+
+    struct _mp_vfs_mount_t *vfs_cur;
+    struct _mp_vfs_mount_t *vfs_mount_table;
+# 191 "../micropython/py/mpstate.h"
+    byte *qstr_last_chunk;
+    size_t qstr_last_alloc;
+    size_t qstr_last_used;
+
+
+
+
+
+
+
+    mp_uint_t mp_optimise_value;
+
+
+
+
+    mp_int_t mp_emergency_exception_buf_size;
+
+
+
+    volatile int16_t sched_state;
+    uint16_t sched_sp;
+
+
+
+
+
+
+} mp_state_vm_t;
+
+
+
+typedef struct _mp_state_thread_t {
+
+    char *stack_top;
+
+
+    size_t stack_limit;
+# 242 "../micropython/py/mpstate.h"
+    mp_obj_dict_t *dict_locals;
+    mp_obj_dict_t *dict_globals;
+
+    nlr_buf_t *nlr_top;
+} mp_state_thread_t;
+
+
+
+typedef struct _mp_state_ctx_t {
+    mp_state_thread_t thread;
+    mp_state_vm_t vm;
+    mp_state_mem_t mem;
+} mp_state_ctx_t;
+
+extern mp_state_ctx_t mp_state_ctx;
+# 30 "../micropython/py/runtime.h" 2
+# 1 "../micropython/py/pystack.h" 1
+# 80 "../micropython/py/pystack.h"
+static inline void mp_local_free(void *ptr) {
+    (void)ptr;
+}
+
+static inline void *mp_nonlocal_alloc(size_t n_bytes) {
+    return ((uint8_t*)(m_malloc(sizeof(uint8_t) * (n_bytes))));
+}
+
+static inline void *mp_nonlocal_realloc(void *ptr, size_t old_n_bytes, size_t new_n_bytes) {
+    return ((uint8_t*)(m_realloc((ptr), sizeof(uint8_t) * (new_n_bytes))));
+}
+
+static inline void mp_nonlocal_free(void *ptr, size_t n_bytes) {
+    ((void)(n_bytes), m_free(ptr));
+}
+# 31 "../micropython/py/runtime.h" 2
+
+typedef enum {
+    MP_VM_RETURN_NORMAL,
+    MP_VM_RETURN_YIELD,
+    MP_VM_RETURN_EXCEPTION,
+} mp_vm_return_kind_t;
+
+typedef enum {
+    MP_ARG_BOOL = 0x001,
+    MP_ARG_INT = 0x002,
+    MP_ARG_OBJ = 0x003,
+    MP_ARG_KIND_MASK = 0x0ff,
+    MP_ARG_REQUIRED = 0x100,
+    MP_ARG_KW_ONLY = 0x200,
+} mp_arg_flag_t;
+
+typedef union _mp_arg_val_t {
+    _Bool u_bool;
+    mp_int_t u_int;
+    mp_obj_t u_obj;
+    mp_rom_obj_t u_rom_obj;
+} mp_arg_val_t;
+
+typedef struct _mp_arg_t {
+    uint16_t qst;
+    uint16_t flags;
+    mp_arg_val_t defval;
+} mp_arg_t;
+
+
+extern const byte mp_unary_op_method_name[];
+extern const byte mp_binary_op_method_name[];
+
+void mp_init(void);
+void mp_deinit(void);
+
+void mp_handle_pending(void);
+void mp_handle_pending_tail(mp_uint_t atomic_state);
+
+
+void mp_sched_lock(void);
+void mp_sched_unlock(void);
+static inline unsigned int mp_sched_num_pending(void) { return (mp_state_ctx.vm.sched_sp); }
+_Bool mp_sched_schedule(mp_obj_t function, mp_obj_t arg);
+
+
+
+int mp_print_mp_int(const mp_print_t *print, mp_obj_t x, int base, int base_char, int flags, char fill, int width, int prec);
+
+void mp_arg_check_num_sig(size_t n_args, size_t n_kw, uint32_t sig);
+static inline void mp_arg_check_num(size_t n_args, size_t n_kw, size_t n_args_min, size_t n_args_max, _Bool takes_kw) {
+    mp_arg_check_num_sig(n_args, n_kw, (uint32_t)(((n_args_min) << 17) | ((n_args_max) << 1) | ((takes_kw) ? 1 : 0)));
+}
+void mp_arg_parse_all(size_t n_pos, const mp_obj_t *pos, mp_map_t *kws, size_t n_allowed, const mp_arg_t *allowed, mp_arg_val_t *out_vals);
+void mp_arg_parse_all_kw_array(size_t n_pos, size_t n_kw, const mp_obj_t *args, size_t n_allowed, const mp_arg_t *allowed, mp_arg_val_t *out_vals);
+__attribute__((noreturn)) void mp_arg_error_terse_mismatch(void);
+__attribute__((noreturn)) void mp_arg_error_unimpl_kw(void);
+
+static inline mp_obj_dict_t *mp_locals_get(void) { return (mp_state_ctx.thread.dict_locals); }
+static inline void mp_locals_set(mp_obj_dict_t *d) { (mp_state_ctx.thread.dict_locals) = d; }
+static inline mp_obj_dict_t *mp_globals_get(void) { return (mp_state_ctx.thread.dict_globals); }
+static inline void mp_globals_set(mp_obj_dict_t *d) { (mp_state_ctx.thread.dict_globals) = d; }
+
+mp_obj_t mp_load_name(qstr qst);
+mp_obj_t mp_load_global(qstr qst);
+mp_obj_t mp_load_build_class(void);
+void mp_store_name(qstr qst, mp_obj_t obj);
+void mp_store_global(qstr qst, mp_obj_t obj);
+void mp_delete_name(qstr qst);
+void mp_delete_global(qstr qst);
+
+mp_obj_t mp_unary_op(mp_unary_op_t op, mp_obj_t arg);
+mp_obj_t mp_binary_op(mp_binary_op_t op, mp_obj_t lhs, mp_obj_t rhs);
+
+mp_obj_t mp_call_function_0(mp_obj_t fun);
+mp_obj_t mp_call_function_1(mp_obj_t fun, mp_obj_t arg);
+mp_obj_t mp_call_function_2(mp_obj_t fun, mp_obj_t arg1, mp_obj_t arg2);
+mp_obj_t mp_call_function_n_kw(mp_obj_t fun, size_t n_args, size_t n_kw, const mp_obj_t *args);
+mp_obj_t mp_call_method_n_kw(size_t n_args, size_t n_kw, const mp_obj_t *args);
+mp_obj_t mp_call_method_n_kw_var(_Bool have_self, size_t n_args_n_kw, const mp_obj_t *args);
+mp_obj_t mp_call_method_self_n_kw(mp_obj_t meth, mp_obj_t self, size_t n_args, size_t n_kw, const mp_obj_t *args);
+
+
+mp_obj_t mp_call_function_1_protected(mp_obj_t fun, mp_obj_t arg);
+mp_obj_t mp_call_function_2_protected(mp_obj_t fun, mp_obj_t arg1, mp_obj_t arg2);
+
+typedef struct _mp_call_args_t {
+    mp_obj_t fun;
+    size_t n_args, n_kw, n_alloc;
+    mp_obj_t *args;
+} mp_call_args_t;
+# 131 "../micropython/py/runtime.h"
+void mp_unpack_sequence(mp_obj_t seq, size_t num, mp_obj_t *items);
+void mp_unpack_ex(mp_obj_t seq, size_t num, mp_obj_t *items);
+mp_obj_t mp_store_map(mp_obj_t map, mp_obj_t key, mp_obj_t value);
+mp_obj_t mp_load_attr(mp_obj_t base, qstr attr);
+void mp_convert_member_lookup(mp_obj_t obj, const mp_obj_type_t *type, mp_obj_t member, mp_obj_t *dest);
+void mp_load_method(mp_obj_t base, qstr attr, mp_obj_t *dest);
+void mp_load_method_maybe(mp_obj_t base, qstr attr, mp_obj_t *dest);
+void mp_load_method_protected(mp_obj_t obj, qstr attr, mp_obj_t *dest, _Bool catch_all_exc);
+void mp_load_super_method(qstr attr, mp_obj_t *dest);
+void mp_store_attr(mp_obj_t base, qstr attr, mp_obj_t val);
+
+mp_obj_t mp_getiter(mp_obj_t o, mp_obj_iter_buf_t *iter_buf);
+mp_obj_t mp_iternext_allow_raise(mp_obj_t o);
+mp_obj_t mp_iternext(mp_obj_t o);
+mp_vm_return_kind_t mp_resume(mp_obj_t self_in, mp_obj_t send_value, mp_obj_t throw_value, mp_obj_t *ret_val);
+
+mp_obj_t mp_make_raise_obj(mp_obj_t o);
+
+mp_obj_t mp_import_name(qstr name, mp_obj_t fromlist, mp_obj_t level);
+mp_obj_t mp_import_from(mp_obj_t module, qstr name);
+void mp_import_all(mp_obj_t module);
+
+__attribute__((noreturn)) void mp_raise_msg(const mp_obj_type_t *exc_type, const char *msg);
+
+__attribute__((noreturn)) void mp_raise_ValueError(const char *msg);
+__attribute__((noreturn)) void mp_raise_TypeError(const char *msg);
+__attribute__((noreturn)) void mp_raise_NotImplementedError(const char *msg);
+__attribute__((noreturn)) void mp_raise_OSError(int errno_);
+__attribute__((noreturn)) void mp_raise_recursion_depth(void);
+# 172 "../micropython/py/runtime.h"
+mp_uint_t mp_convert_obj_to_native(mp_obj_t obj, mp_uint_t type);
+mp_obj_t mp_convert_native_to_obj(mp_uint_t val, mp_uint_t type);
+mp_obj_dict_t *mp_native_swap_globals(mp_obj_dict_t *new_globals);
+mp_obj_t mp_native_call_function_n_kw(mp_obj_t fun_in, size_t n_args_kw, const mp_obj_t *args);
+void mp_native_raise(mp_obj_t o);
+
+
+
+
+
+void mp_warning(const char *msg, ...);
+# 36 "machine_ep_spi.c" 2
+# 1 "../micropython/py/stream.h" 1
+# 30 "../micropython/py/stream.h"
+# 1 "../micropython/py/mperrno.h" 1
+# 146 "../micropython/py/mperrno.h"
+qstr mp_errno_to_str(mp_obj_t errno_val);
+# 31 "../micropython/py/stream.h" 2
+# 53 "../micropython/py/stream.h"
+struct mp_stream_seek_t {
+
+
+
+    mp_off_t offset;
+    int whence;
+};
+
+
+
+
+
+
+
+typedef struct _mp_stream_p_t {
+
+
+    mp_uint_t (*read)(mp_obj_t obj, void *buf, mp_uint_t size, int *errcode);
+    mp_uint_t (*write)(mp_obj_t obj, const void *buf, mp_uint_t size, int *errcode);
+    mp_uint_t (*ioctl)(mp_obj_t obj, mp_uint_t request, uintptr_t arg, int *errcode);
+    mp_uint_t is_text : 1;
+} mp_stream_p_t;
+
+extern const mp_obj_fun_builtin_var_t mp_stream_read_obj;
+extern const mp_obj_fun_builtin_var_t mp_stream_read1_obj;
+extern const mp_obj_fun_builtin_var_t mp_stream_readinto_obj;
+extern const mp_obj_fun_builtin_var_t mp_stream_unbuffered_readline_obj;
+extern const mp_obj_fun_builtin_fixed_t mp_stream_unbuffered_readlines_obj;
+extern const mp_obj_fun_builtin_var_t mp_stream_write_obj;
+extern const mp_obj_fun_builtin_fixed_t mp_stream_write1_obj;
+extern const mp_obj_fun_builtin_fixed_t mp_stream_close_obj;
+extern const mp_obj_fun_builtin_var_t mp_stream_seek_obj;
+extern const mp_obj_fun_builtin_fixed_t mp_stream_tell_obj;
+extern const mp_obj_fun_builtin_fixed_t mp_stream_flush_obj;
+extern const mp_obj_fun_builtin_var_t mp_stream_ioctl_obj;
+
+
+
+
+
+
+
+static inline const mp_stream_p_t *mp_get_stream(mp_const_obj_t self) {
+    return (const mp_stream_p_t*)((const mp_obj_base_t*)((void*)self))->type->protocol;
+}
+
+const mp_stream_p_t *mp_get_stream_raise(mp_obj_t self_in, int flags);
+mp_obj_t mp_stream_close(mp_obj_t stream);
+
+
+mp_obj_t mp_stream_unbuffered_iter(mp_obj_t self);
+
+mp_obj_t mp_stream_write(mp_obj_t self_in, const void *buf, size_t len, byte flags);
+
+
+
+
+
+mp_uint_t mp_stream_rw(mp_obj_t stream, void *buf, mp_uint_t size, int *errcode, byte flags);
+
+
+
+void mp_stream_write_adaptor(void *self, const char *buf, size_t len);
+
+
+
+
+ssize_t mp_stream_posix_write(void *stream, const void *buf, size_t len);
+ssize_t mp_stream_posix_read(void *stream, void *buf, size_t len);
+off_t mp_stream_posix_lseek(void *stream, off_t offset, int whence);
+int mp_stream_posix_fsync(void *stream);
+# 37 "machine_ep_spi.c" 2
+# 1 "../micropython/py/mphal.h" 1
+# 32 "../micropython/py/mphal.h"
+# 1 "./esp_mphal.h" 1
+# 27 "./esp_mphal.h"
+# 1 "../micropython/py/ringbuf.h" 1
+# 29 "../micropython/py/ringbuf.h"
+typedef struct _ringbuf_t {
+    uint8_t *buf;
+    uint16_t size;
+    uint16_t iget;
+    uint16_t iput;
+} ringbuf_t;
+# 48 "../micropython/py/ringbuf.h"
+static inline int ringbuf_get(ringbuf_t *r) {
+    if (r->iget == r->iput) {
+        return -1;
+    }
+    uint8_t v = r->buf[r->iget++];
+    if (r->iget >= r->size) {
+        r->iget = 0;
+    }
+    return v;
+}
+
+static inline int ringbuf_put(ringbuf_t *r, uint8_t v) {
+    uint32_t iput_new = r->iput + 1;
+    if (iput_new >= r->size) {
+        iput_new = 0;
+    }
+    if (iput_new == r->iget) {
+        return -1;
+    }
+    r->buf[r->iput] = v;
+    r->iput = iput_new;
+    return 0;
+}
+# 28 "./esp_mphal.h" 2
+# 1 "../micropython/lib/utils/interrupt_char.h" 1
+# 29 "../micropython/lib/utils/interrupt_char.h"
+extern int mp_interrupt_char;
+void mp_hal_set_interrupt_char(int c);
+void mp_keyboard_interrupt(void);
+# 29 "./esp_mphal.h" 2
+# 1 "./xtirq.h" 1
+# 32 "./xtirq.h"
+static inline uint32_t query_irq(void) {
+    uint32_t ps;
+    __asm__ volatile("rsr %0, ps" : "=a" (ps));
+    return ps & 0xf;
+}
+
+
+
+static inline uint32_t raise_irq_pri(uint32_t intlevel) {
+    uint32_t old_ps;
+    __asm__ volatile ("rsil %0, %1" : "=a" (old_ps) : "I" (intlevel));
+    return old_ps;
+}
+
+
+static inline void restore_irq_pri(uint32_t ps) {
+    __asm__ volatile ("wsr %0, ps; rsync" :: "a" (ps));
+}
+
+static inline uint32_t disable_irq(void) {
+    return raise_irq_pri(15);
+}
+
+static inline void enable_irq(uint32_t irq_state) {
+    restore_irq_pri(irq_state);
+}
+# 30 "./esp_mphal.h" 2
+
+void mp_keyboard_interrupt(void);
+
+struct _mp_print_t;
+
+extern const struct _mp_print_t mp_debug_print;
+
+extern ringbuf_t stdin_ringbuf;
+
+void mp_hal_signal_input(void);
+
+void mp_hal_signal_dupterm_input(void);
+
+
+extern int uart_attached_to_dupterm;
+
+void mp_hal_init(void);
+void mp_hal_rtc_init(void);
+
+uint32_t mp_hal_ticks_us(void);
+__attribute__((always_inline)) static inline uint32_t mp_hal_ticks_cpu(void) {
+  uint32_t ccount;
+  __asm__ __volatile__("rsr %0,ccount":"=a" (ccount));
+  return ccount;
+}
+
+void mp_hal_delay_us(uint32_t);
+void mp_hal_set_interrupt_char(int c);
+uint32_t mp_hal_get_cpu_freq(void);
+
+
+
+void uart_task_init();
+void dupterm_task_init();
+
+void ets_event_poll(void);
+
+
+
 # 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/osapi.h" 1 3 4
-# 28 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/osapi.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 1 3 4
-# 10 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 1 3 4
-# 11 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 2 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 1 3 4
-# 14 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 1 3 4
-# 12 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_types.h" 1 3 4
-
-
-
-
-
-
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 1 3 4
-# 25 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3 4
-typedef signed char __int8_t ;
-typedef unsigned char __uint8_t ;
-# 35 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3 4
-typedef signed short __int16_t;
-typedef unsigned short __uint16_t;
-# 45 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3 4
-typedef __int16_t __int_least16_t;
-typedef __uint16_t __uint_least16_t;
-# 57 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3 4
-typedef signed int __int32_t;
-typedef unsigned int __uint32_t;
-# 75 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3 4
-typedef __int32_t __int_least32_t;
-typedef __uint32_t __uint_least32_t;
-# 98 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3 4
-typedef signed long long __int64_t;
-typedef unsigned long long __uint64_t;
-# 8 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_types.h" 2 3 4
-# 13 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 2 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/lock.h" 1 3 4
-
-
-
-
-
-typedef int _LOCK_T;
-typedef int _LOCK_RECURSIVE_T;
-# 14 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 2 3 4
-
-
-typedef long _off_t;
-
-
-
-
-
-
-
-typedef short __dev_t;
-
-
-
-
-typedef unsigned short __uid_t;
-
-
-typedef unsigned short __gid_t;
-
-
-
-__extension__ typedef long long _off64_t;
-
-
-
-
-
-
-
-typedef long _fpos_t;
-# 56 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 3 4
-typedef int _ssize_t;
-
-
-
-
-
-
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 1 3 4
-# 356 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 3 4
-typedef unsigned int wint_t;
-# 64 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 2 3 4
-
-
-
-typedef struct
-{
-  int __count;
-  union
-  {
-    wint_t __wch;
-    unsigned char __wchb[4];
-  } __value;
-} _mbstate_t;
-
-
-
-typedef _LOCK_RECURSIVE_T _flock_t;
-
-
-
-
-typedef void *_iconv_t;
-# 15 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 2 3 4
-
-
-
-
-
-
-typedef unsigned long __ULong;
-# 37 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3 4
-struct _reent;
-
-
-
-
-
-
-struct _Bigint
-{
-  struct _Bigint *_next;
-  int _k, _maxwds, _sign, _wds;
-  __ULong _x[1];
-};
-
-
-struct __tm
-{
-  int __tm_sec;
-  int __tm_min;
-  int __tm_hour;
-  int __tm_mday;
-  int __tm_mon;
-  int __tm_year;
-  int __tm_wday;
-  int __tm_yday;
-  int __tm_isdst;
-};
-
-
-
-
-
-
-
-struct _on_exit_args {
- void * _fnargs[32];
- void * _dso_handle[32];
-
- __ULong _fntypes;
-
-
- __ULong _is_cxa;
-};
-# 89 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3 4
-struct _atexit {
- struct _atexit *_next;
- int _ind;
-
- void (*_fns[32])(void);
-        struct _on_exit_args _on_exit_args;
-};
-# 105 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3 4
-struct __sbuf {
- unsigned char *_base;
- int _size;
-};
-# 169 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3 4
-struct __sFILE {
-  unsigned char *_p;
-  int _r;
-  int _w;
-  short _flags;
-  short _file;
-  struct __sbuf _bf;
-  int _lbfsize;
-
-
-
-
-
-
-  void * _cookie;
-
-  int (* _read) (struct _reent *, void *, char *, int)
-                     ;
-  int (* _write) (struct _reent *, void *, const char *, int)
-                            ;
-  _fpos_t (* _seek) (struct _reent *, void *, _fpos_t, int);
-  int (* _close) (struct _reent *, void *);
-
-
-  struct __sbuf _ub;
-  unsigned char *_up;
-  int _ur;
-
-
-  unsigned char _ubuf[3];
-  unsigned char _nbuf[1];
-
-
-  struct __sbuf _lb;
-
-
-  int _blksize;
-  _off_t _offset;
-
-
-  struct _reent *_data;
-
-
-
-  _flock_t _lock;
-
-  _mbstate_t _mbstate;
-  int _flags2;
-};
-# 273 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3 4
-typedef struct __sFILE __FILE;
-
-
-
-struct _glue
-{
-  struct _glue *_next;
-  int _niobs;
-  __FILE *_iobs;
-};
-# 305 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3 4
-struct _rand48 {
-  unsigned short _seed[3];
-  unsigned short _mult[3];
-  unsigned short _add;
-
-
-
-
-};
-# 580 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3 4
-struct _reent
-{
-  int _errno;
-
-
-
-
-  __FILE *_stdin, *_stdout, *_stderr;
-
-  int _inc;
-  char _emergency[25];
-
-  int _current_category;
-  const char *_current_locale;
-
-  int __sdidinit;
-
-  void (* __cleanup) (struct _reent *);
-
-
-  struct _Bigint *_result;
-  int _result_k;
-  struct _Bigint *_p5s;
-  struct _Bigint **_freelist;
-
-
-  int _cvtlen;
-  char *_cvtbuf;
-
-  union
-    {
-      struct
-        {
-          unsigned int _unused_rand;
-          char * _strtok_last;
-          char _asctime_buf[26];
-          struct __tm _localtime_buf;
-          int _gamma_signgam;
-          __extension__ unsigned long long _rand_next;
-          struct _rand48 _r48;
-          _mbstate_t _mblen_state;
-          _mbstate_t _mbtowc_state;
-          _mbstate_t _wctomb_state;
-          char _l64a_buf[8];
-          char _signal_buf[24];
-          int _getdate_err;
-          _mbstate_t _mbrlen_state;
-          _mbstate_t _mbrtowc_state;
-          _mbstate_t _mbsrtowcs_state;
-          _mbstate_t _wcrtomb_state;
-          _mbstate_t _wcsrtombs_state;
-   int _h_errno;
-        } _reent;
-
-
-
-      struct
-        {
-
-          unsigned char * _nextf[30];
-          unsigned int _nmalloc[30];
-        } _unused;
-    } _new;
-
-
-  struct _atexit *_atexit;
-  struct _atexit _atexit0;
-
-
-  void (**(_sig_func))(int);
-
-
-
-
-  struct _glue __sglue;
-  __FILE __sf[3];
-};
-# 818 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3 4
-extern struct _reent *_impure_ptr ;
-extern struct _reent *const _global_impure_ptr ;
-
-void _reclaim_reent (struct _reent *);
-# 12 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 2 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/cdefs.h" 1 3 4
-# 13 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 2 3 4
-
-
-
-
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 1 3 4
-# 214 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 3 4
-typedef unsigned int size_t;
-# 18 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 2 3 4
-
-
-
-void * memchr (const void *, int, size_t);
-int memcmp (const void *, const void *, size_t);
-void * memcpy (void *, const void *, size_t);
-void * memmove (void *, const void *, size_t);
-void * memset (void *, int, size_t);
-char *strcat (char *, const char *);
-char *strchr (const char *, int);
-int strcmp (const char *, const char *);
-int strcoll (const char *, const char *);
-char *strcpy (char *, const char *);
-size_t strcspn (const char *, const char *);
-char *strerror (int);
-size_t strlen (const char *);
-char *strncat (char *, const char *, size_t);
-int strncmp (const char *, const char *, size_t);
-char *strncpy (char *, const char *, size_t);
-char *strpbrk (const char *, const char *);
-char *strrchr (const char *, int);
-size_t strspn (const char *, const char *);
-char *strstr (const char *, const char *);
-
-
-char *strtok (char *, const char *);
-
-
-size_t strxfrm (char *, const char *, size_t);
-
-
-char *strtok_r (char *, const char *, char **);
-
-int bcmp (const void *, const void *, size_t);
-void bcopy (const void *, void *, size_t);
-void bzero (void *, size_t);
-int ffs (int);
-char *index (const char *, int);
-void * memccpy (void *, const void *, int, size_t);
-void * mempcpy (void *, const void *, size_t);
-void * memmem (const void *, size_t, const void *, size_t);
-void * memrchr (const void *, int, size_t);
-char *rindex (const char *, int);
-char *stpcpy (char *, const char *);
-char *stpncpy (char *, const char *, size_t);
-int strcasecmp (const char *, const char *);
-char *strcasestr (const char *, const char *);
-char *strchrnul (const char *, int);
-
-
-char *strdup (const char *);
-
-
-char *_strdup_r (struct _reent *, const char *);
-
-
-char *strndup (const char *, size_t);
-
-
-char *_strndup_r (struct _reent *, const char *, size_t);
-# 86 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 3 4
-int strerror_r (int, char *, size_t) __asm__ ("" "__xpg_strerror_r");
-
-
-
-
-
-size_t strlcat (char *, const char *, size_t);
-size_t strlcpy (char *, const char *, size_t);
-int strncasecmp (const char *, const char *, size_t);
-size_t strnlen (const char *, size_t);
-char *strsep (char **, const char *);
-char *strlwr (char *);
-char *strupr (char *);
-
-char *strsignal (int __signo);
-
-
-
-
-
-
-char * _strerror_r (struct _reent *, int, int, int *);
-# 139 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/string.h" 1 3 4
-# 140 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 2 3 4
-
-
-# 29 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/osapi.h" 2 3 4
-
+# 29 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/osapi.h" 3 4
+# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/os_type.h" 1 3 4
+# 30 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/osapi.h" 2 3 4
 # 1 "./user_config.h" 1 3 4
 # 31 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/osapi.h" 2 3 4
 
@@ -660,146 +2690,15 @@ int os_printf_plus(const char *format, ...) __attribute__ ((format (printf, 1, 2
 # 90 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/osapi.h" 3 4
 unsigned long os_random(void);
 int os_get_random(unsigned char *buf, size_t len);
-# 41 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/arch/cc.h" 2 3 4
-# 52 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/arch/cc.h" 3 4
-typedef unsigned char u8_t;
-typedef signed char s8_t;
-typedef unsigned short u16_t;
-typedef signed short s16_t;
-typedef unsigned long u32_t;
-typedef signed long s32_t;
-typedef unsigned long mem_ptr_t;
-# 95 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/arch/cc.h" 3 4
-extern u8_t memp_memory_RAW_PCB_base[];
-
-
-
-extern u8_t memp_memory_UDP_PCB_base[];
-
-
-
-extern u8_t memp_memory_TCP_PCB_base[];
-extern u8_t memp_memory_TCP_PCB_LISTEN_base[];
-extern u8_t memp_memory_TCP_SEG_base[] ;
-
-
-
-extern u8_t memp_memory_SYS_TIMEOUT_base[];
-
-
-extern u8_t memp_memory_PBUF_base[];
-extern u8_t memp_memory_PBUF_POOL_base[];
-# 44 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/arch.h" 2 3 4
-# 36 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/debug.h" 2 3 4
-# 47 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/opt.h" 2 3 4
-# 36 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/ip_addr.h" 2 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/def.h" 1 3 4
-# 37 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/ip_addr.h" 2 3 4
+# 70 "./esp_mphal.h" 2
 
 
 
 
 
 
-
-struct ip_addr {
-  u32_t addr;
-};
-
-
-
-
-
-
-
-struct ip_addr_packed {
-  u32_t addr;
-} __attribute__((packed));
-
-
-
-
-
-
-
-typedef struct ip_addr ip_addr_t;
-typedef struct ip_addr_packed ip_addr_p_t;
-# 74 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/ip_addr.h" 3 4
-
-struct ip_addr2 {
-  u16_t addrw[2];
-} __attribute__((packed));
-
-
-
-
-
-
-struct netif;
-
-extern const ip_addr_t ip_addr_any;
-extern const ip_addr_t ip_addr_broadcast;
-# 203 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/ip_addr.h" 3 4
-u8_t ip4_addr_isbroadcast(u32_t addr, const struct netif *netif)__attribute__((section(".irom0.text")));
-
-
-u8_t ip4_addr_netmask_valid(u32_t netmask)__attribute__((section(".irom0.text")));
-# 234 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/ip_addr.h" 3 4
-u32_t ipaddr_addr(const char *cp)__attribute__((section(".irom0.text")));
-int ipaddr_aton(const char *cp, ip_addr_t *addr)__attribute__((section(".irom0.text")));
-
-char *ipaddr_ntoa(const ip_addr_t *addr)__attribute__((section(".irom0.text")));
-char *ipaddr_ntoa_r(const ip_addr_t *addr, char *buf, int buflen)__attribute__((section(".irom0.text")));
-# 247 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/lwip/ip_addr.h" 3 4
-struct ip_info {
-    struct ip_addr ip;
-    struct ip_addr netmask;
-    struct ip_addr gw;
-};
-# 31 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/user_interface.h" 2 3 4
-
-
-
-
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/queue.h" 1 3 4
-# 36 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/user_interface.h" 2 3 4
-# 1 "./user_config.h" 1 3 4
-# 37 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/user_interface.h" 2 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/spi_flash.h" 1 3 4
-# 28 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/spi_flash.h" 3 4
-typedef enum {
-    SPI_FLASH_RESULT_OK,
-    SPI_FLASH_RESULT_ERR,
-    SPI_FLASH_RESULT_TIMEOUT
-} SpiFlashOpResult;
-
-typedef struct{
- uint32 deviceId;
- uint32 chip_size;
- uint32 block_size;
- uint32 sector_size;
- uint32 page_size;
- uint32 status_mask;
-} SpiFlashChip;
-
-
-
-uint32 spi_flash_get_id(void);
-SpiFlashOpResult spi_flash_erase_sector(uint16 sec);
-SpiFlashOpResult spi_flash_write(uint32 des_addr, uint32 *src_addr, uint32 size);
-SpiFlashOpResult spi_flash_read(uint32 src_addr, uint32 *des_addr, uint32 size);
-
-typedef SpiFlashOpResult (* user_spi_flash_read)(
-  SpiFlashChip *spi,
-  uint32 src_addr,
-  uint32 *des_addr,
-        uint32 size);
-
-void spi_flash_set_read_func(user_spi_flash_read read);
-
-_Bool spi_flash_erase_protect_enable(void);
-_Bool spi_flash_erase_protect_disable(void);
-# 38 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/user_interface.h" 2 3 4
+# 1 "./etshal.h" 1
+# 77 "./esp_mphal.h" 2
 # 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/gpio.h" 1 3 4
 # 35 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/gpio.h" 3 4
 typedef enum {
@@ -864,621 +2763,235 @@ void gpio_pin_wakeup_enable(uint32 i, GPIO_INT_TYPE intr_state);
 void gpio_pin_wakeup_disable();
 
 void gpio_pin_intr_state_set(uint32 i, GPIO_INT_TYPE intr_state);
-# 39 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/user_interface.h" 2 3 4
+# 78 "./esp_mphal.h" 2
+# 1 "./modmachine.h" 1
 
 
 
 
 
+extern const mp_obj_type_t pyb_pin_type;
+extern const mp_obj_type_t pyb_pwm_type;
+extern const mp_obj_type_t pyb_adc_type;
+extern const mp_obj_type_t pyb_rtc_type;
+extern const mp_obj_type_t pyb_uart_type;
+extern const mp_obj_type_t pyb_i2c_type;
+extern const mp_obj_type_t machine_hspi_type;
+extern const mp_obj_type_t machine_ep_spi_type;
 
-enum rst_reason {
-    REASON_DEFAULT_RST = 0,
-    REASON_WDT_RST = 1,
-    REASON_EXCEPTION_RST = 2,
-    REASON_SOFT_WDT_RST = 3,
-    REASON_SOFT_RESTART = 4,
-    REASON_DEEP_SLEEP_AWAKE = 5,
-    REASON_EXT_SYS_RST = 6
-};
+extern const mp_obj_fun_builtin_var_t pyb_info_obj;
 
-struct rst_info{
-    uint32 reason;
-    uint32 exccause;
-    uint32 epc1;
-    uint32 epc2;
-    uint32 epc3;
-    uint32 excvaddr;
-    uint32 depc;
-};
+typedef struct _pyb_pin_obj_t {
+    mp_obj_base_t base;
+    uint16_t phys_port;
+    uint16_t func;
+    uint32_t periph;
+} pyb_pin_obj_t;
 
-struct rst_info* system_get_rst_info(void);
+const pyb_pin_obj_t pyb_pin_obj[16 + 1];
 
+void pin_init0(void);
+void pin_intr_handler_iram(void *arg);
+void pin_intr_handler(uint32_t);
 
+uint mp_obj_get_pin(mp_obj_t pin_in);
+pyb_pin_obj_t *mp_obj_get_pin_obj(mp_obj_t pin_in);
+int pin_get(uint pin);
+void pin_set(uint pin, int value);
 
+extern uint32_t pyb_rtc_alarm0_wake;
+extern uint64_t pyb_rtc_alarm0_expiry;
 
-void system_restore(void);
-void system_restart(void);
-
-_Bool system_deep_sleep_set_option(uint8 option);
-_Bool system_deep_sleep(uint64 time_in_us);
-_Bool system_deep_sleep_instant(uint64 time_in_us);
-
-uint8 system_upgrade_userbin_check(void);
-void system_upgrade_reboot(void);
-uint8 system_upgrade_flag_check();
-void system_upgrade_flag_set(uint8 flag);
-
-void system_timer_reinit(void);
-uint32 system_get_time(void);
+void pyb_rtc_set_us_since_2000(uint64_t nowus);
+uint64_t pyb_rtc_get_us_since_2000();
+void rtc_prepare_deepsleep(uint64_t sleep_us);
+# 79 "./esp_mphal.h" 2
 
 
+
+
+void mp_hal_pin_input(uint32_t pin);
+void mp_hal_pin_output(uint32_t pin);
+void mp_hal_pin_open_drain(uint32_t pin);
+# 97 "./esp_mphal.h"
+void *ets_get_esf_buf_ctlblk(void);
+int ets_esf_free_bufs(int idx);
+# 33 "../micropython/py/mphal.h" 2
+
+
+
+
+
+int mp_hal_stdin_rx_chr(void);
+
+
+
+void mp_hal_stdout_tx_str(const char *str);
+
+
+
+void mp_hal_stdout_tx_strn(const char *str, size_t len);
+
+
+
+void mp_hal_stdout_tx_strn_cooked(const char *str, size_t len);
+
+
+
+void mp_hal_delay_ms(mp_uint_t ms);
+
+
+
+void mp_hal_delay_us(mp_uint_t us);
+
+
+
+mp_uint_t mp_hal_ticks_ms(void);
+
+
+
+mp_uint_t mp_hal_ticks_us(void);
+
+
+
+mp_uint_t mp_hal_ticks_cpu(void);
+# 38 "machine_ep_spi.c" 2
+# 1 "../micropython/extmod/machine_spi.h" 1
+# 31 "../micropython/extmod/machine_spi.h"
+# 1 "../micropython/drivers/bus/spi.h" 1
+# 31 "../micropython/drivers/bus/spi.h"
 enum {
-    USER_TASK_PRIO_0 = 0,
-    USER_TASK_PRIO_1,
-    USER_TASK_PRIO_2,
-    USER_TASK_PRIO_MAX
+    MP_SPI_IOCTL_INIT,
+    MP_SPI_IOCTL_DEINIT,
 };
 
-_Bool system_os_task(ETSTask task, uint8 prio, ETSEvent *queue, uint8 qlen);
-_Bool system_os_post(uint8 prio, ETSSignal sig, ETSParam par);
-
-void system_print_meminfo(void);
-uint32 system_get_free_heap_size(void);
-
-void system_set_os_print(uint8 onoff);
-uint8 system_get_os_print();
-
-uint64 system_mktime(uint32 year, uint32 mon, uint32 day, uint32 hour, uint32 min, uint32 sec);
-
-uint32 system_get_chip_id(void);
-
-typedef void (* init_done_cb_t)(void);
-
-void system_init_done_cb(init_done_cb_t cb);
-
-uint32 system_rtc_clock_cali_proc(void);
-uint32 system_get_rtc_time(void);
-
-_Bool system_rtc_mem_read(uint8 src_addr, void *des_addr, uint16 load_size);
-_Bool system_rtc_mem_write(uint8 des_addr, const void *src_addr, uint16 save_size);
-
-void system_uart_swap(void);
-void system_uart_de_swap(void);
-
-uint16 system_adc_read(void);
-void system_adc_read_fast(uint16 *adc_addr, uint16 adc_num, uint8 adc_clk_div);
-uint16 system_get_vdd33(void);
-
-const char *system_get_sdk_version(void);
-
-
-
-
-
-
-
-uint8 system_get_boot_version(void);
-uint32 system_get_userbin_addr(void);
-uint8 system_get_boot_mode(void);
-_Bool system_restart_enhance(uint8 bin_type, uint32 bin_addr);
-
-
-
-
-_Bool system_update_cpu_freq(uint8 freq);
-uint8 system_get_cpu_freq(void);
-
-enum flash_size_map {
-    FLASH_SIZE_4M_MAP_256_256 = 0,
-    FLASH_SIZE_2M,
-    FLASH_SIZE_8M_MAP_512_512,
-    FLASH_SIZE_16M_MAP_512_512,
-    FLASH_SIZE_32M_MAP_512_512,
-    FLASH_SIZE_16M_MAP_1024_1024,
-    FLASH_SIZE_32M_MAP_1024_1024,
-    FLASH_SIZE_32M_MAP_2048_2048,
-
-    FLASH_SIZE_64M_MAP_1024_1024,
-    FLASH_SIZE_128M_MAP_1024_1024
-};
-
-enum flash_size_map system_get_flash_size_map(void);
-
-void system_phy_set_max_tpw(uint8 max_tpw);
-void system_phy_set_tpw_via_vdd33(uint16 vdd33);
-void system_phy_set_rfoption(uint8 option);
-void system_phy_set_powerup_option(uint8 option);
-void system_phy_freq_trace_enable(_Bool enable);
-
-_Bool system_param_save_with_protect(uint16 start_sec, void *param, uint16 len);
-_Bool system_param_load(uint16 start_sec, uint16 offset, void *param, uint16 len);
-
-void system_soft_wdt_stop(void);
-void system_soft_wdt_restart(void);
-void system_soft_wdt_feed(void);
-
-void system_show_malloc(void);
-
-
-
-
-
-
-typedef enum _auth_mode {
-    AUTH_OPEN = 0,
-    AUTH_WEP,
-    AUTH_WPA_PSK,
-    AUTH_WPA2_PSK,
-    AUTH_WPA_WPA2_PSK,
-    AUTH_MAX
-} AUTH_MODE;
-
-uint8 wifi_get_opmode(void);
-uint8 wifi_get_opmode_default(void);
-_Bool wifi_set_opmode(uint8 opmode);
-_Bool wifi_set_opmode_current(uint8 opmode);
-uint8 wifi_get_broadcast_if(void);
-_Bool wifi_set_broadcast_if(uint8 interface);
-
-struct bss_info {
-    struct { struct bss_info *stqe_next; } next;
-
-    uint8 bssid[6];
-    uint8 ssid[32];
-    uint8 ssid_len;
-    uint8 channel;
-    sint8 rssi;
-    AUTH_MODE authmode;
-    uint8 is_hidden;
-    sint16 freq_offset;
-    sint16 freqcal_val;
-    uint8 *esp_mesh_ie;
-    uint8 simple_pair;
-};
-
-typedef struct _scaninfo {
-    struct { struct bss_info *stqh_first; struct bss_info **stqh_last; } *pbss;
-    struct espconn *pespconn;
-    uint8 totalpage;
-    uint8 pagenum;
-    uint8 page_sn;
-    uint8 data_cnt;
-} scaninfo;
-
-typedef void (* scan_done_cb_t)(void *arg, STATUS status);
-
-struct station_config {
-    uint8 ssid[32];
-    uint8 password[64];
-    uint8 bssid_set;
-
-    uint8 bssid[6];
-};
-
-_Bool wifi_station_get_config(struct station_config *config);
-_Bool wifi_station_get_config_default(struct station_config *config);
-_Bool wifi_station_set_config(struct station_config *config);
-_Bool wifi_station_set_config_current(struct station_config *config);
-
-_Bool wifi_station_connect(void);
-_Bool wifi_station_disconnect(void);
-
-sint8 wifi_station_get_rssi(void);
-
-typedef enum {
-    WIFI_SCAN_TYPE_ACTIVE = 0,
-    WIFI_SCAN_TYPE_PASSIVE,
-} wifi_scan_type_t;
-
-struct scan_config {
-    uint8 *ssid;
-    uint8 *bssid;
-    uint8 channel;
-    uint8 show_hidden;
-    wifi_scan_type_t scan_type;
-};
-
-_Bool wifi_station_scan(struct scan_config *config, scan_done_cb_t cb);
-
-uint8 wifi_station_get_auto_connect(void);
-_Bool wifi_station_set_auto_connect(uint8 set);
-
-_Bool wifi_station_set_reconnect_policy(_Bool set);
-
-enum {
-    STATION_IDLE = 0,
-    STATION_CONNECTING,
-    STATION_WRONG_PASSWORD,
-    STATION_NO_AP_FOUND,
-    STATION_CONNECT_FAIL,
-    STATION_GOT_IP
-};
-
-enum dhcp_status {
-    DHCP_STOPPED,
-    DHCP_STARTED
-};
-
-uint8 wifi_station_get_connect_status(void);
-
-uint8 wifi_station_get_current_ap_id(void);
-_Bool wifi_station_ap_change(uint8 current_ap_id);
-_Bool wifi_station_ap_number_set(uint8 ap_number);
-uint8 wifi_station_get_ap_info(struct station_config config[]);
-
-_Bool wifi_station_dhcpc_start(void);
-_Bool wifi_station_dhcpc_stop(void);
-enum dhcp_status wifi_station_dhcpc_status(void);
-_Bool wifi_station_dhcpc_set_maxtry(uint8 num);
-
-char* wifi_station_get_hostname(void);
-_Bool wifi_station_set_hostname(char *name);
-
-int wifi_station_set_cert_key(uint8 *client_cert, int client_cert_len,
-    uint8 *private_key, int private_key_len,
-    uint8 *private_key_passwd, int private_key_passwd_len);
-void wifi_station_clear_cert_key(void);
-int wifi_station_set_username(uint8 *username, int len);
-void wifi_station_clear_username(void);
-
-struct softap_config {
-    uint8 ssid[32];
-    uint8 password[64];
-    uint8 ssid_len;
-    uint8 channel;
-    AUTH_MODE authmode;
-    uint8 ssid_hidden;
-    uint8 max_connection;
-    uint16 beacon_interval;
-};
-
-_Bool wifi_softap_get_config(struct softap_config *config);
-_Bool wifi_softap_get_config_default(struct softap_config *config);
-_Bool wifi_softap_set_config(struct softap_config *config);
-_Bool wifi_softap_set_config_current(struct softap_config *config);
-
-struct station_info {
-    struct { struct station_info *stqe_next; } next;
-
-    uint8 bssid[6];
-    struct ip_addr ip;
-};
-
-struct dhcps_lease {
-    _Bool enable;
-    struct ip_addr start_ip;
-    struct ip_addr end_ip;
-};
-
-enum dhcps_offer_option{
-    OFFER_START = 0x00,
-    OFFER_ROUTER = 0x01,
-    OFFER_END
-};
-
-uint8 wifi_softap_get_station_num(void);
-struct station_info * wifi_softap_get_station_info(void);
-void wifi_softap_free_station_info(void);
-
-_Bool wifi_softap_dhcps_start(void);
-_Bool wifi_softap_dhcps_stop(void);
-
-_Bool wifi_softap_set_dhcps_lease(struct dhcps_lease *please);
-_Bool wifi_softap_get_dhcps_lease(struct dhcps_lease *please);
-uint32 wifi_softap_get_dhcps_lease_time(void);
-_Bool wifi_softap_set_dhcps_lease_time(uint32 minute);
-_Bool wifi_softap_reset_dhcps_lease_time(void);
-
-enum dhcp_status wifi_softap_dhcps_status(void);
-_Bool wifi_softap_set_dhcps_offer_option(uint8 level, void* optarg);
-
-
-
-
-_Bool wifi_get_ip_info(uint8 if_index, struct ip_info *info);
-_Bool wifi_set_ip_info(uint8 if_index, struct ip_info *info);
-_Bool wifi_get_macaddr(uint8 if_index, uint8 *macaddr);
-_Bool wifi_set_macaddr(uint8 if_index, uint8 *macaddr);
-
-uint8 wifi_get_channel(void);
-_Bool wifi_set_channel(uint8 channel);
-
-void wifi_status_led_install(uint8 gpio_id, uint32 gpio_name, uint8 gpio_func);
-void wifi_status_led_uninstall();
-
-
-
-
-
-void wifi_promiscuous_enable(uint8 promiscuous);
-
-typedef void (* wifi_promiscuous_cb_t)(uint8 *buf, uint16 len);
-
-void wifi_set_promiscuous_rx_cb(wifi_promiscuous_cb_t cb);
-
-void wifi_promiscuous_set_mac(const uint8_t *address);
-
-enum phy_mode {
-    PHY_MODE_11B = 1,
-    PHY_MODE_11G = 2,
-    PHY_MODE_11N = 3
-};
-
-enum phy_mode wifi_get_phy_mode(void);
-_Bool wifi_set_phy_mode(enum phy_mode mode);
-
-enum sleep_type {
-    NONE_SLEEP_T = 0,
-    LIGHT_SLEEP_T,
-    MODEM_SLEEP_T
-};
-
-_Bool wifi_set_sleep_type(enum sleep_type type);
-enum sleep_type wifi_get_sleep_type(void);
-
-void wifi_fpm_open(void);
-void wifi_fpm_close(void);
-void wifi_fpm_do_wakeup(void);
-sint8 wifi_fpm_do_sleep(uint32 sleep_time_in_us);
-void wifi_fpm_set_sleep_type(enum sleep_type type);
-enum sleep_type wifi_fpm_get_sleep_type(void);
-
-typedef void (*fpm_wakeup_cb)(void);
-void wifi_fpm_set_wakeup_cb(fpm_wakeup_cb cb);
-
-void wifi_fpm_auto_sleep_set_in_null_mode(uint8 req);
-
-enum {
-    EVENT_STAMODE_CONNECTED = 0,
-    EVENT_STAMODE_DISCONNECTED,
-    EVENT_STAMODE_AUTHMODE_CHANGE,
-    EVENT_STAMODE_GOT_IP,
-    EVENT_STAMODE_DHCP_TIMEOUT,
-    EVENT_SOFTAPMODE_STACONNECTED,
-    EVENT_SOFTAPMODE_STADISCONNECTED,
-    EVENT_SOFTAPMODE_PROBEREQRECVED,
-    EVENT_OPMODE_CHANGED,
-    EVENT_MAX
-};
-
-enum {
-    REASON_UNSPECIFIED = 1,
-    REASON_AUTH_EXPIRE = 2,
-    REASON_AUTH_LEAVE = 3,
-    REASON_ASSOC_EXPIRE = 4,
-    REASON_ASSOC_TOOMANY = 5,
-    REASON_NOT_AUTHED = 6,
-    REASON_NOT_ASSOCED = 7,
-    REASON_ASSOC_LEAVE = 8,
-    REASON_ASSOC_NOT_AUTHED = 9,
-    REASON_DISASSOC_PWRCAP_BAD = 10,
-    REASON_DISASSOC_SUPCHAN_BAD = 11,
-    REASON_IE_INVALID = 13,
-    REASON_MIC_FAILURE = 14,
-    REASON_4WAY_HANDSHAKE_TIMEOUT = 15,
-    REASON_GROUP_KEY_UPDATE_TIMEOUT = 16,
-    REASON_IE_IN_4WAY_DIFFERS = 17,
-    REASON_GROUP_CIPHER_INVALID = 18,
-    REASON_PAIRWISE_CIPHER_INVALID = 19,
-    REASON_AKMP_INVALID = 20,
-    REASON_UNSUPP_RSN_IE_VERSION = 21,
-    REASON_INVALID_RSN_IE_CAP = 22,
-    REASON_802_1X_AUTH_FAILED = 23,
-    REASON_CIPHER_SUITE_REJECTED = 24,
-
-    REASON_BEACON_TIMEOUT = 200,
-    REASON_NO_AP_FOUND = 201,
-    REASON_AUTH_FAIL = 202,
-    REASON_ASSOC_FAIL = 203,
-    REASON_HANDSHAKE_TIMEOUT = 204,
-};
-
-typedef struct {
-    uint8 ssid[32];
-    uint8 ssid_len;
-    uint8 bssid[6];
-    uint8 channel;
-} Event_StaMode_Connected_t;
-
-typedef struct {
-    uint8 ssid[32];
-    uint8 ssid_len;
-    uint8 bssid[6];
-    uint8 reason;
-} Event_StaMode_Disconnected_t;
-
-typedef struct {
-    uint8 old_mode;
-    uint8 new_mode;
-} Event_StaMode_AuthMode_Change_t;
-
-typedef struct {
-    struct ip_addr ip;
-    struct ip_addr mask;
-    struct ip_addr gw;
-} Event_StaMode_Got_IP_t;
-
-typedef struct {
-    uint8 mac[6];
-    uint8 aid;
-} Event_SoftAPMode_StaConnected_t;
-
-typedef struct {
-    uint8 mac[6];
-    uint8 aid;
-} Event_SoftAPMode_StaDisconnected_t;
-
-typedef struct {
-    int rssi;
-    uint8 mac[6];
-} Event_SoftAPMode_ProbeReqRecved_t;
-
-typedef struct {
-    uint8 old_opmode;
-    uint8 new_opmode;
-} Event_OpMode_Change_t;
-
-typedef union {
-    Event_StaMode_Connected_t connected;
-    Event_StaMode_Disconnected_t disconnected;
-    Event_StaMode_AuthMode_Change_t auth_change;
-    Event_StaMode_Got_IP_t got_ip;
-    Event_SoftAPMode_StaConnected_t sta_connected;
-    Event_SoftAPMode_StaDisconnected_t sta_disconnected;
-    Event_SoftAPMode_ProbeReqRecved_t ap_probereqrecved;
-    Event_OpMode_Change_t opmode_changed;
-} Event_Info_u;
-
-typedef struct _esp_event {
-    uint32 event;
-    Event_Info_u event_info;
-} System_Event_t;
-
-typedef void (* wifi_event_handler_cb_t)(System_Event_t *event);
-
-void wifi_set_event_handler_cb(wifi_event_handler_cb_t cb);
-
-typedef enum wps_type {
-    WPS_TYPE_DISABLE = 0,
-    WPS_TYPE_PBC,
-    WPS_TYPE_PIN,
-    WPS_TYPE_DISPLAY,
-    WPS_TYPE_MAX,
-} WPS_TYPE_t;
-
-enum wps_cb_status {
-    WPS_CB_ST_SUCCESS = 0,
-    WPS_CB_ST_FAILED,
-    WPS_CB_ST_TIMEOUT,
-    WPS_CB_ST_WEP,
-};
-
-_Bool wifi_wps_enable(WPS_TYPE_t wps_type);
-_Bool wifi_wps_disable(void);
-_Bool wifi_wps_start(void);
-
-typedef void (*wps_st_cb_t)(int status);
-_Bool wifi_set_wps_cb(wps_st_cb_t cb);
-
-typedef void (*freedom_outside_cb_t)(uint8 status);
-int wifi_register_send_pkt_freedom_cb(freedom_outside_cb_t cb);
-void wifi_unregister_send_pkt_freedom_cb(void);
-int wifi_send_pkt_freedom(uint8 *buf, int len, _Bool sys_seq);
-
-int wifi_rfid_locp_recv_open(void);
-void wifi_rfid_locp_recv_close(void);
-
-typedef void (*rfid_locp_cb_t)(uint8 *frm, int len, int rssi);
-int wifi_register_rfid_locp_recv_cb(rfid_locp_cb_t cb);
-void wifi_unregister_rfid_locp_recv_cb(void);
-
-enum FIXED_RATE {
-        PHY_RATE_48 = 0x8,
-        PHY_RATE_24 = 0x9,
-        PHY_RATE_12 = 0xA,
-        PHY_RATE_6 = 0xB,
-        PHY_RATE_54 = 0xC,
-        PHY_RATE_36 = 0xD,
-        PHY_RATE_18 = 0xE,
-        PHY_RATE_9 = 0xF,
-};
-
-
-
-
-
-
-int wifi_set_user_fixed_rate(uint8 enable_mask, uint8 rate);
-int wifi_get_user_fixed_rate(uint8 *enable_mask, uint8 *rate);
-
-enum support_rate {
-    RATE_11B5M = 0,
-    RATE_11B11M = 1,
-    RATE_11B1M = 2,
-    RATE_11B2M = 3,
-    RATE_11G6M = 4,
-    RATE_11G12M = 5,
-    RATE_11G24M = 6,
-    RATE_11G48M = 7,
-    RATE_11G54M = 8,
-    RATE_11G9M = 9,
-    RATE_11G18M = 10,
-    RATE_11G36M = 11,
-};
-
-int wifi_set_user_sup_rate(uint8 min, uint8 max);
-
-enum RATE_11B_ID {
-    RATE_11B_B11M = 0,
-    RATE_11B_B5M = 1,
-    RATE_11B_B2M = 2,
-    RATE_11B_B1M = 3,
-};
-
-enum RATE_11G_ID {
-    RATE_11G_G54M = 0,
-    RATE_11G_G48M = 1,
-    RATE_11G_G36M = 2,
-    RATE_11G_G24M = 3,
-    RATE_11G_G18M = 4,
-    RATE_11G_G12M = 5,
-    RATE_11G_G9M = 6,
-    RATE_11G_G6M = 7,
-    RATE_11G_B5M = 8,
-    RATE_11G_B2M = 9,
-    RATE_11G_B1M = 10
-};
-
-enum RATE_11N_ID {
-    RATE_11N_MCS7S = 0,
-    RATE_11N_MCS7 = 1,
-    RATE_11N_MCS6 = 2,
-    RATE_11N_MCS5 = 3,
-    RATE_11N_MCS4 = 4,
-    RATE_11N_MCS3 = 5,
-    RATE_11N_MCS2 = 6,
-    RATE_11N_MCS1 = 7,
-    RATE_11N_MCS0 = 8,
-    RATE_11N_B5M = 9,
-    RATE_11N_B2M = 10,
-    RATE_11N_B1M = 11
-};
-# 630 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/sysroot/usr/include/user_interface.h" 3 4
-_Bool wifi_set_user_rate_limit(uint8 mode, uint8 ifidx, uint8 max, uint8 min);
-uint8 wifi_get_user_limit_rate_mask(void);
-_Bool wifi_set_user_limit_rate_mask(uint8 enable_mask);
-
-enum {
-    USER_IE_BEACON = 0,
-    USER_IE_PROBE_REQ,
-    USER_IE_PROBE_RESP,
-    USER_IE_ASSOC_REQ,
-    USER_IE_ASSOC_RESP,
-    USER_IE_MAX
-};
-
-typedef void (*user_ie_manufacturer_recv_cb_t)(uint8 type, const uint8 sa[6], const uint8 m_oui[3], uint8 *ie, uint8 ie_len, int rssi);
-
-_Bool wifi_set_user_ie(_Bool enable, uint8 *m_oui, uint8 type, uint8 *user_ie, uint8 len);
-int wifi_register_user_ie_manufacturer_recv_cb(user_ie_manufacturer_recv_cb_t cb);
-void wifi_unregister_user_ie_manufacturer_recv_cb(void);
-
-void wifi_enable_gpio_wakeup(uint32 i, GPIO_INT_TYPE intr_status);
-void wifi_disable_gpio_wakeup(void);
-
-void uart_div_modify(uint8 uart_no, uint32 DivLatchValue);
-# 2 "main.c" 2
-
-void init_done(void) {
-    wifi_fpm_set_sleep_type(MODEM_SLEEP_T);
-    if (wifi_get_opmode() == 0x00) {
-        wifi_fpm_open();
-        wifi_fpm_do_sleep(0xfffffff);
+typedef struct _mp_spi_proto_t {
+    int (*ioctl)(void *self, uint32_t cmd);
+    void (*transfer)(void *self, size_t len, const uint8_t *src, uint8_t *dest);
+} mp_spi_proto_t;
+
+typedef struct _mp_soft_spi_obj_t {
+    uint32_t delay_half;
+    uint8_t polarity;
+    uint8_t phase;
+    uint32_t sck;
+    uint32_t mosi;
+    uint32_t miso;
+} mp_soft_spi_obj_t;
+
+extern const mp_spi_proto_t mp_soft_spi_proto;
+
+int mp_soft_spi_ioctl(void *self, uint32_t cmd);
+void mp_soft_spi_transfer(void *self, size_t len, const uint8_t *src, uint8_t *dest);
+# 32 "../micropython/extmod/machine_spi.h" 2
+
+
+typedef struct _mp_machine_spi_p_t {
+    void (*init)(mp_obj_base_t *obj, size_t n_args, const mp_obj_t *pos_args, mp_map_t *kw_args);
+    void (*deinit)(mp_obj_base_t *obj);
+    void (*transfer)(mp_obj_base_t *obj, size_t len, const uint8_t *src, uint8_t *dest);
+} mp_machine_spi_p_t;
+
+typedef struct _mp_machine_soft_spi_obj_t {
+    mp_obj_base_t base;
+    mp_soft_spi_obj_t spi;
+} mp_machine_soft_spi_obj_t;
+
+extern const mp_machine_spi_p_t mp_machine_soft_spi_p;
+extern const mp_obj_type_t mp_machine_soft_spi_type;
+extern const mp_obj_dict_t mp_machine_spi_locals_dict;
+
+mp_obj_t mp_machine_spi_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *args);
+
+extern const mp_obj_fun_builtin_var_t mp_machine_spi_read_obj;
+extern const mp_obj_fun_builtin_var_t mp_machine_spi_readinto_obj;
+extern const mp_obj_fun_builtin_fixed_t mp_machine_spi_write_obj;
+extern const mp_obj_fun_builtin_fixed_t mp_machine_spi_write_readinto_obj;
+# 39 "machine_ep_spi.c" 2
+# 1 "modmachine.h" 1
+# 40 "machine_ep_spi.c" 2
+# 1 "hspi.h" 1
+# 29 "hspi.h"
+# 1 "hspi_register.h" 1
+# 30 "hspi.h" 2
+# 54 "hspi.h"
+void spi_init(uint8_t spi_no);
+void spi_mode(uint8_t spi_no, uint8_t spi_cpha,uint8_t spi_cpol);
+void spi_init_gpio(uint8_t spi_no, uint8_t sysclk_as_spiclk);
+void spi_clock(uint8_t spi_no, uint16_t prediv, uint8_t cntdiv);
+void spi_tx_byte_order(uint8_t spi_no, uint8_t byte_order);
+void spi_rx_byte_order(uint8_t spi_no, uint8_t byte_order);
+uint32_t spi_transaction(uint8_t spi_no, uint8_t cmd_bits, uint16_t cmd_data,
+                         uint32_t addr_bits, uint32_t addr_data,
+                         uint32_t dout_bits, uint32_t dout_data,
+                         uint32_t din_bits, uint32_t dummy_bits);
+void spi_tx8fast(uint8_t spi_no, uint8_t dout_data);
+# 41 "machine_ep_spi.c" 2
+
+
+
+typedef struct _machine_ep_spi_obj_t {
+    mp_obj_base_t base;
+} machine_ep_spi_obj_t;
+
+static mp_obj_t mp_machine_ep_spi_write(mp_obj_t self, mp_obj_t wr_buf, mp_obj_t dc) {
+    mp_buffer_info_t src;
+    mp_get_buffer_raise(wr_buf, &src, (1));
+
+    spi_transaction(1, 0, 0, 0, 0, 1, mp_obj_int_get_checked(dc), 0, 0);
+
+    const uint8_t *buf = (const uint8_t *)src.buf;
+    size_t i = 0;
+    while (i < src.len) {
+        spi_tx8fast(1, buf[i]);
+        ++i;
     }
-# 35 "main.c"
+
+    return (((mp_obj_t)&mp_const_none_obj));
+}
+const mp_obj_fun_builtin_fixed_t mp_machine_ep_spi_write_obj = {{&mp_type_fun_builtin_3}, .fun._3 = mp_machine_ep_spi_write};
+
+
+
+
+static void machine_ep_spi_print(const mp_print_t *print, mp_obj_t self_in, mp_print_kind_t kind) {
+    mp_printf(print, "EP_SPI()");
 }
 
-void user_init(void) {
-    system_timer_reinit();
-    system_init_done_cb(init_done);
+static mp_obj_t machine_ep_spi_init(mp_obj_t self) {
+    spi_init_gpio(1, 1);
+    spi_clock(1, 0, 0);
+    spi_tx_byte_order(1, 1);
+    spi_rx_byte_order(1, 1);
+    (*((volatile uint32_t *)((((0x60000200-1*0x100) + 0x1C))))) = (uint32_t)(((*((volatile uint32_t *)(((0x60000200-1*0x100) + 0x1C))))&(~(((1UL << (2))) | ((1UL << (28))) | ((1UL << (30))) | ((1UL << (31))) | ((1UL << (29)))))))
+                                                                       ;
+    (*((volatile uint32_t *)((((0x60000200-1*0x100) + 0x8))))) = (uint32_t)(((*((volatile uint32_t *)(((0x60000200-1*0x100) + 0x8))))&(~(((1UL << (24))) | ((1UL << (23))) | ((1UL << (14))) | ((1UL << (20)))))))
+                                                      ;
+    spi_mode(1, 0, 0);
+    return (((mp_obj_t)&mp_const_none_obj));
 }
+static const mp_obj_fun_builtin_fixed_t machine_ep_spi_init_obj = {{&mp_type_fun_builtin_1}, .fun._1 = machine_ep_spi_init};
+
+mp_obj_t machine_ep_spi_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *args) {
+    mp_arg_check_num(n_args, n_kw, 0, 0, 0);
+
+    machine_ep_spi_obj_t *self = (((machine_ep_spi_obj_t*)(m_malloc(sizeof(machine_ep_spi_obj_t) * (1)))));
+    self->base.type = &machine_ep_spi_type;
+    machine_ep_spi_init(((void *)0));
+    return ((mp_obj_t)self);
+}
+
+static const mp_rom_map_elem_t machine_ep_spi_locals_dict_table[] = {
+    { ((mp_obj_t)((((mp_uint_t)(MP_QSTR_init)) << 3) | 0x00000006)), (&machine_ep_spi_init_obj) },
+    { ((mp_obj_t)((((mp_uint_t)(MP_QSTR_write)) << 3) | 0x00000006)), (&mp_machine_ep_spi_write_obj) },
+};
+
+const mp_obj_dict_t mp_machine_ep_spi_locals_dict = { .base = {&mp_type_dict}, .map = { .all_keys_are_qstrs = 1, .is_fixed = 1, .is_ordered = 1, .used = (sizeof(machine_ep_spi_locals_dict_table) / sizeof((machine_ep_spi_locals_dict_table)[0])), .alloc = (sizeof(machine_ep_spi_locals_dict_table) / sizeof((machine_ep_spi_locals_dict_table)[0])), .table = (mp_map_elem_t*)(mp_rom_map_elem_t*)machine_ep_spi_locals_dict_table, }, };
+
+const mp_obj_type_t machine_ep_spi_type = {
+    { &mp_type_type },
+    .name = MP_QSTR_EPSPI,
+    .print = machine_ep_spi_print,
+    .make_new = machine_ep_spi_make_new,
+    .locals_dict = (mp_obj_dict_t*)&mp_machine_ep_spi_locals_dict,
+};
