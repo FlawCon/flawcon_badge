@@ -1,4 +1,5 @@
 from micropython import const
+import struct
 import time
 
 WHITE = const(0)
@@ -12,7 +13,7 @@ RESOLUTION = ((296, 128), (128, 296, -90))
 
 
 class EPD:
-    def __init__(self, spi, cs_pin, reset_pin, busy_pin):
+    def __init__(self, spi, cs_pin, reset_pin, busy_pin, adt):
 
         self.resolution = RESOLUTION[0]
         self.width, self.height = RESOLUTION[0]
@@ -25,6 +26,7 @@ class EPD:
         self._busy_pin = busy_pin
         self._cs_pin = cs_pin
         self._spi = spi
+        self._adt = adt
 
         self._dirty = False
 
@@ -96,6 +98,12 @@ class EPD:
             self._send_command(0x4e, 0x00)  # Set RAM X Pointer Start
             self._send_command(0x4f, [0x00, 0x00])  # Set RAM Y Pointer Start
             self._send_command(cmd, buf)
+
+        temp = self._adt.read_temp()
+        temp_b = struct.pack(">h", int(temp*16))
+        temp0 = (temp_b[0] & 0xF) << 4
+        temp1 = temp_b[1]
+        self._send_command(0x1b, [temp1, temp0])
 
         self._send_command(0x22, 0xc7)  # Display Update Sequence
         self._send_command(0x20)  # Trigger Display Update

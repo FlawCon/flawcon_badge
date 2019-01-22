@@ -10,9 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d7cb189-dfa7-4409-80ed-d743a6a0daeb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/modules/fcb/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/fcb/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/fcb/fcb.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/fcb/fcb.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../micropython" beforeDir="false" afterPath="$PROJECT_DIR$/../micropython" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fcb/_epd.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/fcb/_epd.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,79 +21,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modmachine.h">
+        <entry file="file://$PROJECT_DIR$/modules/_boot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="12" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules/fcb/fcb.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/fcb/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" selection-start-column="12" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/machine_hspi.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1940">
-              <caret line="97" column="6" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/fcb/default_apps/circle_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1000">
-              <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qrcode.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12540">
-              <caret line="627" selection-start-line="627" selection-end-line="627" />
-              <folding>
-                <element signature="e#4438#4695#0" expanded="true" />
-                <element signature="e#13551#13558#0" expanded="true" />
-                <element signature="e#25069#25232#0" expanded="true" />
-                <element signature="e#28088#28253#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modqr.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="771">
-              <caret line="91" column="34" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modesp.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6900">
-              <caret line="345" column="50" selection-start-line="345" selection-start-column="3" selection-end-line="347" selection-end-column="68" />
+            <state relative-caret-position="323">
+              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -103,23 +32,51 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/fcb/_epd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1940">
-              <caret line="98" selection-start-line="98" selection-end-line="98" />
+            <state relative-caret-position="531">
+              <caret line="100" column="35" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/fcb/_adt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qrcode.h">
+        <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-              <folding>
-                <element signature="e#33205#33216#0" expanded="true" />
-                <element signature="e#2489#2490#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1428">
+              <caret line="84" column="15" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="15" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/esp8266_common.ld">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2737">
+              <caret line="161" column="20" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hspi.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3162">
+              <caret line="186" column="22" selection-start-line="186" selection-start-column="9" selection-end-line="186" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hspi.h">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -212,11 +169,11 @@
         <option value="$PROJECT_DIR$/qrcode.c" />
         <option value="$PROJECT_DIR$/qrcode.h" />
         <option value="$PROJECT_DIR$/esp8266_common.ld" />
-        <option value="$PROJECT_DIR$/modules/fcb/_epd.py" />
         <option value="$PROJECT_DIR$/modules/fcb/default_apps/circle_test.py" />
         <option value="$PROJECT_DIR$/modqr.c" />
         <option value="$PROJECT_DIR$/modules/fcb/__init__.py" />
         <option value="$PROJECT_DIR$/modules/fcb/fcb.py" />
+        <option value="$PROJECT_DIR$/modules/fcb/_epd.py" />
       </list>
     </option>
   </component>
@@ -231,6 +188,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -249,18 +207,10 @@
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="fcb" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="firmware" type="b2602c69:ProjectViewProjectNode" />
-              <item name="firmware" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="fcb" type="462c0819:PsiDirectoryNode" />
-              <item name="default_apps" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -271,14 +221,14 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/modules" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/modules/fcb/default_apps" />
       <recent name="$PROJECT_DIR$/modules/fcb" />
       <recent name="$PROJECT_DIR$/modules" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/modules" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -312,14 +262,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47548000" />
+    <option name="totallyTimeSpent" value="47999000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1181" extended-state="6" />
+    <frame x="0" y="0" width="1600" height="881" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.11657754" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.12" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -451,15 +401,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hspi.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
+        <state relative-caret-position="3162">
           <caret line="186" column="22" selection-start-line="186" selection-start-column="9" selection-end-line="186" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hspi.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
@@ -490,21 +438,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/modules/_boot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/fcb/default_apps.py" />
-    <entry file="file://$PROJECT_DIR$/modules/fcb/_adt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/fcb/_font.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -535,8 +469,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="701">
-          <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+        <state relative-caret-position="1428">
+          <caret line="84" column="15" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -552,8 +486,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/esp8266_common.ld">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="163" column="14" selection-start-line="163" selection-start-column="14" selection-end-line="163" selection-end-column="14" />
+        <state relative-caret-position="2737">
+          <caret line="161" column="20" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -605,13 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/fcb/_epd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1940">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/qrcode.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
@@ -641,6 +568,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/_boot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/fcb/_epd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="100" column="35" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/fcb/_adt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
