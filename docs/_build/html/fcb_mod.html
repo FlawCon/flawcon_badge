@@ -1,0 +1,230 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>OS Interface Reference &#8212; Flawcon Badge Flawcon 2019 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CAPT1296 driver reference" href="_capt_mod.html" />
+    <link rel="prev" title="Welcome to Flawcon Badge’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-fcb">
+<span id="os-interface-reference"></span><h1>OS Interface Reference<a class="headerlink" href="#module-fcb" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="fcb.Event">
+<em class="property">class </em><code class="descclassname">fcb.</code><code class="descname">Event</code><span class="sig-paren">(</span><em>char=None</em>, <em>special=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fcb/fcb.html#Event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fcb.Event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Storage class for event that is to be passed to an app</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>is_special</strong> – Weather this is a character or special event</li>
+<li><strong>val</strong> – The event value, a character if <cite>is_special == False</cite>, event dependent otherwise</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="fcb.Event.BUTTON_A">
+<code class="descname">BUTTON_A</code><a class="headerlink" href="#fcb.Event.BUTTON_A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Special event type for when the A capacitive button is pressed</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="fcb.Event.BUTTON_B">
+<code class="descname">BUTTON_B</code><a class="headerlink" href="#fcb.Event.BUTTON_B" title="Permalink to this definition">¶</a></dt>
+<dd><p>Special event type for when the B capacitive button is pressed</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="fcb.Event.DOWN">
+<code class="descname">DOWN</code><a class="headerlink" href="#fcb.Event.DOWN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Special event type for when the DOWN capacitive button is pressed</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="fcb.Event.LEFT">
+<code class="descname">LEFT</code><a class="headerlink" href="#fcb.Event.LEFT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Special event type for when the LEFT capacitive button is pressed</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="fcb.Event.RIGHT">
+<code class="descname">RIGHT</code><a class="headerlink" href="#fcb.Event.RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Special event type for when the RIGHT capacitive button is pressed</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="fcb.Event.UP">
+<code class="descname">UP</code><a class="headerlink" href="#fcb.Event.UP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Special event type for when the UP capacitive button is pressed</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="fcb.FCB">
+<em class="property">class </em><code class="descclassname">fcb.</code><code class="descname">FCB</code><a class="reference internal" href="_modules/fcb/fcb.html#FCB"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fcb.FCB" title="Permalink to this definition">¶</a></dt>
+<dd><p>The main OS class</p>
+<p>An instance of this is passed to the <cite>__init__</cite> of each app. Every app is expected to store this and use it when
+accessing the badge hardware.</p>
+<dl class="attribute">
+<dt id="fcb.FCB.adt">
+<code class="descname">adt</code><a class="headerlink" href="#fcb.FCB.adt" title="Permalink to this definition">¶</a></dt>
+<dd><p>An instance of the <a class="reference internal" href="_adt_mod.html#fcb._adt.ADT75" title="fcb._adt.ADT75"><code class="xref py py-class docutils literal notranslate"><span class="pre">ADT75</span> <span class="pre">class</span></code></a> for accessing the temperature sensor  on the        badge</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="fcb.FCB.capt">
+<code class="descname">capt</code><a class="headerlink" href="#fcb.FCB.capt" title="Permalink to this definition">¶</a></dt>
+<dd><p>An instance of the <a class="reference internal" href="_capt_mod.html#fcb._capt.CAP1296" title="fcb._capt.CAP1296"><code class="xref py py-class docutils literal notranslate"><span class="pre">CAPT1296</span> <span class="pre">class</span></code></a> for accessing the capacitive touch chip        on the badge</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="fcb.FCB.clear_disp">
+<code class="descname">clear_disp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fcb/fcb.html#FCB.clear_disp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fcb.FCB.clear_disp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="fcb.FCB.epd">
+<code class="descname">epd</code><a class="headerlink" href="#fcb.FCB.epd" title="Permalink to this definition">¶</a></dt>
+<dd><p>An instance of the <code class="xref py py-class docutils literal notranslate"><span class="pre">EPD</span> <span class="pre">class</span></code> for accessing the e-paper display on the badge</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="fcb.FCB.font">
+<code class="descname">font</code><a class="headerlink" href="#fcb.FCB.font" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="fcb.FCB.gfx">
+<code class="descname">gfx</code><a class="headerlink" href="#fcb.FCB.gfx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="fcb.FCB.i2c">
+<code class="descname">i2c</code><a class="headerlink" href="#fcb.FCB.i2c" title="Permalink to this definition">¶</a></dt>
+<dd><p>An instance of the <a class="reference external" href="https://docs.micropython.org/en/latest/library/machine.I2C.html#machine.I2C" title="(in MicroPython v1.9.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">I2C</span> <span class="pre">class</span></code></a> from micropython</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="fcb.FCB.read_i2c">
+<code class="descname">read_i2c</code><span class="sig-paren">(</span><em>addr</em>, <em>register</em>, <em>num</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fcb/fcb.html#FCB.read_i2c"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fcb.FCB.read_i2c" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fcb.FCB.start">
+<code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fcb/fcb.html#FCB.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fcb.FCB.start" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fcb.FCB.write_i2c">
+<code class="descname">write_i2c</code><span class="sig-paren">(</span><em>addr</em>, <em>register</em>, <em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fcb/fcb.html#FCB.write_i2c"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fcb.FCB.write_i2c" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Flawcon Badge</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">OS Interface Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_capt_mod.html">CAPT1296 driver reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_adt_mod.html">ADT75 driver reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Flawcon Badge’s documentation!</a></li>
+      <li>Next: <a href="_capt_mod.html" title="next chapter">CAPT1296 driver reference</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Q Misell.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/fcb_mod.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

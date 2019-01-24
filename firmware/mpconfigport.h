@@ -208,7 +208,7 @@ extern const struct _mp_obj_module_t qr_module;
 // board specifics
 
 #define MICROPY_MPHALPORT_H "esp_mphal.h"
-#define MICROPY_HW_BOARD_NAME "ESP module"
+#define MICROPY_HW_BOARD_NAME "FlawCon 2019 Badge"
 #define MICROPY_HW_MCU_NAME "ESP8266"
 #define MICROPY_PY_SYS_PLATFORM "esp8266"
 

@@ -1,24 +1,25 @@
-from fcb import Event, RESOLUTION
+from fcb import Event, DISP_RESOLUTION
 
 
 class App:
-    def __init__(self):
+    def __init__(self, fcb):
         self.circle_radius = 10
         self.circle_x = 0
         self.circle_y = 0
         self.changed = False
+        self.fcb = fcb
 
     def change_x(self, n):
         new_x = self.circle_x + n
         new_x = max(new_x, self.circle_radius)
-        new_x = min(new_x, RESOLUTION[0][0] - self.circle_radius)
+        new_x = min(new_x, DISP_RESOLUTION[0][0] - self.circle_radius)
         self.circle_x = new_x
         self.changed = True
 
     def change_y(self, n):
         new_y = self.circle_y + n
         new_y = max(new_y, self.circle_radius)
-        new_y = min(new_y, RESOLUTION[0][1] - self.circle_radius)
+        new_y = min(new_y, DISP_RESOLUTION[0][1] - self.circle_radius)
         self.circle_y = new_y
         self.changed = True
 
@@ -44,8 +45,8 @@ class App:
             elif evt.special == Event.BUTTON_B:
                 self.change_radius(-1)
 
-    def redraw(self, gfx):
+    def redraw(self):
         if self.changed:
-            gfx.fill_rect(0, 0, RESOLUTION[0][0], RESOLUTION[0][1])
-            gfx.circle(self.circle_x, self.circle_y, self.circle_radius, 1)
+            self.fcb.gfx.fill_rect(0, 0, RESOLUTION[0][0], RESOLUTION[0][1])
+            self.fcb.gfx.circle(self.circle_x, self.circle_y, self.circle_radius, 1)
             self.changed = False

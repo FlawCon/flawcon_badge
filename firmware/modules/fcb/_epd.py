@@ -1,4 +1,5 @@
 from micropython import const
+from framebuf import FrameBuffer, GS2_HMSB
 import time
 
 WHITE = const(0)
@@ -8,7 +9,7 @@ RED = const(2)
 _SPI_COMMAND = False
 _SPI_DATA = True
 
-RESOLUTION = ((296, 128), (128, 296, -90))
+RESOLUTION = ((296, 128), (128, 296))
 
 
 class EPD:
@@ -16,9 +17,9 @@ class EPD:
 
         self.resolution = RESOLUTION[0]
         self.width, self.height = RESOLUTION[0]
-        self.cols, self.rows, self.rotation = RESOLUTION[1]
+        self.cols, self.rows = RESOLUTION[1]
 
-        self.buf = [[0 for _ in range(self.height)] for _ in range(self.width)]
+        self.buf = FrameBuffer(bytearray(self.width * self.height // 4), self.width, self.height, GS2_HMSB)
         self.border_colour = 0
 
         self._reset_pin = reset_pin
@@ -106,42 +107,47 @@ class EPD:
 
     def set_pixel(self, x, y, v):
         if v in (WHITE, BLACK, RED):
-            self.buf[y][x] = v
+            self.buf.pixel(x, y, v)
+            self._dirty = True
+
+    def hline(self, x, y, w, v):
+        if v in (WHITE, BLACK, RED):
+            self.buf.hline(x, y, w, v)
+            self._dirty = True
+
+    def vline(self, x, y, h, v):
+        if v in (WHITE, BLACK, RED):
+            self.buf.hline(x, y, h, v)
             self._dirty = True
 
     @property
     def dirty(self):
         return self._dirty
 
-    def _rotate_buf(self, matrix, degree=0):
-        if degree not in [0, 90, 180, 270, 360]:
-            raise ValueError
-        return matrix if not degree else self._rotate_buf(zip(*matrix[::-1]), degree-90)
-
     def show(self):
-        region = self.buf
+        def gen_buf_a():
+            for row in range(self.rows):
+                for col in range(0, self.cols, 8):
+                    out = 0
+                    for i in range(8):
+                        if self.buf.pixel(col+i, row) == BLACK:
+                            out += 1 << (7-i)
+                    yield out
 
-        if self.rotation:
-            region = self._rotate_buf(region, self.rotation)
+        def gen_buf_b():
+            for row in range(self.rows):
+                for col in range(0, self.cols, 8):
+                    out = 0
+                    for i in range(8):
+                        if self.buf.pixel(col+i, row) == RED:
+                            out += 1 << (7-i)
+                    yield out
 
-        buf_a = []
-        buf_b = []
-
-        for row in region:
-            for cell in region:
-                if cell == BLACK:
-                    buf_a.append(1)
-                else:
-                    buf_a.append(0)
-                if cell == RED:
-                    buf_b.append(1)
-                else:
-                    buf_b.append(0)
-
-        self._update(buf_a, buf_b)
+        self._update(gen_buf_a(), gen_buf_b())
 
     def _spi_write(self, dc, values):
-        self._spi.write(data, dc)
+        for v in values:
+            self._spi.write(v, dc)
 
     def _send_command(self, command, data=None):
         self._spi_write(_SPI_COMMAND, [command])
@@ -151,5 +157,5 @@ class EPD:
     def _send_data(self, data):
         if isinstance(data, int):
             data = [data]
-            self._spi_write(_SPI_DATA, data)
+        self._spi_write(_SPI_DATA, data)
 

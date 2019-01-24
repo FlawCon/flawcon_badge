@@ -1,4 +1,5 @@
 from micropython import const
+from machine import Pin
 
 _CAP1296_I2C_ADDRESS = const(0x28)
 
@@ -33,7 +34,7 @@ class CAP1296:
 
         self.write = lambda r, b: self.i2c.writeto_mem(self._addr, r, b)
         self.read = lambda r, n: self.i2c.readfrom_mem(self._addr, r, n)
-        self.alert.irq(handler=self.handle_interrupt, trigger=Pin.IRQ_LOW_LEVEL)
+        self.alert.irq(handler=self.handle_interrupt, trigger=Pin.IRQ_FALLING)
 
     def handle_interrupt(self):
         self.intr(self.read_keys(True))
