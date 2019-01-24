@@ -1,0 +1,182 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Font driver reference &#8212; Flawcon Badge Flawcon 2019 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Graphics driver reference" href="_gfx_mod.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-fcb._font">
+<span id="font-driver-reference"></span><h1>Font driver reference<a class="headerlink" href="#module-fcb._font" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="fcb._font.Font">
+<em class="property">class </em><code class="descclassname">fcb._font.</code><code class="descname">Font</code><span class="sig-paren">(</span><em>width</em>, <em>height</em>, <em>pixel</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fcb/_font.html#Font"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fcb._font.Font" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for writing text onto the display framebuffer. The font is a fixed 5x8 font.</p>
+<dl class="method">
+<dt id="fcb._font.Font.draw_char">
+<code class="descname">draw_char</code><span class="sig-paren">(</span><em>ch</em>, <em>x</em>, <em>y</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fcb/_font.html#Font.draw_char"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fcb._font.Font.draw_char" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a single character at the specified location</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ch</strong> – The character to draw</li>
+<li><strong>x</strong> – X location to draw at</li>
+<li><strong>y</strong> – Y location to draw at</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Additional arguments:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first last">Passed to the pixel drawing function of the framebuffer, for example to set the colour</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="fcb._font.Font.text">
+<code class="descname">text</code><span class="sig-paren">(</span><em>text</em>, <em>x</em>, <em>y</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fcb/_font.html#Font.text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fcb._font.Font.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws text with the top-left corner of the text at the specified location</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>text</strong> – The text to draw</li>
+<li><strong>x</strong> – X location to draw at</li>
+<li><strong>y</strong> – Y location to draw at</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Additional arguments:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first last">Passed to the pixel drawing function of the framebuffer, for example to set the colour</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="fcb._font.Font.width">
+<code class="descname">width</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fcb/_font.html#Font.width"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#fcb._font.Font.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the width of a run of text</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> – The text to calculate the width for</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The width of the run of text in pixels</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Flawcon Badge</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fcb_mod.html">OS Interface Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_capt_mod.html">CAPT1296 driver reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_adt_mod.html">ADT75 driver reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_gfx_mod.html">Graphics driver reference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Font driver reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="_gfx_mod.html" title="previous chapter">Graphics driver reference</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Q Misell.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/_font_mod.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

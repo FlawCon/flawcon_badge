@@ -1,4 +1,5 @@
 from micropython import const
+from machine import Pin
 
 _CAP1296_I2C_ADDRESS = const(0x28)
 
@@ -25,6 +26,10 @@ def _byte_to_keys(keys_as_byte, num_keys=6):
 
 
 class CAP1296:
+    """
+    A driver for accessing the CAP1296 capacitive touch IC on the badge
+    """
+
     def __init__(self, i2c, alert_pin, intr):
         self.i2c = i2c
         self.alert = alert_pin
@@ -33,12 +38,17 @@ class CAP1296:
 
         self.write = lambda r, b: self.i2c.writeto_mem(self._addr, r, b)
         self.read = lambda r, n: self.i2c.readfrom_mem(self._addr, r, n)
-        self.alert.irq(handler=self.handle_interrupt, trigger=Pin.IRQ_LOW_LEVEL)
+        self.alert.irq(handler=self._handle_interrupt, trigger=Pin.IRQ_FALLING)
 
-    def handle_interrupt(self):
+    def _handle_interrupt(self):
         self.intr(self.read_keys(True))
 
     def enable_interrupt(self, keys):
+        """
+        Enables interrupts for the specified keys
+        
+        :param keys: A list of key numbers in the range 0-5
+        """
         self.write(_INTERRUPT_ENABLE, _keys_to_byte(keys, default=b'\x3f'))
 
     def enable_multitouch(self, enable, simultaneous_touches=1):

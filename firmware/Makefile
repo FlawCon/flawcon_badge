@@ -19,9 +19,9 @@ FROZEN_MPY_DIR ?= modules
 include $(TOP)/py/py.mk
 
 FWBIN = $(BUILD)/firmware-combined.bin
-PORT ?= /dev/ttyACM0
+PORT ?= /dev/ttyUSB0
 BAUD ?= 115200
-FLASH_MODE ?= qio
+FLASH_MODE ?= dio
 FLASH_SIZE ?= detect
 CROSS_COMPILE = xtensa-lx106-elf-
 ESP_SDK = $(shell $(CC) -print-sysroot)/usr

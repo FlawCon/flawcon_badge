@@ -6,138 +6,60 @@
 
 
 
-# 1 "../micropython/py/runtime.h" 1
-# 29 "../micropython/py/runtime.h"
-# 1 "../micropython/py/mpstate.h" 1
-# 29 "../micropython/py/mpstate.h"
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stdint.h" 1 3 4
-# 9 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stdint.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 1 3 4
-# 12 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 1 3 4
-# 15 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/newlib.h" 1 3 4
-# 16 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 2 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 1 3 4
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 1 3
+# 10 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 3
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 1 3
+# 15 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 3
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/newlib.h" 1 3
+# 16 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 2 3
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 1 3
 
 
 
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/ieeefp.h" 1 3 4
-# 5 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 2 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/features.h" 1 3 4
-# 6 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 2 3 4
-# 170 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/xtensa/config/core-isa.h" 1 3 4
-# 171 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 2 3 4
-# 17 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 2 3 4
-# 13 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 2 3 4
-# 41 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
-typedef signed char int8_t ;
-typedef unsigned char uint8_t ;
-
-
-
-
-typedef signed char int_least8_t;
-typedef unsigned char uint_least8_t;
-
-
-
-
-typedef signed short int16_t;
-typedef unsigned short uint16_t;
-# 67 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
-typedef int16_t int_least16_t;
-typedef uint16_t uint_least16_t;
-# 80 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
-typedef signed int int32_t;
-typedef unsigned int uint32_t;
-# 102 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
-typedef int32_t int_least32_t;
-typedef uint32_t uint_least32_t;
-# 124 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
-typedef signed long long int64_t;
-typedef unsigned long long uint64_t;
-# 134 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
-typedef int64_t int_least64_t;
-typedef uint64_t uint_least64_t;
-# 164 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
-  typedef signed int int_fast8_t;
-  typedef unsigned int uint_fast8_t;
-
-
-
-
-  typedef signed int int_fast16_t;
-  typedef unsigned int uint_fast16_t;
-
-
-
-
-  typedef signed int int_fast32_t;
-  typedef unsigned int uint_fast32_t;
-# 218 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
-  typedef int_least64_t int_fast64_t;
-  typedef uint_least64_t uint_fast64_t;
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/ieeefp.h" 1 3
+# 5 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 2 3
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/features.h" 1 3
+# 6 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 2 3
+# 170 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 3
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/xtensa/config/core-isa.h" 1 3
+# 171 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/config.h" 2 3
+# 17 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 2 3
+# 11 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 2 3
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 1 3
+# 13 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 1 3
+# 14 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 2 3
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 1 3
+# 12 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 3
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_types.h" 1 3
 
 
 
 
 
 
-
-  typedef long long int intmax_t;
-# 236 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
-  typedef long long unsigned int uintmax_t;
-# 248 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
-typedef signed int intptr_t;
-typedef unsigned int uintptr_t;
-# 10 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stdint.h" 2 3 4
-# 30 "../micropython/py/mpstate.h" 2
-
-# 1 "../micropython/py/mpconfig.h" 1
-# 62 "../micropython/py/mpconfig.h"
-# 1 "./mpconfigport.h" 1
-# 137 "./mpconfigport.h"
-typedef int32_t mp_int_t;
-typedef uint32_t mp_uint_t;
-typedef long mp_off_t;
-typedef uint32_t sys_prot_t;
-
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 1 3
-# 25 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_types.h" 1 3
-
-
-
-
-
-
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 1 3
-# 25 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 1 3
+# 25 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
 typedef signed char __int8_t ;
 typedef unsigned char __uint8_t ;
-# 35 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
+# 35 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
 typedef signed short __int16_t;
 typedef unsigned short __uint16_t;
-# 45 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
+# 45 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
 typedef __int16_t __int_least16_t;
 typedef __uint16_t __uint_least16_t;
-# 57 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
+# 57 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
 typedef signed int __int32_t;
 typedef unsigned int __uint32_t;
-# 75 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
+# 75 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
 typedef __int32_t __int_least32_t;
 typedef __uint32_t __uint_least32_t;
-# 98 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
+# 98 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_default_types.h" 3
 typedef signed long long __int64_t;
 typedef unsigned long long __uint64_t;
-# 8 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_types.h" 2 3
-# 26 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 2 3
-# 61 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 1 3
-# 13 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 3
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/lock.h" 1 3
+# 8 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/_types.h" 2 3
+# 13 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 2 3
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/lock.h" 1 3
 
 
 
@@ -145,7 +67,7 @@ typedef unsigned long long __uint64_t;
 
 typedef int _LOCK_T;
 typedef int _LOCK_RECURSIVE_T;
-# 14 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 2 3
+# 14 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 2 3
 
 
 typedef long _off_t;
@@ -177,7 +99,7 @@ __extension__ typedef long long _off64_t;
 
 
 typedef long _fpos_t;
-# 56 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 3
+# 56 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 3
 typedef int _ssize_t;
 
 
@@ -185,10 +107,10 @@ typedef int _ssize_t;
 
 
 
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 1 3 4
-# 356 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 3 4
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 1 3 4
+# 356 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-# 64 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 2 3
+# 64 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/_types.h" 2 3
 
 
 
@@ -210,153 +132,15 @@ typedef _LOCK_RECURSIVE_T _flock_t;
 
 
 typedef void *_iconv_t;
-# 62 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 2 3
+# 15 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 2 3
 
 
 
 
 
 
-
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 1 3 4
-# 147 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 3 4
-typedef int ptrdiff_t;
-# 214 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 3 4
-typedef unsigned int size_t;
-# 327 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 3 4
-typedef short unsigned int wchar_t;
-# 70 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 2 3
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/types.h" 1 3
-# 19 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/types.h" 3
-typedef long int __off_t;
-typedef int __pid_t;
-
-__extension__ typedef long long int __loff_t;
-# 71 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 2 3
-# 92 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
-typedef unsigned char u_char;
-typedef unsigned short u_short;
-typedef unsigned int u_int;
-typedef unsigned long u_long;
-
-
-
-typedef unsigned short ushort;
-typedef unsigned int uint;
-typedef unsigned long ulong;
-
-
-
-typedef unsigned long clock_t;
-
-
-
-
-typedef long time_t;
-
-
-
-
-
-
-
-struct timespec {
-  time_t tv_sec;
-  long tv_nsec;
-};
-
-
-struct itimerspec {
-  struct timespec it_interval;
-  struct timespec it_value;
-};
-
-typedef long daddr_t;
-typedef char * caddr_t;
-
-
-
-
-
-
-typedef unsigned short ino_t;
-# 166 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
-typedef _off_t off_t;
-typedef __dev_t dev_t;
-typedef __uid_t uid_t;
-typedef __gid_t gid_t;
-
-
-
-
-
-typedef int pid_t;
-
-
-
-
-
-
-
-typedef long key_t;
-
-typedef _ssize_t ssize_t;
-# 199 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
-typedef unsigned int mode_t __attribute__ ((__mode__ (__SI__)));
-
-
-
-
-typedef unsigned short nlink_t;
-# 226 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
-typedef long fd_mask;
-
-
-
-
-
-
-
-typedef struct _types_fd_set {
- fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
-} _types_fd_set;
-# 257 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
-typedef unsigned long clockid_t;
-
-
-
-
-typedef unsigned long timer_t;
-
-
-
-typedef unsigned long useconds_t;
-typedef long suseconds_t;
-# 143 "./mpconfigport.h" 2
-
-
-void *esp_native_code_commit(void*, size_t);
-
-
-
-extern const struct _mp_print_t mp_debug_print;
-# 164 "./mpconfigport.h"
-extern const struct _mp_obj_module_t esp_module;
-extern const struct _mp_obj_module_t network_module;
-extern const struct _mp_obj_module_t utime_module;
-extern const struct _mp_obj_module_t uos_module;
-extern const struct _mp_obj_module_t mp_module_lwip;
-extern const struct _mp_obj_module_t mp_module_machine;
-extern const struct _mp_obj_module_t qr_module;
-# 206 "./mpconfigport.h"
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/alloca.h" 1 3
-# 10 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/alloca.h" 3
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h" 1 3
-# 11 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/alloca.h" 2 3
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 1 3
-# 21 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
 typedef unsigned long __ULong;
-# 37 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+# 37 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
 struct _reent;
 
 
@@ -400,7 +184,7 @@ struct _on_exit_args {
 
  __ULong _is_cxa;
 };
-# 89 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+# 89 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
 struct _atexit {
  struct _atexit *_next;
  int _ind;
@@ -408,12 +192,12 @@ struct _atexit {
  void (*_fns[32])(void);
         struct _on_exit_args _on_exit_args;
 };
-# 105 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+# 105 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
 struct __sbuf {
  unsigned char *_base;
  int _size;
 };
-# 169 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+# 169 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
 struct __sFILE {
   unsigned char *_p;
   int _r;
@@ -463,7 +247,7 @@ struct __sFILE {
   _mbstate_t _mbstate;
   int _flags2;
 };
-# 273 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+# 273 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
 typedef struct __sFILE __FILE;
 
 
@@ -474,7 +258,7 @@ struct _glue
   int _niobs;
   __FILE *_iobs;
 };
-# 305 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+# 305 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
 struct _rand48 {
   unsigned short _seed[3];
   unsigned short _mult[3];
@@ -484,7 +268,7 @@ struct _rand48 {
 
 
 };
-# 580 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+# 580 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
 struct _reent
 {
   int _errno;
@@ -562,12 +346,323 @@ struct _reent
   struct _glue __sglue;
   __FILE __sf[3];
 };
-# 818 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
+# 818 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/reent.h" 3
 extern struct _reent *_impure_ptr ;
 extern struct _reent *const _global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
-# 12 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/alloca.h" 2 3
+# 12 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 2 3
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/cdefs.h" 1 3
+# 13 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 2 3
+
+
+
+
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 1 3 4
+# 214 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 3 4
+typedef unsigned int size_t;
+# 18 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 2 3
+
+
+
+void * memchr (const void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void * memcpy (void *, const void *, size_t);
+void * memmove (void *, const void *, size_t);
+void * memset (void *, int, size_t);
+char *strcat (char *, const char *);
+char *strchr (const char *, int);
+int strcmp (const char *, const char *);
+int strcoll (const char *, const char *);
+char *strcpy (char *, const char *);
+size_t strcspn (const char *, const char *);
+char *strerror (int);
+size_t strlen (const char *);
+char *strncat (char *, const char *, size_t);
+int strncmp (const char *, const char *, size_t);
+char *strncpy (char *, const char *, size_t);
+char *strpbrk (const char *, const char *);
+char *strrchr (const char *, int);
+size_t strspn (const char *, const char *);
+char *strstr (const char *, const char *);
+
+
+char *strtok (char *, const char *);
+
+
+size_t strxfrm (char *, const char *, size_t);
+
+
+char *strtok_r (char *, const char *, char **);
+
+int bcmp (const void *, const void *, size_t);
+void bcopy (const void *, void *, size_t);
+void bzero (void *, size_t);
+int ffs (int);
+char *index (const char *, int);
+void * memccpy (void *, const void *, int, size_t);
+void * mempcpy (void *, const void *, size_t);
+void * memmem (const void *, size_t, const void *, size_t);
+void * memrchr (const void *, int, size_t);
+char *rindex (const char *, int);
+char *stpcpy (char *, const char *);
+char *stpncpy (char *, const char *, size_t);
+int strcasecmp (const char *, const char *);
+char *strcasestr (const char *, const char *);
+char *strchrnul (const char *, int);
+
+
+char *strdup (const char *);
+
+
+char *_strdup_r (struct _reent *, const char *);
+
+
+char *strndup (const char *, size_t);
+
+
+char *_strndup_r (struct _reent *, const char *, size_t);
+# 86 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 3
+int strerror_r (int, char *, size_t) __asm__ ("" "__xpg_strerror_r");
+
+
+
+
+
+size_t strlcat (char *, const char *, size_t);
+size_t strlcpy (char *, const char *, size_t);
+int strncasecmp (const char *, const char *, size_t);
+size_t strnlen (const char *, size_t);
+char *strsep (char **, const char *);
+char *strlwr (char *);
+char *strupr (char *);
+
+char *strsignal (int __signo);
+
+
+
+
+
+
+char * _strerror_r (struct _reent *, int, int, int *);
+# 139 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 3
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/string.h" 1 3
+# 140 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h" 2 3
+
+
+# 6 "modqr.c" 2
+# 1 "../micropython/py/runtime.h" 1
+# 29 "../micropython/py/runtime.h"
+# 1 "../micropython/py/mpstate.h" 1
+# 29 "../micropython/py/mpstate.h"
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stdint.h" 1 3 4
+# 9 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stdint.h" 3 4
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 1 3 4
+# 41 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
+typedef signed char int8_t ;
+typedef unsigned char uint8_t ;
+
+
+
+
+typedef signed char int_least8_t;
+typedef unsigned char uint_least8_t;
+
+
+
+
+typedef signed short int16_t;
+typedef unsigned short uint16_t;
+# 67 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
+typedef int16_t int_least16_t;
+typedef uint16_t uint_least16_t;
+# 80 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
+typedef signed int int32_t;
+typedef unsigned int uint32_t;
+# 102 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
+typedef int32_t int_least32_t;
+typedef uint32_t uint_least32_t;
+# 124 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
+typedef signed long long int64_t;
+typedef unsigned long long uint64_t;
+# 134 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
+typedef int64_t int_least64_t;
+typedef uint64_t uint_least64_t;
+# 164 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
+  typedef signed int int_fast8_t;
+  typedef unsigned int uint_fast8_t;
+
+
+
+
+  typedef signed int int_fast16_t;
+  typedef unsigned int uint_fast16_t;
+
+
+
+
+  typedef signed int int_fast32_t;
+  typedef unsigned int uint_fast32_t;
+# 218 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
+  typedef int_least64_t int_fast64_t;
+  typedef uint_least64_t uint_fast64_t;
+
+
+
+
+
+
+
+  typedef long long int intmax_t;
+# 236 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
+  typedef long long unsigned int uintmax_t;
+# 248 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/stdint.h" 3 4
+typedef signed int intptr_t;
+typedef unsigned int uintptr_t;
+# 10 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stdint.h" 2 3 4
+# 30 "../micropython/py/mpstate.h" 2
+
+# 1 "../micropython/py/mpconfig.h" 1
+# 62 "../micropython/py/mpconfig.h"
+# 1 "./mpconfigport.h" 1
+# 137 "./mpconfigport.h"
+typedef int32_t mp_int_t;
+typedef uint32_t mp_uint_t;
+typedef long mp_off_t;
+typedef uint32_t sys_prot_t;
+
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 1 3
+# 69 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 1 3 4
+# 147 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 3 4
+typedef int ptrdiff_t;
+# 327 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 3 4
+typedef short unsigned int wchar_t;
+# 70 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 2 3
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/types.h" 1 3
+# 19 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/types.h" 3
+typedef long int __off_t;
+typedef int __pid_t;
+
+__extension__ typedef long long int __loff_t;
+# 71 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 2 3
+# 92 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
+typedef unsigned char u_char;
+typedef unsigned short u_short;
+typedef unsigned int u_int;
+typedef unsigned long u_long;
+
+
+
+typedef unsigned short ushort;
+typedef unsigned int uint;
+typedef unsigned long ulong;
+
+
+
+typedef unsigned long clock_t;
+
+
+
+
+typedef long time_t;
+
+
+
+
+
+
+
+struct timespec {
+  time_t tv_sec;
+  long tv_nsec;
+};
+
+
+struct itimerspec {
+  struct timespec it_interval;
+  struct timespec it_value;
+};
+
+typedef long daddr_t;
+typedef char * caddr_t;
+
+
+
+
+
+
+typedef unsigned short ino_t;
+# 166 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
+typedef _off_t off_t;
+typedef __dev_t dev_t;
+typedef __uid_t uid_t;
+typedef __gid_t gid_t;
+
+
+
+
+
+typedef int pid_t;
+
+
+
+
+
+
+
+typedef long key_t;
+
+typedef _ssize_t ssize_t;
+# 199 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
+typedef unsigned int mode_t __attribute__ ((__mode__ (__SI__)));
+
+
+
+
+typedef unsigned short nlink_t;
+# 226 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
+typedef long fd_mask;
+
+
+
+
+
+
+
+typedef struct _types_fd_set {
+ fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
+} _types_fd_set;
+# 257 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h" 3
+typedef unsigned long clockid_t;
+
+
+
+
+typedef unsigned long timer_t;
+
+
+
+typedef unsigned long useconds_t;
+typedef long suseconds_t;
+# 143 "./mpconfigport.h" 2
+
+
+void *esp_native_code_commit(void*, size_t);
+
+
+
+extern const struct _mp_print_t mp_debug_print;
+# 164 "./mpconfigport.h"
+extern const struct _mp_obj_module_t esp_module;
+extern const struct _mp_obj_module_t network_module;
+extern const struct _mp_obj_module_t utime_module;
+extern const struct _mp_obj_module_t uos_module;
+extern const struct _mp_obj_module_t mp_module_lwip;
+extern const struct _mp_obj_module_t mp_module_machine;
+extern const struct _mp_obj_module_t qr_module;
+# 206 "./mpconfigport.h"
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/alloca.h" 1 3
 # 207 "./mpconfigport.h" 2
 # 63 "../micropython/py/mpconfig.h" 2
 # 614 "../micropython/py/mpconfig.h"
@@ -577,10 +672,10 @@ typedef float mp_float_t;
 # 33 "../micropython/py/mpstate.h" 2
 # 1 "../micropython/py/misc.h" 1
 # 33 "../micropython/py/misc.h"
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stdbool.h" 1 3 4
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stdbool.h" 1 3 4
 # 34 "../micropython/py/misc.h" 2
 
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 1 3 4
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include/stddef.h" 1 3 4
 # 36 "../micropython/py/misc.h" 2
 
 typedef unsigned char byte;
@@ -676,24 +771,24 @@ extern mp_uint_t mp_verbose_flag;
 # 34 "../micropython/py/mpstate.h" 2
 # 1 "../micropython/py/nlr.h" 1
 # 32 "../micropython/py/nlr.h"
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 1 3 4
-# 34 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/syslimits.h" 1 3 4
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 1 3 4
+# 34 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 3 4
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/syslimits.h" 1 3 4
 
 
 
 
 
 
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 1 3 4
-# 168 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 3 4
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/limits.h" 1 3 4
-# 169 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 2 3 4
-# 8 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/syslimits.h" 2 3 4
-# 35 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 2 3 4
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 1 3 4
+# 168 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 3 4
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/limits.h" 1 3 4
+# 169 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 2 3 4
+# 8 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/syslimits.h" 2 3 4
+# 35 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.5/include-fixed/limits.h" 2 3 4
 # 33 "../micropython/py/nlr.h" 2
-# 1 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/assert.h" 1 3
-# 39 "/media/data/Users/BenjaminMisell/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/assert.h" 3
+# 1 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/assert.h" 1 3
+# 39 "/media/data/Documents/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/include/assert.h" 3
 void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
                                  ;
 void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
@@ -1843,7 +1938,7 @@ void mp_native_raise(mp_obj_t o);
 
 
 void mp_warning(const char *msg, ...);
-# 6 "modqr.c" 2
+# 7 "modqr.c" 2
 # 1 "../micropython/py/gc.h" 1
 # 34 "../micropython/py/gc.h"
 void gc_init(void *start, void *end);
@@ -1885,7 +1980,7 @@ typedef struct _gc_info_t {
 void gc_info(gc_info_t *info);
 void gc_dump_info(void);
 void gc_dump_alloc_table(void);
-# 7 "modqr.c" 2
+# 8 "modqr.c" 2
 
 # 1 "qrcode.h" 1
 # 60 "qrcode.h"
@@ -1904,48 +1999,80 @@ int8_t qrcode_initText(QRCode *qrcode, uint8_t *modules, uint8_t version, uint8_
 int8_t qrcode_initBytes(QRCode *qrcode, uint8_t *modules, uint8_t version, uint8_t ecc, uint8_t *data, uint16_t length);
 
 _Bool qrcode_getModule(QRCode *qrcode, uint8_t x, uint8_t y);
-# 9 "modqr.c" 2
-# 1 "modqr.h" 1
 # 10 "modqr.c" 2
+# 1 "modqr.h" 1
+# 11 "modqr.c" 2
 
 const mp_obj_type_t qr_type;
 
 typedef struct _qr_obj_t {
     mp_obj_base_t base;
     uint8_t qr_version;
+    uint8_t ecc;
     QRCode qrCode;
     uint8_t* qrCodeBytes;
+    uint8_t* dataBuf;
+    size_t dataBufLen;
+    size_t dataBufUsed;
+    _Bool hasInit;
 } qr_obj_t;
 
-static mp_obj_t qr_write(mp_obj_t self_in, mp_obj_t data, mp_obj_t ecc_in) {
-    qr_obj_t *self = ((void*)self_in);
-    uint8_t ecc = mp_obj_int_get_checked(ecc_in);
-    if (0 > ecc || ecc > 3) {
-        nlr_jump(((void*)mp_obj_new_exception_msg(&mp_type_ValueError, "QR ECC must be between 0 and 3")));
-    }
+static mp_obj_t qr_write(mp_obj_t self_in, mp_obj_t data_in) {
+    qr_obj_t* self = ((void*)self_in);
     size_t len;
-    qrcode_initBytes(&self->qrCode, self->qrCodeBytes, self->qr_version, ecc, (uint8_t*)mp_obj_str_get_data(data, &len), len);
+    uint8_t* data = (uint8_t*)mp_obj_str_get_data(data_in, &len);
+
+    if ((self->dataBufUsed + len) > self->dataBufLen) {
+        size_t newLen = (self->dataBufUsed + len) - self->dataBufLen;
+        self->dataBuf = gc_realloc(self->dataBuf, newLen, 1);
+        self->dataBufLen = newLen;
+    }
+    memcpy(self->dataBuf + self->dataBufUsed, data, len);
+    self->dataBufUsed += len;
+
     return (((mp_obj_t)&mp_const_none_obj));
 }
-const mp_obj_fun_builtin_fixed_t qr_write_obj = {{&mp_type_fun_builtin_3}, .fun._3 = qr_write};
+const mp_obj_fun_builtin_fixed_t qr_write_obj = {{&mp_type_fun_builtin_2}, .fun._2 = qr_write};
 
-static mp_obj_t qr_matrix(mp_obj_t self_in, mp_obj_t data, mp_obj_t ecc_in) {
+static mp_obj_t qr_matrix(mp_obj_t self_in) {
     qr_obj_t *self = ((void*)self_in);
-    mp_obj_t out = mp_obj_new_list(self->qrCode.size, ((void *)0));
+
+    if (!self->hasInit) {
+        qrcode_initBytes(&self->qrCode, self->qrCodeBytes, self->qr_version, self->ecc, self->dataBuf, self->dataBufUsed);
+        self->hasInit = 1;
+    }
+
+    mp_obj_t out = mp_obj_new_list(self->qrCode.size+2, ((void *)0));
+
+    mp_obj_t top_row = mp_obj_new_list(self->qrCode.size+2, ((void *)0));
+    mp_obj_list_store(out, mp_obj_new_int(0), top_row);
+    for (uint8_t y = 0; y < (self->qrCode.size+2); y++) {
+        mp_obj_list_store(top_row, mp_obj_new_int(y), (((mp_obj_t)&mp_const_false_obj)));
+    }
+
     for (uint8_t y = 0; y < self->qrCode.size; y++) {
-        mp_obj_t row = mp_obj_new_list(self->qrCode.size, ((void *)0));
-        mp_obj_list_store(out, mp_obj_new_int(y), row);
+        mp_obj_t row = mp_obj_new_list(self->qrCode.size+2, ((void *)0));
+        mp_obj_list_store(out, mp_obj_new_int(y+1), row);
+        mp_obj_list_store(row, mp_obj_new_int(0), (((mp_obj_t)&mp_const_false_obj)));
         for (uint8_t x = 0; x < self->qrCode.size; x++) {
             if (qrcode_getModule(&self->qrCode, x, y)) {
-                mp_obj_list_store(row, mp_obj_new_int(x), (((mp_obj_t)&mp_const_true_obj)));
+                mp_obj_list_store(row, mp_obj_new_int(x+1), (((mp_obj_t)&mp_const_true_obj)));
             } else {
-                mp_obj_list_store(row, mp_obj_new_int(x), (((mp_obj_t)&mp_const_false_obj)));
+                mp_obj_list_store(row, mp_obj_new_int(x+1), (((mp_obj_t)&mp_const_false_obj)));
             }
         }
+        mp_obj_list_store(row, mp_obj_new_int(self->qrCode.size+1), (((mp_obj_t)&mp_const_false_obj)));
     }
+
+    mp_obj_t bottom_row = mp_obj_new_list(self->qrCode.size+2, ((void *)0));
+    mp_obj_list_store(out, mp_obj_new_int(self->qrCode.size+1), bottom_row);
+    for (uint8_t y = 0; y < (self->qrCode.size+2); y++) {
+        mp_obj_list_store(bottom_row, mp_obj_new_int(y), (((mp_obj_t)&mp_const_false_obj)));
+    }
+
     return out;
 }
-const mp_obj_fun_builtin_fixed_t qr_matrix_obj = {{&mp_type_fun_builtin_3}, .fun._3 = qr_matrix};
+const mp_obj_fun_builtin_fixed_t qr_matrix_obj = {{&mp_type_fun_builtin_1}, .fun._1 = qr_matrix};
 
 
 static void qr_print(const mp_print_t *print, mp_obj_t self_in, mp_print_kind_t kind) {
@@ -1954,17 +2081,26 @@ static void qr_print(const mp_print_t *print, mp_obj_t self_in, mp_print_kind_t 
 }
 
 mp_obj_t qr_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *args) {
-    mp_arg_check_num(n_args, n_kw, 1, 1, 0);
+    mp_arg_check_num(n_args, n_kw, 2, 2, 0);
 
-    uint8_t qr_version = mp_obj_get_int(args[0]);
+    uint8_t qr_version = mp_obj_int_get_checked(args[0]);
     if (1 > qr_version || qr_version > 40) {
         nlr_jump(((void*)mp_obj_new_exception_msg(&mp_type_ValueError, "QR Version must be between 1 and 40")));
+    }
+    uint8_t ecc = mp_obj_int_get_checked(args[1]);
+    if (0 > ecc || ecc > 3) {
+        nlr_jump(((void*)mp_obj_new_exception_msg(&mp_type_ValueError, "QR ECC must be between 0 and 3")));
     }
 
     qr_obj_t *self = (((qr_obj_t*)(m_malloc(sizeof(qr_obj_t) * (1)))));
     self->base.type = &qr_type;
     self->qr_version = qr_version;
+    self->ecc = ecc;
     self->qrCodeBytes = gc_alloc(qrcode_getBufferSize(qr_version), 0);
+    self->dataBuf = gc_alloc(7, 0);
+    self->dataBufLen = 7;
+    self->dataBufUsed = 0;
+    self->hasInit = 0;
     return ((mp_obj_t)self);
 }
 

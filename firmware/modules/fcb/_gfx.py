@@ -1,4 +1,8 @@
 class GFX:
+    """
+    A class for drawing simple graphics onto the display framebuffer.
+    """
+
     def __init__(self, width, height, pixel, hline=None, vline=None):
         # Create an instance of the GFX drawing class.  You must pass in the
         # following parameters:
@@ -48,9 +52,18 @@ class GFX:
             self._pixel(x0, y0+i, *args, **kwargs)
 
     def rect(self, x0, y0, width, height, *args, **kwargs):
-        # Rectangle drawing function.  Will draw a single pixel wide rectangle
-        # starting in the upper left x0, y0 position and width, height pixels in
-        # size.
+        """
+        Rectangle drawing function.
+
+        Will draw a single pixel wide non filled rectangle starting in the upper left x0, y0 position and width,\
+        height pixels in size.
+
+        :param x0: X component of the location of the top left corner of the rectangle
+        :param y0: Y component of the location of the top left corner of the rectangle
+        :param height: The height of the rectangle to draw
+        :param width: The width of the rectangle to draw
+        :Additional arguments: Passed to the pixel drawing function of the framebuffer, for example to set the colour
+        """
         if y0 < -height or y0 > self.height or x0 < -width or x0 > self.width:
             return
         self.hline(x0, y0, width, *args, **kwargs)
@@ -59,17 +72,33 @@ class GFX:
         self.vline(x0+width-1, y0, height, *args, **kwargs)
 
     def fill_rect(self, x0, y0, width, height, *args, **kwargs):
-        # Filled rectangle drawing function.  Will draw a single pixel wide
-        # rectangle starting in the upper left x0, y0 position and width, height
-        # pixels in size.
+        """
+        Filled rectangle drawing function.
+
+        Will draw a filled rectangle starting in the upper left x0, y0 position and width, height pixels in size.
+
+        :param x0: X component of the location of the top left corner of the rectangle
+        :param y0: Y component of the location of the top left corner of the rectangle
+        :param height: The height of the rectangle to draw
+        :param width: The width of the rectangle to draw
+        :Additional arguments: Passed to the pixel drawing function of the framebuffer, for example to set the colour
+        """
         if y0 < -height or y0 > self.height or x0 < -width or x0 > self.width:
             return
         for i in range(x0, x0+width):
             self.vline(i, y0, height, *args, **kwargs)
 
     def line(self, x0, y0, x1, y1, *args, **kwargs):
-        # Line drawing function.  Will draw a single pixel wide line starting at
-        # x0, y0 and ending at x1, y1.
+        """
+        Line drawing function.
+
+        Will draw a single pixel wide line starting at x0, y0 and ending at x1, y1.
+
+        :param x0: X component of the location of the start of the line
+        :param y0: Y component of the location of the start of the line
+        :param x1: X component of the location of the end of the line
+        :Additional arguments: Passed to the pixel drawing function of the framebuffer, for example to set the colour
+        """
         steep = abs(y1 - y0) > abs(x1 - x0)
         if steep:
             x0, y0 = y0, x0
@@ -97,8 +126,16 @@ class GFX:
             x0 += 1
 
     def circle(self, x0, y0, radius, *args, **kwargs):
-        # Circle drawing function.  Will draw a single pixel wide circle with
-        # center at x0, y0 and the specified radius.
+        """
+        Circle drawing function.
+
+        Will draw a single pixel wide circle with center at x0, y0 and with the specified radius.
+
+        :param x0: X component of the location of the center of the circle
+        :param y0: Y component of the location of the start of the line
+        :param radius: The radius of the circle to draw
+        :Additional arguments: Passed to the pixel drawing function of the framebuffer, for example to set the colour
+        """
         f = 1 - radius
         ddF_x = 1
         ddF_y = -2 * radius
@@ -126,8 +163,16 @@ class GFX:
             self._pixel(x0 - y, y0 - x, *args, **kwargs)
 
     def fill_circle(self, x0, y0, radius, *args, **kwargs):
-        # Filled circle drawing function.  Will draw a filled circule with
-        # center at x0, y0 and the specified radius.
+        """
+        Filled circle drawing function.
+
+        Will draw a filled circle with center at x0, y0 and with the specified radius.
+
+        :param x0: X component of the location of the center of the circle
+        :param y0: Y component of the location of the start of the line
+        :param radius: The radius of the circle to draw
+        :Additional arguments: Passed to the pixel drawing function of the framebuffer, for example to set the colour
+        """
         self.vline(x0, y0 - radius, 2*radius + 1, *args, **kwargs)
         f = 1 - radius
         ddF_x = 1
@@ -148,6 +193,20 @@ class GFX:
             self.vline(x0 - y, y0 - x, 2*x + 1, *args, **kwargs)
 
     def triangle(self, x0, y0, x1, y1, x2, y2, *args, **kwargs):
+        """
+        Triangle drawing function.
+
+        Will draw a single pixel wide triangle around the points (x0, y0), (x1, y1), and (x2, y2).
+
+        :param x0: X component of the location of the first corner of the triangle
+        :param y0: Y component of the location of the first corner of the triangle
+        :param x1: X component of the location of the second corner of the triangle
+        :param y1: Y component of the location of the second corner of the triangle
+        :param x2: X component of the location of the third corner of the triangle
+        :param y2: Y component of the location of the third corner of the triangle
+        :Additional arguments: Passed to the pixel drawing function of the framebuffer, for example to set the colour
+        """
+
         # Triangle drawing function.  Will draw a single pixel wide triangle
         # around the points (x0, y0), (x1, y1), and (x2, y2).
         self.line(x0, y0, x1, y1, *args, **kwargs)
@@ -155,8 +214,19 @@ class GFX:
         self.line(x2, y2, x0, y0, *args, **kwargs)
 
     def fill_triangle(self, x0, y0, x1, y1, x2, y2, *args, **kwargs):
-        # Filled triangle drawing function.  Will draw a filled triangle around
-        # the points (x0, y0), (x1, y1), and (x2, y2).
+        """
+        Filled triangle drawing function.
+
+        Will draw a filled triangle around the points (x0, y0), (x1, y1), and (x2, y2).
+
+        :param x0: X component of the location of the first corner of the triangle
+        :param y0: Y component of the location of the first corner of the triangle
+        :param x1: X component of the location of the second corner of the triangle
+        :param y1: Y component of the location of the second corner of the triangle
+        :param x2: X component of the location of the third corner of the triangle
+        :param y2: Y component of the location of the third corner of the triangle
+        :Additional arguments: Passed to the pixel drawing function of the framebuffer, for example to set the colour
+        """
         if y0 > y1:
             y0, y1 = y1, y0
             x0, x1 = x1, x0
