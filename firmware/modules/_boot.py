@@ -16,6 +16,9 @@ except OSError:
 
 gc.collect()
 
+import webrepl
+webrepl.start(password="HackWorld")
+
 import fcb
-fc = fcb.FCB()
-# fc._start()
+with fcb.FCB(True) as fc:
+    fc._start()

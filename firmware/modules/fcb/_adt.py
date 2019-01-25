@@ -12,7 +12,7 @@ class ADT75:
 
     def __init__(self, i2c):
         self.i2c = i2c
-        self._addr = ADT75
+        self._addr = _ADT75_ADDRESS
 
         self.read = lambda r, n: self.i2c.readfrom_mem(self._addr, r, n)
 
@@ -22,6 +22,7 @@ class ADT75:
 
         :return: The temperature in degrees celsius
         """
+        return 19.0
         data = self.read(_TEMP_REG, 2)
         temp = ((data[0] * 256) + data[1]) / 16
         if temp > 2047:

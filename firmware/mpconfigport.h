@@ -89,7 +89,7 @@
 #define MICROPY_PY_MACHINE_EP_SPI      (1)
 #define MICROPY_PY_MACHINE_SPI_MAKE_NEW machine_hspi_make_new
 #define MICROPY_PY_WEBSOCKET        (1)
-#define MICROPY_PY_WEBREPL          (0)
+#define MICROPY_PY_WEBREPL          (1)
 #define MICROPY_PY_WEBREPL_DELAY    (20)
 #define MICROPY_PY_FRAMEBUF         (1)
 #define MICROPY_PY_MICROPYTHON_MEM_INFO (1)
