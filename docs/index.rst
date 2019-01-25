@@ -7,15 +7,11 @@ Welcome to Flawcon Badge's documentation!
 =========================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+    :maxdepth: 1
+    :caption: Contents:
 
-   fcb_mod
-   _capt_mod
-   _adt_mod
-   _gfx_mod
-   _font_mod
-
+    fcb/index
+    qr
 
 
 Indices and tables

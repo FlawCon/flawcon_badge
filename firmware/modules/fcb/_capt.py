@@ -45,21 +45,42 @@ class CAP1296:
 
     def enable_interrupt(self, keys):
         """
-        Enables interrupts for the specified keys
+        Enables interrupts for the specified keys. Enabling interrupts results in the touch event being passed to the
+        ``handle_event`` function of the current app
         
         :param keys: A list of key numbers in the range 0-5
         """
         self.write(_INTERRUPT_ENABLE, _keys_to_byte(keys, default=b'\x3f'))
 
     def enable_multitouch(self, enable, simultaneous_touches=1):
+        """
+        Sets weather to enable multitouch and how many simultaneous touches to allow
+
+        :param enable: Weather to enable multitouch
+        :param simultaneous_touches: The number of simuntanious touches to register
+        """
+
         b_mult_t = (simultaneous_touches - 1) << 2
         multi_touch_config = 0x00 if enable else 0x80 | b_mult_t
         self.write(_MULTIPLE_TOUCH_CONFIG, bytes([multi_touch_config]))
 
     def enable_keys(self, keys):
+        """
+        Sets which keys have sensing enabled
+
+        :param keys: A list of the key numbers to enable in the range 0-5
+        """
+
         self.write(_SENSOR_INPUT_ENABLE, _keys_to_byte(keys, default=b'\x3f'))
 
     def read_keys(self, as_list=False):
+        """
+        Read which keys are currently pressed
+
+        :param as_list: Weather to return the raw register value from the IC or the key numbers in a list
+        :return: The pressed keys in the format requested
+        """
+
         status = self.read(_SENSOR_INPUT_STATUS, 1)
         self.write(_MAIN_CONTROL, b'\x00')  # enables next touch reading
 

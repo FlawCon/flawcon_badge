@@ -17,7 +17,7 @@ class Event:
     Storage class for event that is to be passed to an app
 
     :ivar is_special: Weather this is a character or special event
-    :ivar val: The event value, a character if `is_special == False`, event dependent otherwise
+    :ivar val: The event value, a character if ``is_special == False``, event dependent otherwise
     """
 
     #: Special event type for when the UP capacitive button is pressed
@@ -52,7 +52,7 @@ class FCB:
     """
     The main OS class
 
-    An instance of this is passed to the `__init__` of each app. Every app is expected to store this and use it when
+    An instance of this is passed to the ``__init__`` of each app. Every app is expected to store this and use it when
     accessing the badge hardware.
     """
 
@@ -71,11 +71,29 @@ class FCB:
         self._debug = debug
 
     def debug_dump(self, data):
+        """
+        Dump the given data is REPL representation to the serial port for debugging. Only prints if in debug mode.
+
+        :param data: The data to dump
+        """
         self.debug_print("%r" % data)
 
     def debug_print(self, msg):
+        """
+        Prints the gives string to the serial port if in debug mode
+
+        :param msg: The message to print
+        """
         if self._debug:
             self._uart.write(msg)
+
+    def set_debug(self, state):
+        """
+        Sets weather the badge is in debug mode or not
+
+        :param state: ``True`` for debug, ``False`` for not
+        """
+        self._debug = state
 
     @property
     def i2c(self):
@@ -114,28 +132,14 @@ class FCB:
         """
         return self._font
 
-    def write_i2c(self, addr, register, data):
-        """
-        Writes the data to the register at the address on the exposed I2C bus
-
-        :param addr: Address to write at
-        :param register: Register to write
-        :param data: The data to write
-        """
-        self._i2c.writeto_mem(addr, register, data)
-
-    def read_i2c(self, addr, register, num):
-        """
-        Reads from the register at the address on the exposed I2C bus
-
-        :param addr: Address to read at
-        :param register: Register to read from
-        :param num: Number of bytes to read
-        :return: The data read
-        """
-        return self._i2c.readfrom_mem(addr, register, num)
-
     def get_input(self, prompt=None):
+        """
+        Prompts for input on the serial port, returning when ``\\r`` or ``\\n`` is received
+
+        :param prompt: Optional prompt to print before getting input
+        :return: The input read
+        """
+
         if prompt:
             self._uart.write(prompt)
         buffer = b""
@@ -164,9 +168,9 @@ class FCB:
     def config(self):
         """
         The config dict stored in the badge's filesystem consisting of
-          - `name`
-          - `social_handle`
-          - `ticket_id`
+          - ``name``
+          - ``social_handle``
+          - ``ticket_id``
         """
         try:
             with open("/config.json", "r") as conf_f:
@@ -174,20 +178,31 @@ class FCB:
                     config = json.load(conf_f)
 
                     if not all(v in config.keys() for v in ('name', 'ticket_id', 'social_handle')):
+                        self.debug_print("Invalid keys in config: %r" % config.keys())
                         return None
 
                     return config
-                except ValueError:
+                except ValueError as e:
+                    self.debug_dump(e)
                     return None
-        except OSError:
+        except OSError as e:
+            self.debug_dump(e)
             return None
 
     def load_app(self, name):
+        """
+        Exits the current app and loads up the specified app
+
+        :param name: The import name of the module of new app to load
+        """
         self.debug_print("App loading: %s" % name)
         app_mod = __import__(name, [], [], ["App"])
         self._app = app_mod.App(self)
 
     def app_exit(self):
+        """
+        Exits the current app and return to the home screen
+        """
         self.debug_print("App exiting")
         self.load_app(_HOME_APP)
 
@@ -215,6 +230,7 @@ class FCB:
                 self._app.handle_event(self._event_queue.popleft())
             self._app.redraw()
             if self._epd.dirty:
+                self.debug_print("Display buffer dirty, redrawing")
                 self._epd.show()
 
     def clear_disp(self):
