@@ -1,4 +1,6 @@
 import time
+import json
+import os
 from micropython import const
 from machine import Pin, I2C, EPSPI, UART
 from fcb._capt import CAP1296
@@ -8,7 +10,7 @@ from fcb._gfx import GFX
 from fcb._font import Font
 
 DISP_RESOLUTION = RESOLUTION[0]
-
+_HOME_APP = "fcb.default_apps.circle_test"
 
 class Event:
     """
@@ -54,7 +56,7 @@ class FCB:
     accessing the badge hardware.
     """
 
-    def __init__(self):
+    def __init__(self, debug=False):
         self._uart = UART(0, 115200)
         self._i2c = I2C(scl=Pin(5), sda=Pin(4), freq=100000)
         self._capt = CAP1296(i2c=self._i2c, alert_pin=Pin(10, Pin.IN), intr=self._handle_touch_intr)
@@ -66,6 +68,14 @@ class FCB:
 
         self._event_queue = []
         self._app = None
+        self._debug = debug
+
+    def debug_dump(self, data):
+        self.debug_print("%r" % data)
+
+    def debug_print(self, msg):
+        if self._debug:
+            self._uart.write(msg)
 
     @property
     def i2c(self):
@@ -125,23 +135,84 @@ class FCB:
         """
         return self._i2c.readfrom_mem(addr, register, num)
 
+    def get_input(self, prompt=None):
+        if prompt:
+            self._uart.write(prompt)
+        buffer = b""
+        os.dupterm(None, 1)
+        while True:
+            if self._uart.any() != 0:
+                key = self._uart.read(1)
+                if key in (b"\x7f", b"\x08"):
+                    buffer = buffer[0:-1]
+                    self._uart.write(b"\x08 \x08")
+                elif key in (b"\n", b"\r"):
+                    self._uart.write(b"\r\n")
+                    break
+                else:
+                    self._uart.write(key)
+                    buffer += key
+            else:
+                time.sleep_ms(10)
+        os.dupterm(self._uart, 1)
+        try:
+            return buffer.decode().strip()
+        except TypeError:
+            return ""
+
+    @property
+    def config(self):
+        """
+        The config dict stored in the badge's filesystem consisting of
+          - `name`
+          - `social_handle`
+          - `ticket_id`
+        """
+        try:
+            with open("/config.json", "r") as conf_f:
+                try:
+                    config = json.load(conf_f)
+
+                    if not all(v in config.keys() for v in ('name', 'ticket_id', 'social_handle')):
+                        return None
+
+                    return config
+                except ValueError:
+                    return None
+        except OSError:
+            return None
+
+    def load_app(self, name):
+        self.debug_print("App loading: %s" % name)
+        app_mod = __import__(name, [], [], ["App"])
+        self._app = app_mod.App(self)
+
+    def app_exit(self):
+        self.debug_print("App exiting")
+        self.load_app(_HOME_APP)
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        return
+
     def _start(self):
+        self._uart.write("Booting...\n")
         self.clear_disp()
         self._epd.show()
 
+        if self.config is None:
+            self.load_app('fcb.default_apps.setup_app')
+
         if self._app is None:
-            app_mod = __import__('fcb.default_apps.circle_test')
-            self._app = app_mod.App(self)
+            self.load_app(_HOME_APP)
 
         while True:
-            if not self._event_waiting() and self._uart.any() == 0:
-                time.sleep_ms(10)
-                continue
             if self._uart.any() != 0:
                 self._handle_uart()
-            if self._event_waiting():
-                while self._event_waiting():
-                    self._app.handle_event(self._event_queue.popleft())
+            while self._event_waiting():
+                self._app.handle_event(self._event_queue.popleft())
             self._app.redraw()
             if self._epd.dirty:
                 self._epd.show()
