@@ -7,7 +7,6 @@
 #include "py/gc.h"
 #include "py/obj.h"
 #include "qrcode.h"
-#include "modqr.h"
 
 const mp_obj_type_t qr_type;
 
@@ -83,7 +82,7 @@ MP_DEFINE_CONST_FUN_OBJ_1(qr_matrix_obj, qr_matrix);
 
 STATIC void qr_print(const mp_print_t *print, mp_obj_t self_in, mp_print_kind_t kind) {
     qr_obj_t *self = MP_OBJ_TO_PTR(self_in);
-    mp_printf(print, "EP_SPI(%u)", self->qr_version);
+    mp_printf(print, "QR(%u)", self->qr_version);
 }
 
 mp_obj_t qr_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *args) {
@@ -91,11 +90,11 @@ mp_obj_t qr_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, cons
 
     uint8_t qr_version = mp_obj_int_get_checked(args[0]);
     if (1 > qr_version || qr_version > 40) {
-        nlr_raise(mp_obj_new_exception_msg(&mp_type_ValueError, "QR Version must be between 1 and 40"));
+        mp_raise_ValueError("QR Version must be between 1 and 40");
     }
     uint8_t ecc = mp_obj_int_get_checked(args[1]);
     if (0 > ecc || ecc > 3) {
-        nlr_raise(mp_obj_new_exception_msg(&mp_type_ValueError, "QR ECC must be between 0 and 3"));
+        mp_raise_ValueError("QR ECC must be between 0 and 3");
     }
 
     qr_obj_t *self = m_new_obj(qr_obj_t);
