@@ -45,12 +45,19 @@ typedef struct _machine_ep_spi_obj_t {
     mp_obj_base_t base;
 } machine_ep_spi_obj_t;
 
-STATIC mp_obj_t mp_machine_ep_spi_write(mp_obj_t self, mp_obj_t data, mp_obj_t dc) {
-    spi_transaction(HSPI, 0, 0, 0, 0, 1, mp_obj_int_get_checked(dc), 0, 0);
-    spi_tx8fast(HSPI, mp_obj_int_get_checked(data));
+STATIC mp_obj_t mp_machine_ep_spi_write(mp_obj_t self, mp_obj_t data, mp_obj_t dc_in) {
+    mp_obj_t data_iter = mp_getiter(data, NULL);
+
+    mp_obj_t iter_data;
+    bool dc = mp_obj_is_true(dc_in) ? 1 : 0;
+    while ((iter_data = mp_iternext(data_iter)) != MP_OBJ_STOP_ITERATION) {
+        spi_transaction(HSPI, 0, 0, 0, 0, 1, dc, 0, 0);
+        spi_tx8fast(HSPI, mp_obj_int_get_checked(iter_data));
+        ets_event_poll();
+    }
     return mp_const_none;
 }
-MP_DEFINE_CONST_FUN_OBJ_3(mp_machine_ep_spi_write_obj, mp_machine_ep_spi_write);
+STATIC MP_DEFINE_CONST_FUN_OBJ_3(mp_machine_ep_spi_write_obj, mp_machine_ep_spi_write);
 
 /******************************************************************************/
 // MicroPython bindings for HSPI
@@ -73,7 +80,7 @@ STATIC mp_obj_t machine_ep_spi_init(mp_obj_t self) {
 }
 STATIC MP_DEFINE_CONST_FUN_OBJ_1(machine_ep_spi_init_obj, machine_ep_spi_init);
 
-mp_obj_t machine_ep_spi_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *args) {
+STATIC mp_obj_t machine_ep_spi_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *args) {
     mp_arg_check_num(n_args, n_kw, 0, 0, false);
 
     machine_ep_spi_obj_t *self = m_new_obj(machine_ep_spi_obj_t);

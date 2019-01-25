@@ -84,6 +84,7 @@ SRC_C = \
 	machine_hspi.c \
 	machine_ep_spi.c \
 	qrcode.c \
+	modframegen.c \
 	modqr.c \
 	modesp.c \
 	modnetwork.c \

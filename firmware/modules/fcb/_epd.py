@@ -1,6 +1,7 @@
 from micropython import const
 import struct
 from framebuf import FrameBuffer, GS2_HMSB
+from framegen import FrameGen
 import time
 
 WHITE = const(0)
@@ -63,6 +64,7 @@ class EPD:
         self._busy_wait()
 
     def _busy_wait(self):
+        return
         while self._busy_pin.value():
             time.sleep(0.01)
 
@@ -151,11 +153,11 @@ class EPD:
                             out += 1 << (7-i)
                     yield out
 
-        self._update(gen_buf_a(), gen_buf_b())
+        self._update(FrameGen(self.cols, self.rows, BLACK, self.buf.pixel),
+                     FrameGen(self.cols, self.rows, RED, self.buf.pixel))
 
     def _spi_write(self, dc, values):
-        for v in values:
-            self._spi.write(v, dc)
+        self._spi.write(values, dc)
 
     def _send_command(self, command, data=None):
         self._spi_write(_SPI_COMMAND, [command])
